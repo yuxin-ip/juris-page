@@ -1,0 +1,15 @@
+# Local source corpus and OCR intermediates are not website assets.
+法硕小程序开发/
+data/ocr_*.jsonl
+data/jiexi_*.json
+data/questions_jichu.json
+data/questions_2025.json
+data/questions_2026.json
+
+# Re-creatable caches and local checks.
+.firecrawl/
+.work/
+.tools/
+tmp/
+__pycache__/
+*.pyc

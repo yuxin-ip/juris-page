@@ -1,0 +1,291 @@
+{
+  "summary": {
+    "questions": 675,
+    "mapped": 674,
+    "unmapped": 1,
+    "topic_links": 2231
+  },
+  "by_year_track": [
+    {
+      "year": 2010,
+      "track": "法学",
+      "questions": 10,
+      "mapped": 10,
+      "unmapped": 0,
+      "topic_links": 34
+    },
+    {
+      "year": 2010,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 95
+    },
+    {
+      "year": 2011,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 48
+    },
+    {
+      "year": 2011,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 98
+    },
+    {
+      "year": 2012,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 68
+    },
+    {
+      "year": 2012,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 106
+    },
+    {
+      "year": 2013,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 52
+    },
+    {
+      "year": 2013,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 91
+    },
+    {
+      "year": 2014,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 36
+    },
+    {
+      "year": 2014,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 64
+    },
+    {
+      "year": 2015,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 68
+    },
+    {
+      "year": 2015,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 109
+    },
+    {
+      "year": 2016,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 61
+    },
+    {
+      "year": 2016,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 108
+    },
+    {
+      "year": 2017,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 59
+    },
+    {
+      "year": 2017,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 106
+    },
+    {
+      "year": 2018,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 42
+    },
+    {
+      "year": 2018,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 64
+    },
+    {
+      "year": 2019,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 54
+    },
+    {
+      "year": 2019,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 88
+    },
+    {
+      "year": 2020,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 49
+    },
+    {
+      "year": 2020,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 83
+    },
+    {
+      "year": 2021,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 30
+    },
+    {
+      "year": 2021,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 69
+    },
+    {
+      "year": 2022,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 14,
+      "unmapped": 1,
+      "topic_links": 59
+    },
+    {
+      "year": 2022,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 73
+    },
+    {
+      "year": 2023,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 48
+    },
+    {
+      "year": 2023,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 80
+    },
+    {
+      "year": 2024,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 34
+    },
+    {
+      "year": 2024,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 53
+    },
+    {
+      "year": 2025,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 36
+    },
+    {
+      "year": 2025,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 64
+    },
+    {
+      "year": 2026,
+      "track": "法学",
+      "questions": 15,
+      "mapped": 15,
+      "unmapped": 0,
+      "topic_links": 41
+    },
+    {
+      "year": 2026,
+      "track": "非法学",
+      "questions": 25,
+      "mapped": 25,
+      "unmapped": 0,
+      "topic_links": 61
+    }
+  ],
+  "topics": {
+    "total": 322,
+    "with_both_books": 192,
+    "with_one_book": 130
+  },
+  "scope_notes": [
+    "2010 年法学卷第 21—25 题为民法客观题，未纳入刑法题库。",
+    "2022 年法学第 25 题涉及非法植入基因编辑、克隆胚胎罪；两本现有教材未检出该罪名，暂不提供页码。"
+  ]
+}

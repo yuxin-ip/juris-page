@@ -1,0 +1,236 @@
+{
+  "generated": "2026-08-23",
+  "scope": {
+    "years": [
+      2010,
+      2026
+    ],
+    "questions": 675,
+    "mapped_questions": 675,
+    "by_track": {
+      "非法学": 425,
+      "法学": 250
+    },
+    "other_site_questions_before_merge": 425,
+    "missing_track_in_other_site": "法学",
+    "missing_questions_in_other_site": 250
+  },
+  "page_comparison": {
+    "exact_label_disagreements": 22,
+    "chosen_from_codex": 11,
+    "chosen_from_other": 11,
+    "resolutions": [
+      {
+        "book": "背诵",
+        "topic": "侮辱罪",
+        "other_page": 130,
+        "codex_page": 136,
+        "chosen_page": 136,
+        "chosen_source": "Codex",
+        "reason": "P.130 是强制猥亵、侮辱罪；普通侮辱罪从 P.136 开始"
+      },
+      {
+        "book": "背诵",
+        "topic": "刑罚",
+        "other_page": 47,
+        "codex_page": 49,
+        "chosen_page": 49,
+        "chosen_source": "Codex",
+        "reason": "P.47 仍属于刑事责任；刑罚论及概念从 P.49 开始"
+      },
+      {
+        "book": "背诵",
+        "topic": "刑事责任",
+        "other_page": 19,
+        "codex_page": 46,
+        "chosen_page": 46,
+        "chosen_source": "Codex",
+        "reason": "P.19 只是因果关系语境；刑事责任专章从 P.46 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "避险过当",
+        "other_page": 113,
+        "codex_page": 110,
+        "chosen_page": 113,
+        "chosen_source": "other",
+        "reason": "细分标题在 P.113"
+      },
+      {
+        "book": "精讲",
+        "topic": "剥夺政治权利",
+        "other_page": 208,
+        "codex_page": 204,
+        "chosen_page": 208,
+        "chosen_source": "other",
+        "reason": "细分标题在 P.208"
+      },
+      {
+        "book": "精讲",
+        "topic": "犯罪构成",
+        "other_page": 33,
+        "codex_page": 32,
+        "chosen_page": 32,
+        "chosen_source": "Codex",
+        "reason": "第三章标题、概念与构成要件从 P.32 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "犯罪主体",
+        "other_page": 65,
+        "codex_page": 63,
+        "chosen_page": 63,
+        "chosen_source": "Codex",
+        "reason": "第六章标题、定义与年龄制度从 P.63 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "防卫过当",
+        "other_page": 107,
+        "codex_page": 101,
+        "chosen_page": 107,
+        "chosen_source": "other",
+        "reason": "细分标题在 P.107"
+      },
+      {
+        "book": "精讲",
+        "topic": "拘役",
+        "other_page": 200,
+        "codex_page": 199,
+        "chosen_page": 200,
+        "chosen_source": "other",
+        "reason": "拘役细分标题在 P.200"
+      },
+      {
+        "book": "精讲",
+        "topic": "聚众斗殴罪",
+        "other_page": 466,
+        "codex_page": 490,
+        "chosen_page": 490,
+        "chosen_source": "Codex",
+        "reason": "P.466 是其他章节表格；罪名正文从 P.490 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "量刑",
+        "other_page": 213,
+        "codex_page": 212,
+        "chosen_page": 212,
+        "chosen_source": "Codex",
+        "reason": "第十四章标题、概念从 P.212 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "没收财产",
+        "other_page": 206,
+        "codex_page": 204,
+        "chosen_page": 206,
+        "chosen_source": "other",
+        "reason": "没收财产细分标题在 P.206"
+      },
+      {
+        "book": "精讲",
+        "topic": "抢劫罪",
+        "other_page": 424,
+        "codex_page": 422,
+        "chosen_page": 422,
+        "chosen_source": "Codex",
+        "reason": "抢劫罪标题及四种类型从 P.422 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "死刑",
+        "other_page": 202,
+        "codex_page": 199,
+        "chosen_page": 202,
+        "chosen_source": "other",
+        "reason": "死刑细分标题在 P.202"
+      },
+      {
+        "book": "精讲",
+        "topic": "坦白",
+        "other_page": 221,
+        "codex_page": 228,
+        "chosen_page": 221,
+        "chosen_source": "other",
+        "reason": "自首与坦白一节从 P.221 开始；P.228 是立功"
+      },
+      {
+        "book": "精讲",
+        "topic": "特别累犯",
+        "other_page": 220,
+        "codex_page": 218,
+        "chosen_page": 220,
+        "chosen_source": "other",
+        "reason": "特别累犯细分标题在 P.220"
+      },
+      {
+        "book": "精讲",
+        "topic": "伪造货币罪",
+        "other_page": 335,
+        "codex_page": 333,
+        "chosen_page": 333,
+        "chosen_source": "Codex",
+        "reason": "罪名条文及构成特征从 P.333 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "无期徒刑",
+        "other_page": 201,
+        "codex_page": 199,
+        "chosen_page": 201,
+        "chosen_source": "other",
+        "reason": "无期徒刑细分标题在 P.201"
+      },
+      {
+        "book": "精讲",
+        "topic": "侮辱罪",
+        "other_page": 410,
+        "codex_page": 409,
+        "chosen_page": 409,
+        "chosen_source": "Codex",
+        "reason": "普通侮辱罪构成特征从 P.409 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "刑法的解释",
+        "other_page": 11,
+        "codex_page": 5,
+        "chosen_page": 11,
+        "chosen_source": "other",
+        "reason": "刑法解释细分标题在 P.11"
+      },
+      {
+        "book": "精讲",
+        "topic": "刑事责任",
+        "other_page": 191,
+        "codex_page": 190,
+        "chosen_page": 190,
+        "chosen_source": "Codex",
+        "reason": "第十二章概述、定义从 P.190 开始"
+      },
+      {
+        "book": "精讲",
+        "topic": "有期徒刑",
+        "other_page": 201,
+        "codex_page": 199,
+        "chosen_page": 201,
+        "chosen_source": "other",
+        "reason": "有期徒刑细分标题在 P.201"
+      }
+    ]
+  },
+  "catalog": {
+    "topics": 387,
+    "topics_with_both_books": 274
+  },
+  "merge": {
+    "other_question_links_used": 1284,
+    "other_spillover_records_skipped": 3
+  },
+  "notes": [
+    "2010 年法学卷第 21—25 题经原解析复核为民法题，未计入刑法库。",
+    "2022 年法学第 25 题涉及非法植入基因编辑、克隆胚胎罪；现有两本教材未检出该罪名。",
+    "网站只显示教材印刷页，不提供教材 PDF 或解析全文。"
+  ]
+}

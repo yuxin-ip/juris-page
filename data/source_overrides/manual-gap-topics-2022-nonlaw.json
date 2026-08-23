@@ -1,0 +1,33 @@
+{
+  "year": 2022,
+  "track": "非法学",
+  "subject": "刑法",
+  "note": "依据原卷 OCR 复核后补录的候选知识点；不收录题干或解析正文。",
+  "questions": [
+    {
+      "number": 4,
+      "type": "single",
+      "answer": "A",
+      "primary": ["行贿罪"]
+    },
+    {
+      "number": 19,
+      "type": "single",
+      "answer": "A",
+      "primary": ["拒不执行判决、裁定罪"]
+    },
+    {
+      "number": 20,
+      "type": "single",
+      "answer": "D",
+      "primary": ["食品、药品监管渎职罪"]
+    },
+    {
+      "number": 43,
+      "type": "multiple",
+      "answer": "ABCD",
+      "primary": ["刑法对刑事责任年龄的规定"],
+      "related": ["减刑", "假释", "剥夺政治权利"]
+    }
+  ]
+}

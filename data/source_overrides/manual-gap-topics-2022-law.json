@@ -1,0 +1,22 @@
+{
+  "year": 2022,
+  "track": "法学",
+  "subject": "刑法",
+  "note": "依据原卷 OCR 复核后补录的候选知识点；不收录题干或解析正文。",
+  "questions": [
+    {
+      "number": 8,
+      "type": "single",
+      "answer": "A",
+      "primary": ["刑法对刑事责任年龄的规定"],
+      "related": ["犯罪预备"]
+    },
+    {
+      "number": 10,
+      "type": "single",
+      "answer": "B",
+      "primary": ["正当防卫的成立条件"],
+      "related": ["防卫过当"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {"label":"犯罪的社会危害性","kind":"general_rule","printed_page":13,"pdf_page":19,"review_status":"candidate"},
+  {"label":"单位犯罪","kind":"general_rule","printed_page":22,"pdf_page":28,"review_status":"candidate"},
+  {"label":"违法所得的追缴","kind":"general_rule","printed_page":55,"pdf_page":61,"review_status":"candidate"},
+  {"label":"挪用公款罪","kind":"offense","printed_page":173,"pdf_page":179,"review_status":"candidate"},
+  {"label":"内幕交易、泄露内幕信息罪","kind":"offense","printed_page":114,"pdf_page":120,"review_status":"candidate"},
+  {"label":"虚开增值税专用发票、用于骗取出口退税、抵扣税款发票罪","kind":"offense","printed_page":119,"pdf_page":125,"review_status":"candidate"},
+  {"label":"行贿罪","kind":"offense","printed_page":176,"pdf_page":182,"review_status":"verified"},
+  {"label":"拒不执行判决、裁定罪","kind":"offense","printed_page":162,"pdf_page":168,"review_status":"candidate"},
+  {"label":"食品、药品监管渎职罪","kind":"offense","printed_page":179,"pdf_page":185,"review_status":"verified"}
+]

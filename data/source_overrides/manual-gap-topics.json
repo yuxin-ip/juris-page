@@ -1,0 +1,15 @@
+{
+  "year": 2021,
+  "track": "非法学",
+  "subject": "刑法",
+  "note": "基于题目解析补录的候选知识点；不收录题干或解析正文。",
+  "questions": [
+    {
+      "number": 19,
+      "type": "single",
+      "answer": "A",
+      "primary": ["共同犯罪的形式"],
+      "related": ["一般主体与特殊主体"]
+    }
+  ]
+}

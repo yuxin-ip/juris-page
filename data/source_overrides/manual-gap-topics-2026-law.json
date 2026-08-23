@@ -1,0 +1,14 @@
+{
+  "year": 2026,
+  "track": "法学",
+  "subject": "刑法",
+  "note": "基于本地真题补录的候选知识点；不收录题干或解析正文。",
+  "questions": [
+    {
+      "number": 10,
+      "type": "single",
+      "answer": "C",
+      "primary": ["违法所得的追缴"]
+    }
+  ]
+}
