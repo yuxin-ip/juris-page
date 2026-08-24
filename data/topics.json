@@ -1806,6 +1806,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 227,
+            "end": 227
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 249,
+            "end": 249
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -2399,6 +2416,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 226,
+            "end": 226
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 248,
+            "end": 248
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14880,6 +14914,49 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.刑法的形式",
+    "label": "刑法的形式",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 4,
+            "end": 4
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 10,
+            "end": 10
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 7,
+            "end": 7
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 29,
+            "end": 29
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },

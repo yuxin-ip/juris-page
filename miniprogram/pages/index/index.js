@@ -6,10 +6,14 @@ const TYPES = ['', 'single', 'multiple'];
 const SUBJECTS = ['', '刑法', '民法'];
 
 function availableGroups(subject) { return subject ? groups.filter((item) => item.subject === subject) : groups; }
-function categoryOptions(subject) { return ['全部门类'].concat(availableGroups(subject).map((item) => item.label)); }
+function categoryOptions(subject) {
+  const first = subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法部分' : '';
+  return [first].concat(availableGroups(subject).map((item) => item.label));
+}
 function allTopics(category, subject) {
   const selected = groups.find((item) => item.label === category);
-  return ['全部知识点'].concat(selected ? selected.topics : availableGroups(subject).flatMap((item) => item.topics));
+  const first = subject === '刑法' ? '具体罪名' : '具体知识点';
+  return [first].concat(selected ? selected.topics : availableGroups(subject).flatMap((item) => item.topics));
 }
 
 function termMatches(question, haystack, term) {
@@ -29,9 +33,9 @@ Page({
     trackOptions: ['全部', '非法学', '法学'],
     yearOptions: ['全部年份'].concat(years.map(String)),
     typeOptions: ['全部', '单选', '多选'],
-    subjectOptions: ['全部科目', '刑法', '民法'],
-    categoryOptions: categoryOptions(''),
-    topicOptions: allTopics('', ''), topicFilterTitle: '知识点筛选', categoryCaption: '知识门类', topicCaption: '具体知识点',
+    subjectOptions: ['全部', '刑法', '民法'],
+    categoryOptions: [],
+    topicOptions: [], topicFilterTitle: '', categoryCaption: '', topicCaption: '',
     items: [], visibleItems: [], resultText: '', endText: '', limit: 80,
     hasActiveFilter: false, hasMore: false, showEndHint: false,
   },
@@ -42,15 +46,15 @@ Page({
   onYearChange(event) { this.setData({ yearIndex: Number(event.detail.value) }, () => this.applyFilters()); },
   onTypeChange(event) { this.setData({ typeIndex: Number(event.detail.value) }, () => this.applyFilters()); },
 
-  onSubjectChange(event) {
-    const subjectIndex = Number(event.detail.value);
+  onSubjectTap(event) {
+    const subjectIndex = Number(event.currentTarget.dataset.index);
     const subject = SUBJECTS[subjectIndex];
     this.setData({
       subjectIndex, categoryIndex: 0, topicIndex: 0,
       categoryOptions: categoryOptions(subject), topicOptions: allTopics('', subject),
-      topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : subject === '民法' ? '民法编号知识点' : '知识点筛选',
-      categoryCaption: subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法部分' : '知识门类',
-      topicCaption: subject === '刑法' ? '具体罪名' : '具体知识点',
+      topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : subject === '民法' ? '民法编号知识点' : '',
+      categoryCaption: subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法部分' : '',
+      topicCaption: subject === '刑法' ? '具体罪名' : subject === '民法' ? '具体知识点' : '',
     }, () => this.applyFilters());
   },
 
@@ -69,8 +73,8 @@ Page({
   resetFilters() {
     this.setData({
       trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectIndex: 0, categoryIndex: 0, topicIndex: 0,
-      categoryOptions: categoryOptions(''), topicOptions: allTopics('', ''),
-      topicFilterTitle: '知识点筛选', categoryCaption: '知识门类', topicCaption: '具体知识点',
+      categoryOptions: [], topicOptions: [],
+      topicFilterTitle: '', categoryCaption: '', topicCaption: '',
     }, () => this.applyFilters());
   },
 

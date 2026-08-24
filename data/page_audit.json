@@ -5,15 +5,15 @@
       2010,
       2026
     ],
-    "questions": 675,
-    "mapped_questions": 675,
+    "questions": 680,
+    "mapped_questions": 680,
     "by_track": {
       "非法学": 425,
-      "法学": 250
+      "法学": 255
     },
     "other_site_questions_before_merge": 425,
     "missing_track_in_other_site": "法学",
-    "missing_questions_in_other_site": 250
+    "missing_questions_in_other_site": 255
   },
   "page_comparison": {
     "exact_label_disagreements": 22,
@@ -221,15 +221,15 @@
     ]
   },
   "catalog": {
-    "topics": 401,
-    "topics_with_both_books": 319
+    "topics": 402,
+    "topics_with_both_books": 322
   },
   "merge": {
     "other_question_links_used": 1284,
     "other_spillover_records_skipped": 3
   },
   "notes": [
-    "2010 年法学卷第 21—25 题经原解析复核为民法题，未计入刑法库。",
+    "2010 年法学卷采用特殊连续编号：刑法多选为第 11—15 题，已依据原卷补入。",
     "2022 年法学第 25 题涉及非法植入基因编辑、克隆胚胎罪；现有两本教材未检出该罪名。",
     "网站只显示教材印刷页，不提供教材 PDF 或解析全文。"
   ]

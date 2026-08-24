@@ -9,12 +9,13 @@
   </view>
   <input class="search" value="{{query}}" placeholder="搜索年份、题号、科目、考点或罪名" bindinput="onSearch" confirm-type="search" />
 
+  <view class="subject-panel"><text>科目</text><view class="subject-switch"><button wx:for="{{subjectOptions}}" wx:key="*this" data-index="{{index}}" bindtap="onSubjectTap" class="subject-button {{subjectIndex === index ? 'subject-active' : ''}}">{{item}}</button></view></view>
+
   <view class="filters {{hasActiveFilter ? 'filters-active' : ''}}">
     <picker mode="selector" range="{{trackOptions}}" value="{{trackIndex}}" bindchange="onTrackChange"><view class="filter"><text>类别 · 法学 / 非法学</text><text>{{trackOptions[trackIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{yearOptions}}" value="{{yearIndex}}" bindchange="onYearChange"><view class="filter"><text>年份</text><text>{{yearOptions[yearIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{typeOptions}}" value="{{typeIndex}}" bindchange="onTypeChange"><view class="filter"><text>题型 · 单选 / 多选</text><text>{{typeOptions[typeIndex]}} ›</text></view></picker>
-    <picker mode="selector" range="{{subjectOptions}}" value="{{subjectIndex}}" bindchange="onSubjectChange"><view class="filter"><text>科目 · 刑法 / 民法</text><text>{{subjectOptions[subjectIndex]}} ›</text></view></picker>
-    <view class="filter offense-filter"><text>{{topicFilterTitle}}</text><view class="offense-selects"><picker mode="selector" range="{{categoryOptions}}" value="{{categoryIndex}}" bindchange="onCategoryChange"><view class="offense-select"><text>{{categoryCaption}}</text><text>{{categoryOptions[categoryIndex]}} ›</text></view></picker><picker mode="selector" range="{{topicOptions}}" value="{{topicIndex}}" bindchange="onTopicChange"><view class="offense-select"><text>{{topicCaption}}</text><text>{{topicOptions[topicIndex]}} ›</text></view></picker></view></view>
+    <view wx:if="{{subjectIndex > 0}}" class="filter offense-filter"><text>{{topicFilterTitle}}</text><view class="offense-selects"><picker mode="selector" range="{{categoryOptions}}" value="{{categoryIndex}}" bindchange="onCategoryChange"><view class="offense-select"><text>{{categoryCaption}}</text><text>{{categoryOptions[categoryIndex]}} ›</text></view></picker><picker mode="selector" range="{{topicOptions}}" value="{{topicIndex}}" bindchange="onTopicChange"><view class="offense-select"><text>{{topicCaption}}</text><text>{{topicOptions[topicIndex]}} ›</text></view></picker></view></view>
   </view>
   <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view>
 

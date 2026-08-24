@@ -3,7 +3,9 @@
 
 The build deliberately keeps the two extraction results as sources:
 
-* questions.source.json / topics.source.json: 675-question, dual-track source.
+* questions.source.json / topics.source.json: the original dual-track source.
+* source_overrides/2010-law-criminal.json: five 2010 law multiple-choice
+  questions omitted by the original fixed-number parser.
 * dataset_xingfa_v1.json and index_*.json: the earlier 425-question non-law source.
 
 Question links are merged conservatively.  Page numbers use the printed page shown
@@ -93,6 +95,7 @@ PAGE_RESOLUTIONS = [
 # 《背诵一本通》中仅以章节/罪名表呈现的考点，使用能直接定位到该知识组的页码。
 # 这些页码尚未逐张渲染校对，因此保留为 candidate，而不标示为绿色“已核”圆点。
 SUPPLEMENTAL_PAGE_REFS = {
+    "刑法的形式": {"背诵": 4, "精讲": 7},
     "犯罪概念": {"背诵": 12},
     "刑法基本原则": {"背诵": 7, "精讲": 16},
     "属地管辖": {"背诵": 9},
@@ -101,6 +104,7 @@ SUPPLEMENTAL_PAGE_REFS = {
     "从旧兼从轻": {"精讲": 23},
     "刑法体系": {"背诵": 3, "精讲": 5},
     "刑事责任能力": {"背诵": 20},
+    "刑事责任的解决方式": {"精讲": 193},
     "精神病人": {"背诵": 21, "精讲": 67},
     "醉酒": {"背诵": 21},
     "事实认识错误": {"背诵": 28},
@@ -133,6 +137,8 @@ SUPPLEMENTAL_PAGE_REFS = {
     "徇私枉法罪": {"背诵": 180},
     "失职致使在押人员脱逃罪": {"背诵": 182, "精讲": 578},
     "国家工作人员的范围": {"精讲": 69},
+    "数罪自首的认定": {"精讲": 226},
+    "单位自首的认定": {"精讲": 227},
     "数罪并罚的原则": {"精讲": 232},
     "缓刑的法律后果": {"精讲": 236},
     "危害国家安全罪": {"精讲": 267},
@@ -293,6 +299,11 @@ MANUAL_QUESTION_TOPICS = {
 # 2024 非法学第 5 题考查的是罚金制度本身。题目选项的四类罚金不应被
 # 拆成四个没有独立索引价值的子考点，统一回到“罚金”。
 QUESTION_TOPIC_OVERRIDES = {
+    "2010-法学-刑法-11": ["刑法的形式"],
+    "2010-法学-刑法-12": ["故意犯罪的停止形态"],
+    "2010-法学-刑法-13": ["共同犯罪的形式"],
+    "2010-法学-刑法-14": ["刑事责任的解决方式"],
+    "2010-法学-刑法-15": ["自首", "特别自首", "数罪自首的认定", "单位自首的认定"],
     "2024-非法学-刑法-05": ["罚金"],
 }
 
@@ -324,6 +335,7 @@ def resolve_topic(label: str, by_norm: dict[str, list[dict]]):
 
 def build_questions(topic_by_norm):
     source_questions = load_json("questions.source.json")
+    source_questions.extend(load_json("source_overrides/2010-law-criminal.json"))
     other_questions = load_json("dataset_xingfa_v1.json")
     other_map = {item["id"]: item for item in other_questions}
 
@@ -583,7 +595,7 @@ def audit_payload(rows, topics, merge_stats):
         },
         "merge": dict(merge_stats),
         "notes": [
-            "2010 年法学卷第 21—25 题经原解析复核为民法题，未计入刑法库。",
+            "2010 年法学卷采用特殊连续编号：刑法多选为第 11—15 题，已依据原卷补入。",
             "2022 年法学第 25 题涉及非法植入基因编辑、克隆胚胎罪；现有两本教材未检出该罪名。",
             "网站只显示教材印刷页，不提供教材 PDF 或解析全文。",
         ],
@@ -602,7 +614,7 @@ HTML = r'''<!DOCTYPE html>
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}.wrap{width:min(980px,100%);margin:auto;padding:26px 18px 72px}.hero{margin-bottom:20px}.hero h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}.hero p{margin:0;color:var(--muted);font-size:14px}.controls{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);padding:12px 0 10px}.search-help{margin:0 0 7px;padding:8px 10px;border:1px solid #d9e5fa;border-radius:9px;background:#f8fbff;color:#4a5c78;font-size:12px}.search-help b{color:#274e8f}.search-help code{padding:1px 4px;border-radius:4px;background:#eaf1fd;color:#274e8f;font-family:inherit}.search{width:100%;height:46px;border:1px solid var(--line);border-radius:11px;background:#fff;padding:0 14px;font-size:15px;outline:none}.search:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #dbeafe}.filters{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:8px;margin-top:9px}.filters.active{padding:8px;border:1px solid #bfd3fb;border-radius:11px;background:var(--blue-soft)}.filter-group{display:grid;gap:3px;min-width:0}.filter-group span{padding-left:2px;color:var(--muted);font-size:11px;font-weight:650;line-height:1.2}select{width:100%;min-width:0;height:38px;border:1px solid var(--line);border-radius:9px;background:#fff;padding:0 10px;color:var(--text);font-size:13px}select.active{border-color:var(--blue);background:#e3edff;color:#17458a;font-weight:650}.filter-state{display:flex;align-items:center;gap:9px;margin-top:8px;padding:7px 9px;border:1px solid #bfd3fb;border-radius:9px;background:var(--blue-soft);color:#17458a;font-size:12px}.filter-state[hidden]{display:none}.reset-filters{margin-left:auto;border:1px solid #9dbbf2;border-radius:7px;background:#fff;color:#17458a;padding:4px 9px;font:inherit;font-weight:650;cursor:pointer;white-space:nowrap}.hot{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.hot button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:5px 10px;font-size:12px;cursor:pointer}.hot button.on{color:#fff;background:var(--blue);border-color:var(--blue)}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:13px 1px 10px;color:var(--muted);font-size:13px}.notice{background:#fff8e8;border:1px solid #f2d89a;border-radius:10px;padding:9px 12px;color:#7a4a00;font-size:12px;margin-bottom:12px}.list{display:grid;gap:11px}.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 16px;box-shadow:var(--shadow)}.head{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.qid{font-weight:750;color:var(--blue);font-size:15px}.badge{display:inline-flex;align-items:center;border-radius:6px;padding:2px 7px;font-size:11px;border:1px solid var(--line);color:var(--muted)}.badge.law{color:var(--law);border-color:#ddd0ff;background:#f6f1ff}.badge.nonlaw{color:var(--nonlaw);border-color:#bae3dd;background:#eefaf8}.primary{margin:8px 0 0;font-size:14px}.primary b{color:var(--blue)}.points{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.point{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;background:#fafbfc;padding:4px 8px;font-size:12px}.point.primary-point{background:var(--blue-soft);border-color:#cfe0ff}.point .name{font-weight:620}.page.bs{color:var(--teal);font-weight:650}.page.jj{color:var(--amber);font-weight:650}.page.missing{color:#98a2b3;font-weight:500}.verified{width:7px;height:7px;border-radius:50%;background:#22a06b;display:inline-block}.more,.load{border:1px solid var(--line);background:#fff;color:var(--blue);border-radius:8px;cursor:pointer}.more{font-size:12px;padding:4px 8px}.load{display:block;margin:18px auto 0;padding:9px 22px}.empty{text-align:center;padding:48px 10px;color:var(--muted)}footer{margin-top:28px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}footer p{margin:4px 0}.legend{display:flex;gap:14px;flex-wrap:wrap}.legend span{display:inline-flex;align-items:center;gap:5px}
 @media(max-width:680px){.wrap{padding:18px 14px 56px}.hero h1{font-size:22px}.filters{grid-template-columns:1fr 1fr}.filter-state{align-items:flex-start}.reset-filters{margin-left:0}.controls{padding-top:8px}.card{padding:14px}.point{width:100%;justify-content:flex-start}.hot{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px}.hot button{flex:none}.bar{align-items:flex-start;flex-direction:column;gap:2px}}
 /* Version 1.1: the two topic selectors stack vertically inside one filter slot. */
-.filters{grid-template-columns:1.15fr 1fr 1fr .85fr 1.3fr}.dual-select{display:grid;grid-template-columns:1fr;gap:5px}.dual-select span{padding:0}.end-hint{text-align:center;margin:18px auto 0;color:var(--muted);font-size:12px}
+.subject-panel{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:12px;margin-top:9px;padding:9px 10px;border:1px solid var(--line);border-radius:11px;background:#fff}.subject-panel>span{color:var(--muted);font-size:12px;font-weight:650}.subject-switch{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.subject-button{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#f8fafc;color:var(--text);font:inherit;font-size:13px;font-weight:650;cursor:pointer}.subject-button.active{border-color:var(--blue);background:var(--blue);color:#fff;box-shadow:0 2px 6px rgba(35,87,166,.2)}.filters{grid-template-columns:1.15fr 1fr 1fr 1.45fr}.dual-select{display:grid;grid-template-columns:1fr;gap:5px}.dual-select span{padding:0}.end-hint{text-align:center;margin:18px auto 0;color:var(--muted);font-size:12px}
 @media(max-width:680px){.filters{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -611,12 +623,13 @@ HTML = r'''<!DOCTYPE html>
 <section class="controls" aria-label="题目筛选">
 <div class="search-help"><b>搜索方法：</b>可单独输入年份、题号、科目、考点或罪名，例如 <code>2025</code>、<code>民法</code>、<code>诈骗罪</code>；也可用空格分隔组合筛选，例如 <code>2025 法学 抢劫罪</code>。输入 <code>202506</code> 可查看 2025 年第 6 题（法学、非法学同时显示）。</div>
 <input id="search" class="search" aria-label="搜索题目" placeholder="搜索年份、题号、科目、考点或罪名">
-<div class="filters" id="filters"><label class="filter-group"><span>类别 · 法学 / 非法学</span><select id="track" aria-label="考生类别"><option value="">全部</option><option value="非法学">非法学</option><option value="法学">法学</option></select></label><label class="filter-group"><span>年份</span><select id="year" aria-label="年份"><option value="">全部年份</option></select></label><label class="filter-group"><span>题型 · 单选 / 多选</span><select id="type" aria-label="题型"><option value="">全部</option><option value="single">单选</option><option value="multiple">多选</option></select></label><label class="filter-group"><span>科目</span><select id="subject" aria-label="科目"><option value="">全部科目</option><option value="刑法">刑法</option><option value="民法">民法</option></select></label><label class="filter-group"><span id="topicFilterTitle">知识点筛选</span><span class="dual-select"><select id="topicCategory" aria-label="知识门类"><option value="">知识门类</option></select><select id="topic" aria-label="具体知识点"><option value="">具体知识点</option></select></span></label></div><div class="filter-state" id="filterState" aria-live="polite" hidden><span>当前已启用筛选条件，搜索结果可能减少。</span><button id="resetFilters" class="reset-filters" type="button">重置筛选</button></div>
+<div class="subject-panel"><span>科目</span><div class="subject-switch" role="radiogroup" aria-label="科目筛选"><button class="subject-button active" type="button" data-subject="" role="radio" aria-checked="true">全部</button><button class="subject-button" type="button" data-subject="刑法" role="radio" aria-checked="false">刑法</button><button class="subject-button" type="button" data-subject="民法" role="radio" aria-checked="false">民法</button></div></div>
+<div class="filters" id="filters"><label class="filter-group"><span>类别 · 法学 / 非法学</span><select id="track" aria-label="考生类别"><option value="">全部</option><option value="非法学">非法学</option><option value="法学">法学</option></select></label><label class="filter-group"><span>年份</span><select id="year" aria-label="年份"><option value="">全部年份</option></select></label><label class="filter-group"><span>题型 · 单选 / 多选</span><select id="type" aria-label="题型"><option value="">全部</option><option value="single">单选</option><option value="multiple">多选</option></select></label><label class="filter-group" id="topicFilterGroup" hidden><span id="topicFilterTitle"></span><span class="dual-select"><select id="topicCategory"></select><select id="topic"></select></span></label></div><div class="filter-state" id="filterState" aria-live="polite" hidden><span>当前已启用筛选条件，搜索结果可能减少。</span><button id="resetFilters" class="reset-filters" type="button">重置筛选</button></div>
 </section>
 <div class="bar"><span id="stats"></span><span>页码均为纸质书页脚的印刷页</span></div>
 <div class="notice">提示：同一道题可关联多个罪名或知识点；民法仅收录《背诵一本通》中有编号、有标题的知识点。页码定位仍建议结合题目解析判断。</div>
 <section class="list" id="list" aria-live="polite"></section><button id="load" class="load" hidden>显示更多</button><div id="endHint" class="end-hint" aria-live="polite" hidden></div>
-<footer><div class="legend"><span>背 P. = 背诵一本通</span><span>精 P. = 精讲一本通</span></div><p>范围：2010—2026 年刑法、民法客观题，共 1355 道；2025、2026 两年均已收录。</p><p>本站不提供教材扫描件、真题题面或第三方解析全文。</p><p>版权所有 © 2026 郑宇昕。作者：南京理工大学知识产权学院 郑宇昕。</p></footer>
+<footer><div class="legend"><span>背 P. = 背诵一本通</span><span>精 P. = 精讲一本通</span></div><p>范围：2010—2026 年刑法、民法客观题，共 1360 道；2025、2026 两年均已收录。</p><p>本站不提供教材扫描件、真题题面或第三方解析全文。</p><p>版权所有 © 2026 郑宇昕。作者：南京理工大学知识产权学院 郑宇昕。</p></footer>
 </main><script>
 const DATA=__DATA__;const TOPIC_FILTERS=__TOPIC_FILTERS__;const PAGE_SIZE=80;let visible=PAGE_SIZE;const state={q:"",track:"",year:"",type:"",subject:"",topicCategory:"",topic:""};
 const $=s=>document.querySelector(s);const esc=s=>String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -626,16 +639,17 @@ function termMatches(x,hay,term){const yearQuestion=term.match(/^(20\d{2})(\d{1,
 function filtered(){const terms=state.q.trim().toLowerCase().split(/\s+/).filter(Boolean);const categoryTopics=new Set((TOPIC_FILTERS.find(x=>x.label===state.topicCategory)||{topics:[]}).topics);return DATA.filter(x=>{if(state.track&&x.track!==state.track)return false;if(state.year&&String(x.year)!==state.year)return false;if(state.type&&x.type!==state.type)return false;if(state.subject&&x.subject!==state.subject)return false;if(state.topicCategory&&!x.topics.some(t=>categoryTopics.has(t.label)))return false;if(state.topic&&!x.topics.some(t=>t.label===state.topic))return false;if(terms.length){const hay=[x.id,x.year,x.track,x.subject,x.number,x.primary_topic,...x.topics.map(t=>t.label)].join(" ").toLowerCase();if(!terms.every(term=>termMatches(x,hay,term)))return false}return true})}
 function pointHtml(t,index){return `<span class="point ${index===0?'primary-point':''}"><span class="name">${esc(t.label)}</span>${refHtml(t,'beisong','背','bs')}${refHtml(t,'jingjiang','精','jj')}</span>`}
 function cardHtml(x){const primary=x.primary_topic?`主考点：<b>${esc(x.primary_topic)}</b>`:'暂未识别主考点';const shown=x.topics.slice(0,6),hidden=x.topics.slice(6);return `<article class="card" data-id="${esc(x.id)}"><div class="head"><span class="qid">${x.year} · ${x.track} · ${x.subject} · 第 ${x.number} 题</span><span class="badge">${x.type==='single'?'单选':'多选'}</span></div><p class="primary">${primary}</p><div class="points">${shown.map(pointHtml).join('')}${hidden.length?`<button class="more" data-more="${esc(x.id)}">另 ${hidden.length} 个考点</button>`:''}</div><template>${hidden.map((t,i)=>pointHtml(t,i+shown.length)).join('')}</template></article>`}
-function syncFilterState(){const ids=['track','year','type','subject','topicCategory','topic'];const active=ids.some(id=>Boolean(state[id]));$('#filters').classList.toggle('active',active);$('#filterState').hidden=!active;for(const id of ids){$('#'+id).classList.toggle('active',Boolean(state[id]))}}
+function syncSubjectButtons(){document.querySelectorAll('[data-subject]').forEach(button=>{const active=button.dataset.subject===state.subject;button.classList.toggle('active',active);button.setAttribute('aria-checked',String(active))})}
+function syncFilterState(){const ids=['track','year','type','topicCategory','topic'];const active=Boolean(state.subject)||ids.some(id=>Boolean(state[id]));$('#filters').classList.toggle('active',active);$('#filterState').hidden=!active;for(const id of ids){$('#'+id).classList.toggle('active',Boolean(state[id]))}syncSubjectButtons()}
 function render(){const rows=filtered();const current=rows.slice(0,visible);const hasMore=rows.length>visible;syncFilterState();$('#stats').textContent=`找到 ${rows.length} 道题（法学 ${rows.filter(x=>x.track==='法学').length} · 非法学 ${rows.filter(x=>x.track==='非法学').length}）`;$('#list').innerHTML=current.length?current.map(cardHtml).join(''):'<div class="empty">没有匹配的题目</div>';$('#load').hidden=!hasMore;$('#endHint').hidden=rows.length===0||hasMore;$('#endHint').textContent=`没有更多内容了，已显示全部 ${rows.length} 道题。`}
 function resetRender(){visible=PAGE_SIZE;render()}
 for(let y=2026;y>=2010;y--){$('#year').insertAdjacentHTML('beforeend',`<option value="${y}">${y} 年</option>`)}
-function availableGroups(){return state.subject?TOPIC_FILTERS.filter(x=>x.subject===state.subject):TOPIC_FILTERS}
+function availableGroups(){return TOPIC_FILTERS.filter(x=>x.subject===state.subject)}
 function topicOptions(category){const item=TOPIC_FILTERS.find(x=>x.label===category);return item?item.topics:availableGroups().flatMap(x=>x.topics)}
-function captions(){return state.subject==='刑法'?['刑法分则罪名','犯罪类型','具体罪名']:state.subject==='民法'?['民法编号知识点','民法部分','具体知识点']:['知识点筛选','知识门类','具体知识点']}
-function fillTopicSelectors(){const groups=availableGroups(),labels=groups.map(x=>x.label);if(!labels.includes(state.topicCategory))state.topicCategory='';const [title,categoryLabel,topicLabel]=captions();$('#topicFilterTitle').textContent=title;$('#topicCategory').innerHTML=`<option value="">${categoryLabel}</option>`+groups.map(x=>`<option value="${esc(x.label)}">${esc(x.label)}</option>`).join('');$('#topicCategory').value=state.topicCategory;const options=topicOptions(state.topicCategory);if(!options.includes(state.topic))state.topic='';$('#topic').innerHTML=`<option value="">${topicLabel}</option>`+options.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');$('#topic').value=state.topic}
+function captions(){return state.subject==='刑法'?['刑法分则罪名','犯罪类型','具体罪名']:['民法编号知识点','民法部分','具体知识点']}
+function fillTopicSelectors(){const group=$('#topicFilterGroup');if(!state.subject){state.topicCategory='';state.topic='';group.hidden=true;return}group.hidden=false;const groups=availableGroups(),labels=groups.map(x=>x.label);if(!labels.includes(state.topicCategory))state.topicCategory='';const [title,categoryLabel,topicLabel]=captions();$('#topicFilterTitle').textContent=title;$('#topicCategory').setAttribute('aria-label',categoryLabel);$('#topic').setAttribute('aria-label',topicLabel);$('#topicCategory').innerHTML=`<option value="">${categoryLabel}</option>`+groups.map(x=>`<option value="${esc(x.label)}">${esc(x.label)}</option>`).join('');$('#topicCategory').value=state.topicCategory;const options=topicOptions(state.topicCategory);if(!options.includes(state.topic))state.topic='';$('#topic').innerHTML=`<option value="">${topicLabel}</option>`+options.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');$('#topic').value=state.topic}
 fillTopicSelectors();
-$('#search').addEventListener('input',e=>{state.q=e.target.value;resetRender()});for(const id of ['track','year','type','topic']){$('#'+id).addEventListener('change',e=>{state[id]=e.target.value;resetRender()})}$('#subject').addEventListener('change',e=>{state.subject=e.target.value;fillTopicSelectors();resetRender()});$('#topicCategory').addEventListener('change',e=>{state.topicCategory=e.target.value;fillTopicSelectors();resetRender()});$('#resetFilters').addEventListener('click',()=>{for(const id of ['track','year','type','subject','topicCategory','topic'])state[id]='';for(const id of ['track','year','type','subject'])$('#'+id).value='';fillTopicSelectors();resetRender()});
+$('#search').addEventListener('input',e=>{state.q=e.target.value;resetRender()});for(const id of ['track','year','type','topic']){$('#'+id).addEventListener('change',e=>{state[id]=e.target.value;resetRender()})}document.querySelectorAll('[data-subject]').forEach(button=>button.addEventListener('click',()=>{state.subject=button.dataset.subject;state.topicCategory='';state.topic='';fillTopicSelectors();resetRender()}));$('#topicCategory').addEventListener('change',e=>{state.topicCategory=e.target.value;fillTopicSelectors();resetRender()});$('#resetFilters').addEventListener('click',()=>{for(const id of ['track','year','type','subject','topicCategory','topic'])state[id]='';for(const id of ['track','year','type'])$('#'+id).value='';fillTopicSelectors();resetRender()});
 $('#list').addEventListener('click',e=>{const b=e.target.closest('[data-more]');if(!b)return;const card=b.closest('.card'),tpl=card.querySelector('template');b.insertAdjacentHTML('beforebegin',tpl.innerHTML);b.remove()});$('#load').addEventListener('click',()=>{visible+=PAGE_SIZE;render()});render();
 </script></body></html>'''
 

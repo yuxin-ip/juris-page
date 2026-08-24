@@ -13,10 +13,10 @@ rows = payload["questions"]
 topic_filters = json.loads((ROOT / "data" / "topic_filters.json").read_text(encoding="utf-8"))
 offense_filters = json.loads((ROOT / "data" / "offense_filters.json").read_text(encoding="utf-8"))
 
-assert len(rows) == 1355, f"expected 1355 questions, got {len(rows)}"
-assert len({row["id"] for row in rows}) == 1355, "question IDs must be unique"
-assert Counter(row["track"] for row in rows) == {"法学": 505, "非法学": 850}
-assert Counter(row["subject"] for row in rows) == {"刑法": 675, "民法": 680}
+assert len(rows) == 1360, f"expected 1360 questions, got {len(rows)}"
+assert len({row["id"] for row in rows}) == 1360, "question IDs must be unique"
+assert Counter(row["track"] for row in rows) == {"法学": 510, "非法学": 850}
+assert Counter(row["subject"] for row in rows) == {"刑法": 680, "民法": 680}
 assert {row["year"] for row in rows} == set(range(2010, 2027))
 assert all(
     any(row["year"] == year and row["track"] == track and row["subject"] == subject for row in rows)
@@ -48,9 +48,18 @@ assert "法硕刑民法真题" in html
 assert "2010—2026" in html and "法学 + 非法学" in html
 assert '<select id="track" aria-label="考生类别"><option value="">全部</option>' in html
 assert '<select id="type" aria-label="题型"><option value="">全部</option>' in html
-assert '<select id="subject" aria-label="科目">' in html
-assert 'id="topicCategory" aria-label="知识门类"' in html
-assert 'id="topic" aria-label="具体知识点"' in html
+assert 'class="subject-switch" role="radiogroup"' in html
+assert 'data-subject="刑法"' in html and 'data-subject="民法"' in html
+assert '<select id="subject"' not in html
+assert 'id="topicCategory"' in html
+assert 'id="topic"' in html
+assert "setAttribute('aria-label',categoryLabel)" in html
+assert "setAttribute('aria-label',topicLabel)" in html
+assert 'id="topicFilterGroup" hidden' in html
+assert "Boolean(state.subject)||" in html
+assert "['刑法分则罪名','犯罪类型','具体罪名']" in html
+assert "['民法编号知识点','民法部分','具体知识点']" in html
+assert "知识门类" not in html
 assert "科目、考点或罪名" in html
 assert 'placeholder="搜索年份、题号、科目、考点或罪名"' in html
 assert 'id="pageState"' not in html
@@ -64,6 +73,15 @@ assert "没有更多内容了，已显示全部" in html
 assert 'class="summary"' not in html
 assert "const DATA=" in html and "const TOPIC_FILTERS=" in html
 assert root_html == html, "root GitHub Pages entry must match web/index.html"
+
+missing_2010 = [f"2010-法学-刑法-{number:02d}" for number in range(11, 16)]
+by_id = {row["id"]: row for row in rows}
+assert all(question_id in by_id for question_id in missing_2010)
+assert all(by_id[question_id]["type"] == "multiple" for question_id in missing_2010)
+assert all(
+    topic["references"].get("beisong") and topic["references"].get("jingjiang")
+    for question_id in missing_2010 for topic in by_id[question_id]["topics"]
+)
 
 expected_categories = [
     "危害国家安全罪", "危害公共安全罪", "破坏社会主义市场经济秩序罪",
