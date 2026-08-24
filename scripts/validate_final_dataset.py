@@ -48,7 +48,7 @@ assert "法硕刑民法真题" in html
 assert "2010—2026" in html and "法学 + 非法学" in html
 assert '<select id="track" aria-label="考生类别"><option value="">全部</option>' in html
 assert '<select id="type" aria-label="题型"><option value="">全部</option>' in html
-assert 'class="subject-switch" role="radiogroup"' in html
+assert 'class="subject-switch" aria-label="科目筛选"' in html
 assert 'data-subject="刑法"' in html and 'data-subject="民法"' in html
 assert 'data-subject=""' not in html
 assert '<select id="subject"' not in html
@@ -56,8 +56,10 @@ assert 'id="topicCategory"' in html
 assert 'id="topic"' in html
 assert "setAttribute('aria-label',categoryLabel)" in html
 assert "setAttribute('aria-label',topicLabel)" in html
-assert 'id="topicFilterGroup"' in html and 'id="topicFilterTitle"' in html
-assert "Boolean(state.subject)||" in html
+assert 'id="topicFilterGroup" hidden' in html and 'id="topicFilterTitle"' in html
+assert "subjects:[]" in html and "state.subjects.length===1" in html
+assert "state.subjects=[]" in html
+assert "subjectPanel').classList.toggle('active',Boolean(singleSubject()))" in html
 assert "['刑法分则罪名','犯罪类型','具体罪名']" in html
 assert "['民法编号知识点','民法典全部七编','具体知识点']" in html
 assert "民法部分" not in html

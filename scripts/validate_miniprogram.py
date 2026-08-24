@@ -44,7 +44,10 @@ def main():
     assert 'class="subject-switch"' in wxml and 'bindtap="onSubjectTap"' in wxml
     assert "subjectOptions: ['刑法', '民法']" in index_js
     assert "subjectOptions: ['全部', '刑法', '民法']" not in index_js
-    assert 'wx:if="{{subjectIndex > 0}}"' not in wxml
+    assert "subjectSelected: [false, false]" in index_js
+    assert "subjectIndex" not in index_js and "subjectIndex" not in wxml
+    assert 'wx:if="{{showTopicFilters}}"' in wxml
+    assert "subjectPanelActive" in wxml and "subjectPanelActive" in index_js
     assert "topicFilterTitle" in wxml and "topicFilterTitle" in index_js
     assert "categoryCaption" not in wxml and "categoryCaption" not in index_js
     assert "topicCaption" not in wxml and "topicCaption" not in index_js
@@ -56,6 +59,7 @@ def main():
     assert ".subject-switch{display:flex;" in wxss
     assert ".subject-button{flex:1 1 0;width:0;min-width:0;" in wxss
     assert ".subject-panel" in wxss and "overflow:hidden" in wxss
+    assert ".subject-panel-active{border-color:#bfd3fb;background:#eef4ff}" in wxss
     assert "{{question.track}} · {{question.subject}} · 第" in card
     config = json.loads((PROGRAM / "project.config.json").read_text(encoding="utf-8"))
     assert config["miniprogramRoot"] == "./"

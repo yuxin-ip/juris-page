@@ -5,6 +5,15 @@ const TRACKS = ['', '非法学', '法学'];
 const TYPES = ['', 'single', 'multiple'];
 const SUBJECTS = ['刑法', '民法'];
 
+function selectedSubjects(selected) {
+  return SUBJECTS.filter((_subject, index) => selected[index]);
+}
+
+function singleSubject(selected) {
+  const subjects = selectedSubjects(selected);
+  return subjects.length === 1 ? subjects[0] : '';
+}
+
 function availableGroups(subject) { return subject ? groups.filter((item) => item.subject === subject) : groups; }
 function categoryOptions(subject) {
   const first = subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法典全部七编' : '';
@@ -29,15 +38,14 @@ function termMatches(question, haystack, term) {
 
 Page({
   data: {
-    query: '', trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectIndex: 0, categoryIndex: 0, topicIndex: 0,
+    query: '', trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectSelected: [false, false], categoryIndex: 0, topicIndex: 0,
     trackOptions: ['全部', '非法学', '法学'],
     yearOptions: ['全部年份'].concat(years.map(String)),
     typeOptions: ['全部', '单选', '多选'],
     subjectOptions: ['刑法', '民法'],
-    categoryOptions: categoryOptions('刑法'),
-    topicOptions: allTopics('', '刑法'), topicFilterTitle: '刑法分则罪名',
+    categoryOptions: [], topicOptions: [], topicFilterTitle: '',
     items: [], visibleItems: [], resultText: '', endText: '', limit: 80,
-    hasActiveFilter: false, hasMore: false, showEndHint: false,
+    hasActiveFilter: false, subjectPanelActive: false, showTopicFilters: false, hasMore: false, showEndHint: false,
   },
 
   onLoad() { this.allQuestions = loadAllQuestions(); this.applyFilters(); },
@@ -47,19 +55,22 @@ Page({
   onTypeChange(event) { this.setData({ typeIndex: Number(event.detail.value) }, () => this.applyFilters()); },
 
   onSubjectTap(event) {
-    const subjectIndex = Number(event.currentTarget.dataset.index);
-    const subject = SUBJECTS[subjectIndex];
+    const index = Number(event.currentTarget.dataset.index);
+    const subjectSelected = this.data.subjectSelected.slice();
+    subjectSelected[index] = !subjectSelected[index];
+    const subject = singleSubject(subjectSelected);
     this.setData({
-      subjectIndex, categoryIndex: 0, topicIndex: 0,
-      categoryOptions: categoryOptions(subject), topicOptions: allTopics('', subject),
-      topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : '民法编号知识点',
+      subjectSelected, categoryIndex: 0, topicIndex: 0,
+      categoryOptions: subject ? categoryOptions(subject) : [], topicOptions: subject ? allTopics('', subject) : [],
+      topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : subject === '民法' ? '民法编号知识点' : '',
+      subjectPanelActive: Boolean(subject), showTopicFilters: Boolean(subject),
     }, () => this.applyFilters());
   },
 
   onCategoryChange(event) {
     const categoryIndex = Number(event.detail.value);
     const category = this.data.categoryOptions[categoryIndex];
-    const subject = SUBJECTS[this.data.subjectIndex];
+    const subject = singleSubject(this.data.subjectSelected);
     this.setData({
       categoryIndex, topicIndex: 0,
       topicOptions: allTopics(categoryIndex ? category : '', subject),
@@ -70,9 +81,9 @@ Page({
 
   resetFilters() {
     this.setData({
-      trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectIndex: 0, categoryIndex: 0, topicIndex: 0,
-      categoryOptions: categoryOptions('刑法'), topicOptions: allTopics('', '刑法'),
-      topicFilterTitle: '刑法分则罪名',
+      trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectSelected: [false, false], categoryIndex: 0, topicIndex: 0,
+      categoryOptions: [], topicOptions: [], topicFilterTitle: '',
+      subjectPanelActive: false, showTopicFilters: false,
     }, () => this.applyFilters());
   },
 
@@ -80,11 +91,11 @@ Page({
   goAbout() { wx.navigateTo({ url: '/pages/about/about' }); },
 
   applyFilters(resetLimit = true) {
-    const { query, trackIndex, yearIndex, typeIndex, subjectIndex, categoryIndex, topicIndex, categoryOptions, topicOptions } = this.data;
+    const { query, trackIndex, yearIndex, typeIndex, subjectSelected, categoryIndex, topicIndex, categoryOptions, topicOptions } = this.data;
     const track = TRACKS[trackIndex];
     const year = yearIndex ? Number(years[yearIndex - 1]) : 0;
     const type = TYPES[typeIndex];
-    const subject = SUBJECTS[subjectIndex];
+    const subject = singleSubject(subjectSelected);
     const category = categoryIndex ? categoryOptions[categoryIndex] : '';
     const topic = topicIndex ? topicOptions[topicIndex] : '';
     const categoryTopics = new Set((groups.find((item) => item.label === category) || { topics: [] }).topics);
