@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTitleText": "法硕刑法页码速查",
+    "navigationBarBackgroundColor": "#f3f5f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f3f5f8",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "question-card": "/components/question-card/question-card"
+  }
+}

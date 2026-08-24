@@ -1,0 +1,5 @@
+<view class="page">
+  <view class="card"><view class="title">法硕刑法真题 · 教材页码速查</view><view>收录 2010—2026 年法学、非法学刑法客观题，共 675 道，关联众合 2027《背诵一本通》《精讲一本通》的纸质书印刷页。</view></view>
+  <view class="card"><view class="section">使用说明</view><view>可按关键词、年份、考生类别与题型筛选。同一道题可能关联多个罪名或刑法总则考点。</view><view class="space">绿色圆点表示该页已对照教材页面核验；未标圆点的页码为 OCR 或目录定位结果，建议结合题目解析使用。</view></view>
+  <view class="card"><view class="section">版权说明</view><view>本站不提供教材扫描件、真题题面或第三方解析全文。</view><view class="space">版权所有 © 2026 郑宇昕</view><view>作者：南京理工大学知识产权学院 郑宇昕</view></view>
+</view>

@@ -1,0 +1,4 @@
+{
+  "desc": "法硕刑法真题页码速查",
+  "rules": [{ "action": "allow", "page": "*" }]
+}

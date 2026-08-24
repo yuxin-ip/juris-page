@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="hero">
+    <view class="title-row"><text class="title">法硕刑法真题 · 页码速查</text><text class="about" bindtap="goAbout">说明</text></view>
+    <text class="subtitle">2010—2026 · 法学 + 非法学 · 众合 2027 刑法教材</text>
+  </view>
+
+  <view class="search-help">
+    <text class="help-title">搜索方法：</text>可单独输入年份、题号、考点或罪名，例如 2025、诈骗罪；也可用空格分隔组合筛选，例如 2025 法学 抢劫罪。输入 202506 可同时查看两类试卷的第 6 题。
+  </view>
+  <input class="search" value="{{query}}" placeholder="搜索年份、题号、考点或罪名" bindinput="onSearch" confirm-type="search" />
+
+  <view class="filters {{hasActiveFilter ? 'filters-active' : ''}}">
+    <picker mode="selector" range="{{trackOptions}}" value="{{trackIndex}}" bindchange="onTrackChange"><view class="filter"><text>类别 · 法学 / 非法学</text><text>{{trackOptions[trackIndex]}} ›</text></view></picker>
+    <picker mode="selector" range="{{yearOptions}}" value="{{yearIndex}}" bindchange="onYearChange"><view class="filter"><text>年份</text><text>{{yearOptions[yearIndex]}} ›</text></view></picker>
+    <picker mode="selector" range="{{typeOptions}}" value="{{typeIndex}}" bindchange="onTypeChange"><view class="filter"><text>题型 · 单选 / 多选</text><text>{{typeOptions[typeIndex]}} ›</text></view></picker>
+  </view>
+  <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view>
+
+  <view class="bar"><text>{{resultText}}</text><text>页码为纸质书印刷页</text></view>
+  <view wx:if="{{visibleItems.length}}"><question-card wx:for="{{visibleItems}}" wx:key="id" question="{{item}}" /></view>
+  <view wx:else class="empty">没有匹配的题目</view>
+  <button wx:if="{{items.length > visibleItems.length}}" class="load-more" bindtap="showMore">显示更多</button>
+
+  <view class="notice">同一道题可关联多个罪名或总则考点。绿色圆点表示该页已经过教材页面核验；其余页码为待进一步逐页核验的候选定位。</view>
+  <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>
+</view>

@@ -1,0 +1,19 @@
+{
+  "description": "法硕刑法真题 · 教材页码速查",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "compileHotReLoad": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.7.12",
+  "appid": "touristappid",
+  "projectname": "法硕刑法真题页码速查",
+  "miniprogramRoot": "./"
+}

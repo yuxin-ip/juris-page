@@ -1,0 +1,20 @@
+<view class="card">
+  <view class="head">
+    <text class="qid">{{question.year}} · 第 {{question.number}} 题</text>
+    <text class="badge {{question.track === '法学' ? 'law' : 'nonlaw'}}">{{question.track}}</text>
+    <text class="badge">{{question.type === 'single' ? '单选' : '多选'}}</text>
+  </view>
+  <view class="primary">主考点：<text>{{question.primary_topic || '暂未识别主考点'}}</text></view>
+  <view class="points">
+    <block wx:for="{{question.topics}}" wx:key="label">
+      <view class="point" wx:if="{{index < 6 || expanded}}">
+        <text class="topic-name">{{item.label}}</text>
+        <text class="page bs">背 P.{{item.references.beisong ? item.references.beisong.pages[0][0] : '—'}}</text>
+        <text class="page jj">精 P.{{item.references.jingjiang ? item.references.jingjiang.pages[0][0] : '—'}}</text>
+        <text class="verified" wx:if="{{item.references.beisong && item.references.beisong.status === 'verified'}}">●</text>
+        <text class="verified" wx:if="{{item.references.jingjiang && item.references.jingjiang.status === 'verified'}}">●</text>
+      </view>
+    </block>
+  </view>
+  <button wx:if="{{question.topics.length > 6}}" class="more" bindtap="toggleMore">{{expanded ? '收起考点' : '显示其余 ' + (question.topics.length - 6) + ' 个考点'}}</button>
+</view>

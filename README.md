@@ -18,6 +18,18 @@ python scripts/validate_final_dataset.py
 
 部署入口是仓库根目录的 `index.html`；在 GitHub Pages 中选择 **Deploy from a branch → main / root** 即可。`web/index.html` 是同内容的本地预览副本。
 
+## 微信小程序
+
+`miniprogram/` 是不依赖后端的原生微信小程序版本，保留搜索、三项筛选、双类别试卷与教材印刷页码展示。
+
+```powershell
+python scripts/build_final_site.py
+python scripts/build_miniprogram_data.py
+python scripts/validate_miniprogram.py
+```
+
+然后以 `miniprogram/` 为目录导入微信开发者工具，并在 `miniprogram/project.config.json` 中把 `appid` 替换为你的小程序 AppID。发布前请在真机预览中检查搜索、筛选和长列表。
+
 主要文件：
 
 - `data/site_dataset.json`：网页使用的双类别数据集。
