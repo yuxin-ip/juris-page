@@ -53,7 +53,9 @@ def main():
     assert "'民法部分'" not in index_js
     assert "知识门类" not in index_js and "全部门类" not in index_js
     assert ".offense-selects{display:grid;grid-template-columns:1fr;" in wxss
-    assert "grid-template-columns:repeat(2,minmax(0,1fr))" in wxss
+    assert ".subject-switch{display:flex;" in wxss
+    assert ".subject-button{flex:1 1 0;width:0;min-width:0;" in wxss
+    assert ".subject-panel" in wxss and "overflow:hidden" in wxss
     assert "{{question.track}} · {{question.subject}} · 第" in card
     config = json.loads((PROGRAM / "project.config.json").read_text(encoding="utf-8"))
     assert config["miniprogramRoot"] == "./"
