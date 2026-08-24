@@ -13,13 +13,15 @@
     <picker mode="selector" range="{{trackOptions}}" value="{{trackIndex}}" bindchange="onTrackChange"><view class="filter"><text>类别 · 法学 / 非法学</text><text>{{trackOptions[trackIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{yearOptions}}" value="{{yearIndex}}" bindchange="onYearChange"><view class="filter"><text>年份</text><text>{{yearOptions[yearIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{typeOptions}}" value="{{typeIndex}}" bindchange="onTypeChange"><view class="filter"><text>题型 · 单选 / 多选</text><text>{{typeOptions[typeIndex]}} ›</text></view></picker>
+    <view class="filter offense-filter"><text>刑法分则罪名</text><view class="offense-selects"><picker mode="selector" range="{{categoryOptions}}" value="{{categoryIndex}}" bindchange="onCategoryChange"><view class="offense-select"><text>犯罪类型</text><text>{{categoryOptions[categoryIndex]}} ›</text></view></picker><picker mode="selector" range="{{offenseOptions}}" value="{{offenseIndex}}" bindchange="onOffenseChange"><view class="offense-select"><text>具体罪名</text><text>{{offenseOptions[offenseIndex]}} ›</text></view></picker></view></view>
   </view>
   <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view>
 
   <view class="bar"><text>{{resultText}}</text><text>页码为纸质书印刷页</text></view>
   <view wx:if="{{visibleItems.length}}"><question-card wx:for="{{visibleItems}}" wx:key="id" question="{{item}}" /></view>
   <view wx:else class="empty">没有匹配的题目</view>
-  <button wx:if="{{items.length > visibleItems.length}}" class="load-more" bindtap="showMore">显示更多</button>
+  <button wx:if="{{hasMore}}" class="load-more" bindtap="showMore">显示更多</button>
+  <view wx:if="{{showEndHint}}" class="end-hint">{{endText}}</view>
 
   <view class="notice">同一道题可关联多个罪名或总则考点。绿色圆点表示该页已经过教材页面核验；其余页码为待进一步逐页核验的候选定位。</view>
   <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>

@@ -29,6 +29,19 @@ def main():
     assert (PROGRAM / "pages" / "index" / "index.wxml").exists()
     index_js = (PROGRAM / "pages" / "index" / "index.js").read_text(encoding="utf-8")
     assert "termMatches" in index_js and "loadAllQuestions" in index_js
+    assert "onCategoryChange" in index_js and "onOffenseChange" in index_js
+    assert "showEndHint" in index_js and "hasMore" in index_js
+    offense_filters = read_js_data(PROGRAM / "data" / "offense-filters.js")["categories"]
+    assert [item["label"] for item in offense_filters] == [
+        "危害国家安全罪", "危害公共安全罪", "破坏社会主义市场经济秩序罪",
+        "侵犯公民人身权利、民主权利罪", "侵犯财产罪", "妨害社会管理秩序罪",
+        "贪污贿赂罪", "渎职罪",
+    ]
+    appearing_offenses = {
+        topic["label"] for question in questions for topic in question["topics"]
+        if topic["kind"] == "offense" and topic["label"].endswith("罪")
+    }
+    assert all(set(item["offenses"]) <= appearing_offenses for item in offense_filters)
     config = json.loads((PROGRAM / "project.config.json").read_text(encoding="utf-8"))
     assert config["miniprogramRoot"] == "./"
     print(f"Valid Mini Program: {len(questions)} questions, {len(modules)} year modules")

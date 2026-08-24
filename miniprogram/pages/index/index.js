@@ -1,7 +1,14 @@
 const { years, loadAllQuestions } = require('../../data/loaders.js');
+const { categories } = require('../../data/offense-filters.js');
 
 const TRACKS = ['', '非法学', '法学'];
 const TYPES = ['', 'single', 'multiple'];
+const CATEGORY_OPTIONS = ['全部类型'].concat(categories.map((category) => category.label));
+
+function allOffenses(category) {
+  const selected = categories.find((item) => item.label === category);
+  return ['全部罪名'].concat(selected ? selected.offenses : categories.flatMap((item) => item.offenses));
+}
 
 function termMatches(question, haystack, term) {
   const yearQuestion = term.match(/^(20\d{2})(\d{1,2})$/);
@@ -15,63 +22,58 @@ function termMatches(question, haystack, term) {
 
 Page({
   data: {
-    query: '',
-    trackIndex: 0,
-    yearIndex: 0,
-    typeIndex: 0,
+    query: '', trackIndex: 0, yearIndex: 0, typeIndex: 0, categoryIndex: 0, offenseIndex: 0,
     trackOptions: ['全部', '非法学', '法学'],
     yearOptions: ['全部年份'].concat(years.map(String)),
     typeOptions: ['全部', '单选', '多选'],
-    items: [],
-    visibleItems: [],
-    resultText: '',
-    limit: 80,
-    hasActiveFilter: false,
+    categoryOptions: CATEGORY_OPTIONS,
+    offenseOptions: allOffenses(''),
+    items: [], visibleItems: [], resultText: '', endText: '', limit: 80,
+    hasActiveFilter: false, hasMore: false, showEndHint: false,
   },
 
-  onLoad() {
-    this.allQuestions = loadAllQuestions();
-    this.applyFilters();
+  onLoad() { this.allQuestions = loadAllQuestions(); this.applyFilters(); },
+  onSearch(event) { this.setData({ query: event.detail.value }, () => this.applyFilters()); },
+  onTrackChange(event) { this.setData({ trackIndex: Number(event.detail.value) }, () => this.applyFilters()); },
+  onYearChange(event) { this.setData({ yearIndex: Number(event.detail.value) }, () => this.applyFilters()); },
+  onTypeChange(event) { this.setData({ typeIndex: Number(event.detail.value) }, () => this.applyFilters()); },
+
+  onCategoryChange(event) {
+    const categoryIndex = Number(event.detail.value);
+    const category = CATEGORY_OPTIONS[categoryIndex];
+    this.setData({
+      categoryIndex, offenseIndex: 0,
+      offenseOptions: allOffenses(categoryIndex ? category : ''),
+    }, () => this.applyFilters());
   },
 
-  onSearch(event) {
-    this.setData({ query: event.detail.value }, () => this.applyFilters());
-  },
-
-  onTrackChange(event) {
-    this.setData({ trackIndex: Number(event.detail.value) }, () => this.applyFilters());
-  },
-
-  onYearChange(event) {
-    this.setData({ yearIndex: Number(event.detail.value) }, () => this.applyFilters());
-  },
-
-  onTypeChange(event) {
-    this.setData({ typeIndex: Number(event.detail.value) }, () => this.applyFilters());
-  },
+  onOffenseChange(event) { this.setData({ offenseIndex: Number(event.detail.value) }, () => this.applyFilters()); },
 
   resetFilters() {
-    this.setData({ trackIndex: 0, yearIndex: 0, typeIndex: 0 }, () => this.applyFilters());
+    this.setData({
+      trackIndex: 0, yearIndex: 0, typeIndex: 0, categoryIndex: 0, offenseIndex: 0,
+      offenseOptions: allOffenses(''),
+    }, () => this.applyFilters());
   },
 
-  showMore() {
-    this.setData({ limit: this.data.limit + 80 }, () => this.applyFilters(false));
-  },
-
-  goAbout() {
-    wx.navigateTo({ url: '/pages/about/about' });
-  },
+  showMore() { this.setData({ limit: this.data.limit + 80 }, () => this.applyFilters(false)); },
+  goAbout() { wx.navigateTo({ url: '/pages/about/about' }); },
 
   applyFilters(resetLimit = true) {
-    const { query, trackIndex, yearIndex, typeIndex } = this.data;
+    const { query, trackIndex, yearIndex, typeIndex, categoryIndex, offenseIndex, offenseOptions } = this.data;
     const track = TRACKS[trackIndex];
     const year = yearIndex ? Number(years[yearIndex - 1]) : 0;
     const type = TYPES[typeIndex];
+    const category = categoryIndex ? CATEGORY_OPTIONS[categoryIndex] : '';
+    const offense = offenseIndex ? offenseOptions[offenseIndex] : '';
+    const categoryOffenses = new Set((categories.find((item) => item.label === category) || { offenses: [] }).offenses);
     const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
     const items = this.allQuestions.filter((question) => {
       if (track && question.track !== track) return false;
       if (year && question.year !== year) return false;
       if (type && question.type !== type) return false;
+      if (category && !question.topics.some((topic) => categoryOffenses.has(topic.label))) return false;
+      if (offense && !question.topics.some((topic) => topic.label === offense)) return false;
       const haystack = [question.id, question.year, question.track, question.number, question.primary_topic]
         .concat(question.topics.map((topic) => topic.label)).join(' ').toLowerCase();
       return terms.every((term) => termMatches(question, haystack, term));
@@ -79,11 +81,12 @@ Page({
     const limit = resetLimit ? 80 : this.data.limit;
     const lawCount = items.filter((item) => item.track === '法学').length;
     const nonlawCount = items.length - lawCount;
+    const hasMore = items.length > limit;
     this.setData({
-      items,
-      visibleItems: items.slice(0, limit),
-      limit,
-      hasActiveFilter: Boolean(track || year || type),
+      items, visibleItems: items.slice(0, limit), limit, hasMore,
+      showEndHint: items.length > 0 && !hasMore,
+      endText: `没有更多内容了，已显示全部 ${items.length} 道题。`,
+      hasActiveFilter: Boolean(track || year || type || category || offense),
       resultText: `找到 ${items.length} 道题（法学 ${lawCount} · 非法学 ${nonlawCount}）`,
     });
   }

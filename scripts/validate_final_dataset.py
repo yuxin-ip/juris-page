@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 payload = json.loads((ROOT / "data" / "site_dataset.json").read_text(encoding="utf-8"))
 rows = payload["questions"]
+offense_filters = json.loads((ROOT / "data" / "offense_filters.json").read_text(encoding="utf-8"))
 
 assert len(rows) == 675, f"expected 675 questions, got {len(rows)}"
 assert len({row["id"] for row in rows}) == 675, "question IDs must be unique"
@@ -52,8 +53,27 @@ assert "x.track===term" in html
 assert 'id="resetFilters"' in html
 assert "当前已启用筛选条件，搜索结果可能减少。" in html
 assert "南京理工大学知识产权学院 郑宇昕" in html
+assert 'id="offenseCategory" aria-label="犯罪类型"' in html
+assert 'id="offense" aria-label="具体罪名"' in html
+assert 'id="hot"' not in html
+assert 'id="endHint"' in html
+assert "没有更多内容了，已显示全部" in html
 assert 'class="summary"' not in html
 assert "const DATA=" in html
 assert root_html == html, "root GitHub Pages entry must match web/index.html"
+
+expected_categories = [
+    "危害国家安全罪", "危害公共安全罪", "破坏社会主义市场经济秩序罪",
+    "侵犯公民人身权利、民主权利罪", "侵犯财产罪", "妨害社会管理秩序罪",
+    "贪污贿赂罪", "渎职罪",
+]
+assert [item["label"] for item in offense_filters] == expected_categories
+appearing_offenses = {
+    topic["label"] for row in rows for topic in row["topics"]
+    if topic["kind"] == "offense" and topic["label"].endswith("罪")
+}
+for category in offense_filters:
+    assert set(category["offenses"]) <= appearing_offenses
+    assert category["label"] not in category["offenses"]
 
 print(f"Valid: {len(rows)} questions; track counts={dict(Counter(row['track'] for row in rows))}")
