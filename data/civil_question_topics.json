@@ -1,0 +1,5233 @@
+{
+  "2010-法学-民法-20": {
+    "topics": [
+      "1-46",
+      "1-22",
+      "1-91",
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2010-法学-民法-21": {
+    "topics": [
+      "1-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2010-法学-民法-22": {
+    "topics": [
+      "1-37",
+      "1-38",
+      "1-39"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-法学-民法-23": {
+    "topics": [
+      "6-35"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-法学-民法-24": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-法学-民法-25": {
+    "topics": [
+      "4-14"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-法学-民法-26": {
+    "topics": [
+      "5-26",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2010-法学-民法-27": {
+    "topics": [
+      "4-17"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2010-法学-民法-28": {
+    "topics": [
+      "5-143",
+      "5-145",
+      "5-146",
+      "5-147"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-法学-民法-29": {
+    "topics": [
+      "6-13",
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2010-法学-民法-30": {
+    "topics": [
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-法学-民法-31": {
+    "topics": [
+      "4-9"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2010-法学-民法-32": {
+    "topics": [
+      "1-131"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-法学-民法-33": {
+    "topics": [
+      "5-139"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-法学-民法-34": {
+    "topics": [
+      "3-82"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2010-非法学-民法-31": {
+    "topics": [
+      "1-48",
+      "1-30"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2010-非法学-民法-32": {
+    "topics": [
+      "1-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2010-非法学-民法-33": {
+    "topics": [
+      "1-91",
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2010-非法学-民法-34": {
+    "topics": [
+      "1-95",
+      "5-146",
+      "5-150"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-35": {
+    "topics": [
+      "3-101",
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4955
+  },
+  "2010-非法学-民法-36": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-非法学-民法-37": {
+    "topics": [
+      "3-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2010-非法学-民法-38": {
+    "topics": [
+      "3-16"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-非法学-民法-39": {
+    "topics": [
+      "5-145",
+      "5-149"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-40": {
+    "topics": [
+      "5-64",
+      "5-65"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-非法学-民法-41": {
+    "topics": [
+      "5-14"
+    ],
+    "method": "semantic",
+    "confidence": 0.7263
+  },
+  "2010-非法学-民法-42": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-43": {
+    "topics": [
+      "5-38",
+      "5-39",
+      "5-40",
+      "5-42"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2010-非法学-民法-44": {
+    "topics": [
+      "1-25",
+      "1-30"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-45": {
+    "topics": [
+      "2-4"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2010-非法学-民法-46": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-非法学-民法-47": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-非法学-民法-48": {
+    "topics": [
+      "5-78",
+      "6-50",
+      "6-53",
+      "6-62"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-49": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-50": {
+    "topics": [
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.9591
+  },
+  "2010-非法学-民法-51": {
+    "topics": [
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.9591
+  },
+  "2010-非法学-民法-52": {
+    "topics": [
+      "6-39",
+      "6-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2010-非法学-民法-53": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2010-非法学-民法-54": {
+    "topics": [
+      "4-20"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2010-非法学-民法-55": {
+    "topics": [
+      "7-20"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-11": {
+    "topics": [
+      "1-46",
+      "1-22",
+      "1-91",
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2011-法学-民法-12": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-13": {
+    "topics": [
+      "7-14"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-14": {
+    "topics": [
+      "3-17"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2011-法学-民法-15": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-法学-民法-16": {
+    "topics": [
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-法学-民法-17": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-18": {
+    "topics": [
+      "4-9"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-19": {
+    "topics": [
+      "5-50"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-20": {
+    "topics": [
+      "5-164",
+      "5-165",
+      "7-11"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-法学-民法-26": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-27": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-法学-民法-28": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-法学-民法-29": {
+    "topics": [
+      "1-48",
+      "1-25",
+      "1-30",
+      "1-34"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2011-法学-民法-30": {
+    "topics": [
+      "2-19"
+    ],
+    "method": "semantic",
+    "confidence": 0.5662
+  },
+  "2011-非法学-民法-21": {
+    "topics": [
+      "1-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2011-非法学-民法-22": {
+    "topics": [
+      "1-30"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-非法学-民法-23": {
+    "topics": [
+      "1-64",
+      "1-114",
+      "1-126",
+      "1-133"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-非法学-民法-24": {
+    "topics": [
+      "3-43",
+      "3-45",
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-非法学-民法-25": {
+    "topics": [
+      "3-52",
+      "3-65",
+      "3-48",
+      "3-49"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2011-非法学-民法-26": {
+    "topics": [
+      "1-75",
+      "3-69",
+      "7-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2011-非法学-民法-27": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.95
+  },
+  "2011-非法学-民法-28": {
+    "topics": [
+      "4-10"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-非法学-民法-29": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2011-非法学-民法-30": {
+    "topics": [
+      "4-20"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2011-非法学-民法-31": {
+    "topics": [
+      "5-37",
+      "5-38",
+      "5-39",
+      "5-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.5045
+  },
+  "2011-非法学-民法-32": {
+    "topics": [
+      "4-25"
+    ],
+    "method": "terminology",
+    "confidence": 0.4909
+  },
+  "2011-非法学-民法-33": {
+    "topics": [
+      "5-93",
+      "5-98"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-非法学-民法-34": {
+    "topics": [
+      "6-22"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2011-非法学-民法-35": {
+    "topics": [
+      "6-15",
+      "5-63",
+      "1-64",
+      "1-114"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2011-非法学-民法-36": {
+    "topics": [
+      "6-7"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-非法学-民法-37": {
+    "topics": [
+      "6-35"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2011-非法学-民法-38": {
+    "topics": [
+      "6-38"
+    ],
+    "method": "terminology",
+    "confidence": 0.9318
+  },
+  "2011-非法学-民法-39": {
+    "topics": [
+      "1-85",
+      "1-86"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2011-非法学-民法-40": {
+    "topics": [
+      "5-97",
+      "5-102",
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2011-非法学-民法-46": {
+    "topics": [
+      "1-91",
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2011-非法学-民法-47": {
+    "topics": [
+      "3-8"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2011-非法学-民法-48": {
+    "topics": [
+      "5-54"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2011-非法学-民法-49": {
+    "topics": [
+      "6-53"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2011-非法学-民法-50": {
+    "topics": [
+      "7-13",
+      "1-37",
+      "1-38",
+      "1-39"
+    ],
+    "method": "terminology",
+    "confidence": 0.4955
+  },
+  "2012-法学-民法-11": {
+    "topics": [
+      "1-46",
+      "1-91",
+      "1-93",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2012-法学-民法-12": {
+    "topics": [
+      "1-90"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-法学-民法-13": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-法学-民法-14": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-法学-民法-15": {
+    "topics": [
+      "7-29",
+      "7-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-法学-民法-16": {
+    "topics": [
+      "5-146",
+      "5-150"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-法学-民法-17": {
+    "topics": [
+      "3-50",
+      "3-52",
+      "3-64",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2012-法学-民法-18": {
+    "topics": [
+      "3-98"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-法学-民法-19": {
+    "topics": [
+      "3-102"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-法学-民法-20": {
+    "topics": [
+      "2-19"
+    ],
+    "method": "terminology",
+    "confidence": 0.9364
+  },
+  "2012-法学-民法-26": {
+    "topics": [
+      "1-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2012-法学-民法-27": {
+    "topics": [
+      "7-1",
+      "7-11",
+      "7-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-法学-民法-28": {
+    "topics": [
+      "5-122"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-法学-民法-29": {
+    "topics": [
+      "4-16",
+      "4-20"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2012-法学-民法-30": {
+    "topics": [
+      "3-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-21": {
+    "topics": [
+      "1-27"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-非法学-民法-22": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-23": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-24": {
+    "topics": [
+      "1-90"
+    ],
+    "method": "semantic",
+    "confidence": 0.5935
+  },
+  "2012-非法学-民法-25": {
+    "topics": [
+      "1-91",
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2012-非法学-民法-26": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-非法学-民法-27": {
+    "topics": [
+      "3-50",
+      "3-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2012-非法学-民法-28": {
+    "topics": [
+      "3-96"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-非法学-民法-29": {
+    "topics": [
+      "5-60"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-非法学-民法-30": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-非法学-民法-31": {
+    "topics": [
+      "5-50"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-32": {
+    "topics": [
+      "7-20"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-33": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-非法学-民法-34": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-35": {
+    "topics": [
+      "4-19"
+    ],
+    "method": "semantic",
+    "confidence": 0.6874
+  },
+  "2012-非法学-民法-36": {
+    "topics": [
+      "4-18"
+    ],
+    "method": "semantic",
+    "confidence": 0.6882
+  },
+  "2012-非法学-民法-37": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-非法学-民法-38": {
+    "topics": [
+      "6-5"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-非法学-民法-39": {
+    "topics": [
+      "6-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2012-非法学-民法-40": {
+    "topics": [
+      "6-41"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2012-非法学-民法-46": {
+    "topics": [
+      "1-30",
+      "1-39"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-非法学-民法-47": {
+    "topics": [
+      "1-129",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2012-非法学-民法-48": {
+    "topics": [
+      "3-16"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2012-非法学-民法-49": {
+    "topics": [
+      "5-73"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2012-非法学-民法-50": {
+    "topics": [
+      "6-50"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2013-法学-民法-11": {
+    "topics": [
+      "5-38",
+      "1-30"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2013-法学-民法-12": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-法学-民法-13": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-法学-民法-14": {
+    "topics": [
+      "3-52",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2013-法学-民法-15": {
+    "topics": [
+      "1-129"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2013-法学-民法-16": {
+    "topics": [
+      "3-19",
+      "1-138",
+      "1-143",
+      "3-34"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2013-法学-民法-17": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-法学-民法-18": {
+    "topics": [
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2013-法学-民法-19": {
+    "topics": [
+      "4-14"
+    ],
+    "method": "semantic",
+    "confidence": 0.5159
+  },
+  "2013-法学-民法-20": {
+    "topics": [
+      "4-19"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2013-法学-民法-26": {
+    "topics": [
+      "7-26",
+      "7-1",
+      "7-9",
+      "7-11"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2013-法学-民法-27": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-法学-民法-28": {
+    "topics": [
+      "5-74",
+      "5-76"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-法学-民法-29": {
+    "topics": [
+      "3-14"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2013-法学-民法-30": {
+    "topics": [
+      "4-5"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2013-非法学-民法-21": {
+    "topics": [
+      "1-22",
+      "1-30",
+      "1-34"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2013-非法学-民法-22": {
+    "topics": [
+      "1-49"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2013-非法学-民法-23": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-24": {
+    "topics": [
+      "1-48",
+      "1-25",
+      "1-30",
+      "1-67"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2013-非法学-民法-25": {
+    "topics": [
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2013-非法学-民法-26": {
+    "topics": [
+      "5-63",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2013-非法学-民法-27": {
+    "topics": [
+      "6-13",
+      "4-8",
+      "5-95",
+      "5-100"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2013-非法学-民法-28": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-29": {
+    "topics": [
+      "3-85"
+    ],
+    "method": "semantic",
+    "confidence": 0.6994
+  },
+  "2013-非法学-民法-30": {
+    "topics": [
+      "3-101",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2013-非法学-民法-31": {
+    "topics": [
+      "1-1"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2013-非法学-民法-32": {
+    "topics": [
+      "5-74",
+      "5-76"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-33": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2013-非法学-民法-34": {
+    "topics": [
+      "3-56"
+    ],
+    "method": "terminology",
+    "confidence": 0.9636
+  },
+  "2013-非法学-民法-35": {
+    "topics": [
+      "2-19"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2013-非法学-民法-36": {
+    "topics": [
+      "2-5"
+    ],
+    "method": "semantic",
+    "confidence": 0.6757
+  },
+  "2013-非法学-民法-37": {
+    "topics": [
+      "4-25"
+    ],
+    "method": "terminology",
+    "confidence": 0.4909
+  },
+  "2013-非法学-民法-38": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-39": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2013-非法学-民法-40": {
+    "topics": [
+      "7-20"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-46": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-47": {
+    "topics": [
+      "3-50",
+      "3-52",
+      "3-64",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2013-非法学-民法-48": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2013-非法学-民法-49": {
+    "topics": [
+      "5-164"
+    ],
+    "method": "terminology",
+    "confidence": 0.95
+  },
+  "2013-非法学-民法-50": {
+    "topics": [
+      "7-26",
+      "7-1",
+      "7-9",
+      "7-11"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2014-法学-民法-11": {
+    "topics": [
+      "7-11"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-法学-民法-12": {
+    "topics": [
+      "1-90"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2014-法学-民法-13": {
+    "topics": [
+      "5-33",
+      "5-34"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-法学-民法-14": {
+    "topics": [
+      "5-81"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-法学-民法-15": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-法学-民法-16": {
+    "topics": [
+      "5-46"
+    ],
+    "method": "semantic",
+    "confidence": 0.7284
+  },
+  "2014-法学-民法-17": {
+    "topics": [
+      "5-118",
+      "1-95",
+      "5-122",
+      "5-136"
+    ],
+    "method": "terminology",
+    "confidence": 0.5
+  },
+  "2014-法学-民法-18": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-法学-民法-19": {
+    "topics": [
+      "3-89"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2014-法学-民法-20": {
+    "topics": [
+      "2-4"
+    ],
+    "method": "semantic",
+    "confidence": 0.7587
+  },
+  "2014-法学-民法-26": {
+    "topics": [
+      "5-167",
+      "5-164",
+      "5-165",
+      "7-11"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2014-法学-民法-27": {
+    "topics": [
+      "4-9",
+      "4-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2014-法学-民法-28": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-法学-民法-29": {
+    "topics": [
+      "7-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-法学-民法-30": {
+    "topics": [
+      "6-55"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-21": {
+    "topics": [
+      "1-22",
+      "1-47"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2014-非法学-民法-22": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-23": {
+    "topics": [
+      "5-63",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2014-非法学-民法-24": {
+    "topics": [
+      "1-77"
+    ],
+    "method": "semantic",
+    "confidence": 0.7229
+  },
+  "2014-非法学-民法-25": {
+    "topics": [
+      "7-2"
+    ],
+    "method": "terminology",
+    "confidence": 0.95
+  },
+  "2014-非法学-民法-26": {
+    "topics": [
+      "7-39",
+      "7-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2014-非法学-民法-27": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-非法学-民法-28": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-非法学-民法-29": {
+    "topics": [
+      "5-3"
+    ],
+    "method": "semantic",
+    "confidence": 0.7475
+  },
+  "2014-非法学-民法-30": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-31": {
+    "topics": [
+      "5-64",
+      "5-65"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-32": {
+    "topics": [
+      "1-25",
+      "1-30"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-非法学-民法-33": {
+    "topics": [
+      "5-29"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-34": {
+    "topics": [
+      "5-28"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2014-非法学-民法-35": {
+    "topics": [
+      "6-29"
+    ],
+    "method": "semantic",
+    "confidence": 0.6662
+  },
+  "2014-非法学-民法-36": {
+    "topics": [
+      "6-50",
+      "6-62",
+      "6-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-非法学-民法-37": {
+    "topics": [
+      "6-43"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2014-非法学-民法-38": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-39": {
+    "topics": [
+      "3-73"
+    ],
+    "method": "terminology",
+    "confidence": 0.9364
+  },
+  "2014-非法学-民法-40": {
+    "topics": [
+      "3-100"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2014-非法学-民法-46": {
+    "topics": [
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-非法学-民法-47": {
+    "topics": [
+      "3-48",
+      "3-49",
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2014-非法学-民法-48": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2014-非法学-民法-49": {
+    "topics": [
+      "5-43"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2014-非法学-民法-50": {
+    "topics": [
+      "6-22",
+      "6-29"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2015-法学-民法-11": {
+    "topics": [
+      "1-22",
+      "1-138",
+      "1-143",
+      "5-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2015-法学-民法-12": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2015-法学-民法-13": {
+    "topics": [
+      "4-18"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2015-法学-民法-14": {
+    "topics": [
+      "6-39",
+      "6-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-法学-民法-15": {
+    "topics": [
+      "6-25"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-法学-民法-16": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-法学-民法-17": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-法学-民法-18": {
+    "topics": [
+      "7-31",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.6045
+  },
+  "2015-法学-民法-19": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-法学-民法-20": {
+    "topics": [
+      "7-1",
+      "7-9"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-法学-民法-26": {
+    "topics": [
+      "5-78"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-法学-民法-27": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "semantic",
+    "confidence": 0.6712
+  },
+  "2015-法学-民法-28": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-135"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-法学-民法-29": {
+    "topics": [
+      "5-164"
+    ],
+    "method": "terminology",
+    "confidence": 0.95
+  },
+  "2015-法学-民法-30": {
+    "topics": [
+      "6-50"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-21": {
+    "topics": [
+      "5-40",
+      "5-42"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2015-非法学-民法-22": {
+    "topics": [
+      "1-48",
+      "1-69",
+      "1-30",
+      "1-34"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2015-非法学-民法-23": {
+    "topics": [
+      "1-91",
+      "1-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2015-非法学-民法-24": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-25": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-26": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-27": {
+    "topics": [
+      "1-138",
+      "1-143",
+      "5-89",
+      "5-164"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-28": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-29": {
+    "topics": [
+      "3-25"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2015-非法学-民法-30": {
+    "topics": [
+      "3-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-31": {
+    "topics": [
+      "5-7"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2015-非法学-民法-32": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-33": {
+    "topics": [
+      "1-95",
+      "5-79",
+      "5-83",
+      "5-96"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-34": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-35": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-36": {
+    "topics": [
+      "7-31",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.6045
+  },
+  "2015-非法学-民法-37": {
+    "topics": [
+      "7-14"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-38": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-39": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-40": {
+    "topics": [
+      "7-1",
+      "7-9"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-46": {
+    "topics": [
+      "1-30"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2015-非法学-民法-47": {
+    "topics": [
+      "7-26",
+      "5-164",
+      "5-165",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2015-非法学-民法-48": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2015-非法学-民法-49": {
+    "topics": [
+      "7-39",
+      "7-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2015-非法学-民法-50": {
+    "topics": [
+      "6-52"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2016-法学-民法-11": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-法学-民法-12": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-法学-民法-13": {
+    "topics": [
+      "7-14"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-法学-民法-14": {
+    "topics": [
+      "2-32"
+    ],
+    "method": "semantic",
+    "confidence": 0.7146
+  },
+  "2016-法学-民法-15": {
+    "topics": [
+      "6-60"
+    ],
+    "method": "semantic",
+    "confidence": 0.6698
+  },
+  "2016-法学-民法-16": {
+    "topics": [
+      "1-64",
+      "1-114",
+      "1-126",
+      "1-135"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-法学-民法-17": {
+    "topics": [
+      "3-21"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2016-法学-民法-18": {
+    "topics": [
+      "3-52",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2016-法学-民法-19": {
+    "topics": [
+      "5-31"
+    ],
+    "method": "semantic",
+    "confidence": 0.6845
+  },
+  "2016-法学-民法-20": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-法学-民法-26": {
+    "topics": [
+      "1-74"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2016-法学-民法-27": {
+    "topics": [
+      "7-35",
+      "7-37"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-法学-民法-28": {
+    "topics": [
+      "6-13",
+      "3-43",
+      "3-45",
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-法学-民法-29": {
+    "topics": [
+      "6-25"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-法学-民法-30": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-非法学-民法-21": {
+    "topics": [
+      "6-13",
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-非法学-民法-22": {
+    "topics": [
+      "6-62",
+      "6-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-非法学-民法-23": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-24": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-25": {
+    "topics": [
+      "1-25",
+      "1-30",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-非法学-民法-26": {
+    "topics": [
+      "1-22",
+      "1-91",
+      "1-93",
+      "1-25"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-非法学-民法-27": {
+    "topics": [
+      "3-21"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2016-非法学-民法-28": {
+    "topics": [
+      "1-89"
+    ],
+    "method": "semantic",
+    "confidence": 0.6176
+  },
+  "2016-非法学-民法-29": {
+    "topics": [
+      "5-143",
+      "5-147"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-非法学-民法-30": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-31": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2016-非法学-民法-32": {
+    "topics": [
+      "5-74",
+      "5-76"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-33": {
+    "topics": [
+      "7-17"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-34": {
+    "topics": [
+      "7-18"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2016-非法学-民法-35": {
+    "topics": [
+      "1-80"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2016-非法学-民法-36": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-非法学-民法-37": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "6-50",
+      "6-53"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-非法学-民法-38": {
+    "topics": [
+      "5-164"
+    ],
+    "method": "terminology",
+    "confidence": 0.95
+  },
+  "2016-非法学-民法-39": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-40": {
+    "topics": [
+      "3-52",
+      "3-65",
+      "3-23",
+      "3-12"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2016-非法学-民法-46": {
+    "topics": [
+      "7-35",
+      "7-37"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-47": {
+    "topics": [
+      "4-27",
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2016-非法学-民法-48": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2016-非法学-民法-49": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2016-非法学-民法-50": {
+    "topics": [
+      "4-6"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-法学-民法-11": {
+    "topics": [
+      "1-22",
+      "1-30",
+      "1-34"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2017-法学-民法-12": {
+    "topics": [
+      "5-153"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-法学-民法-13": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-法学-民法-14": {
+    "topics": [
+      "3-87"
+    ],
+    "method": "semantic",
+    "confidence": 0.7227
+  },
+  "2017-法学-民法-15": {
+    "topics": [
+      "3-43",
+      "3-45"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-法学-民法-16": {
+    "topics": [
+      "3-17"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-法学-民法-17": {
+    "topics": [
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2017-法学-民法-18": {
+    "topics": [
+      "6-7"
+    ],
+    "method": "semantic",
+    "confidence": 0.6344
+  },
+  "2017-法学-民法-19": {
+    "topics": [
+      "3-34",
+      "3-35"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-法学-民法-20": {
+    "topics": [
+      "3-50",
+      "3-52",
+      "3-64",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2017-法学-民法-26": {
+    "topics": [
+      "1-64"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2017-法学-民法-27": {
+    "topics": [
+      "5-100",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2017-法学-民法-28": {
+    "topics": [
+      "6-50",
+      "6-53"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-法学-民法-29": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-法学-民法-30": {
+    "topics": [
+      "4-7",
+      "3-48",
+      "3-49",
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2017-非法学-民法-21": {
+    "topics": [
+      "1-22",
+      "1-30",
+      "1-34"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2017-非法学-民法-22": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-23": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-25",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2017-非法学-民法-24": {
+    "topics": [
+      "5-143",
+      "5-147"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-25": {
+    "topics": [
+      "5-153"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-非法学-民法-26": {
+    "topics": [
+      "1-39",
+      "1-138",
+      "1-143",
+      "5-137"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-27": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-非法学-民法-28": {
+    "topics": [
+      "3-87"
+    ],
+    "method": "semantic",
+    "confidence": 0.7211
+  },
+  "2017-非法学-民法-29": {
+    "topics": [
+      "3-43",
+      "3-44",
+      "3-45",
+      "3-46"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-30": {
+    "topics": [
+      "3-17"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-非法学-民法-31": {
+    "topics": [
+      "1-121"
+    ],
+    "method": "terminology",
+    "confidence": 0.9545
+  },
+  "2017-非法学-民法-32": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-33": {
+    "topics": [
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2017-非法学-民法-34": {
+    "topics": [
+      "1-85",
+      "1-86"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2017-非法学-民法-35": {
+    "topics": [
+      "7-14"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-非法学-民法-36": {
+    "topics": [
+      "7-17"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-非法学-民法-37": {
+    "topics": [
+      "6-35"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2017-非法学-民法-38": {
+    "topics": [
+      "6-7"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-39": {
+    "topics": [
+      "3-34",
+      "3-35"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-40": {
+    "topics": [
+      "3-50",
+      "3-52",
+      "3-64",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2017-非法学-民法-46": {
+    "topics": [
+      "1-64"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2017-非法学-民法-47": {
+    "topics": [
+      "5-100",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2017-非法学-民法-48": {
+    "topics": [
+      "6-50",
+      "6-53"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-49": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2017-非法学-民法-50": {
+    "topics": [
+      "4-7",
+      "3-48",
+      "3-49",
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2018-法学-民法-11": {
+    "topics": [
+      "1-48"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2018-法学-民法-12": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-法学-民法-13": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-法学-民法-14": {
+    "topics": [
+      "7-26",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2018-法学-民法-15": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-法学-民法-16": {
+    "topics": [
+      "5-78"
+    ],
+    "method": "semantic",
+    "confidence": 0.7106
+  },
+  "2018-法学-民法-17": {
+    "topics": [
+      "7-38"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2018-法学-民法-18": {
+    "topics": [
+      "2-32"
+    ],
+    "method": "semantic",
+    "confidence": 0.7359
+  },
+  "2018-法学-民法-19": {
+    "topics": [
+      "1-25"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-法学-民法-20": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-法学-民法-26": {
+    "topics": [
+      "1-90"
+    ],
+    "method": "semantic",
+    "confidence": 0.6134
+  },
+  "2018-法学-民法-27": {
+    "topics": [
+      "3-50",
+      "3-52",
+      "3-64",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2018-法学-民法-28": {
+    "topics": [
+      "6-71"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-法学-民法-29": {
+    "topics": [
+      "5-39",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2018-法学-民法-30": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-非法学-民法-21": {
+    "topics": [
+      "1-48"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2018-非法学-民法-22": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-非法学-民法-23": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-非法学-民法-24": {
+    "topics": [
+      "7-26",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2018-非法学-民法-25": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-非法学-民法-26": {
+    "topics": [
+      "5-78"
+    ],
+    "method": "semantic",
+    "confidence": 0.7036
+  },
+  "2018-非法学-民法-27": {
+    "topics": [
+      "7-38"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2018-非法学-民法-28": {
+    "topics": [
+      "2-32"
+    ],
+    "method": "semantic",
+    "confidence": 0.7337
+  },
+  "2018-非法学-民法-29": {
+    "topics": [
+      "1-25"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-非法学-民法-30": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-非法学-民法-31": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-非法学-民法-32": {
+    "topics": [
+      "1-83"
+    ],
+    "method": "semantic",
+    "confidence": 0.6913
+  },
+  "2018-非法学-民法-33": {
+    "topics": [
+      "6-7"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-非法学-民法-34": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-非法学-民法-35": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2018-非法学-民法-36": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2018-非法学-民法-37": {
+    "topics": [
+      "3-43",
+      "3-44",
+      "3-45",
+      "3-46"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-非法学-民法-38": {
+    "topics": [
+      "5-63",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2018-非法学-民法-39": {
+    "topics": [
+      "5-146",
+      "5-150"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2018-非法学-民法-40": {
+    "topics": [
+      "5-100",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2018-非法学-民法-46": {
+    "topics": [
+      "1-90"
+    ],
+    "method": "semantic",
+    "confidence": 0.6189
+  },
+  "2018-非法学-民法-47": {
+    "topics": [
+      "3-50",
+      "3-52",
+      "3-64",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2018-非法学-民法-48": {
+    "topics": [
+      "6-68"
+    ],
+    "method": "semantic",
+    "confidence": 0.5342
+  },
+  "2018-非法学-民法-49": {
+    "topics": [
+      "5-39",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2018-非法学-民法-50": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-法学-民法-11": {
+    "topics": [
+      "5-7"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-法学-民法-12": {
+    "topics": [
+      "7-4"
+    ],
+    "method": "semantic",
+    "confidence": 0.5258
+  },
+  "2019-法学-民法-13": {
+    "topics": [
+      "5-33",
+      "5-34"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-法学-民法-14": {
+    "topics": [
+      "1-59"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-法学-民法-15": {
+    "topics": [
+      "1-67"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-法学-民法-16": {
+    "topics": [
+      "2-35",
+      "2-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-法学-民法-17": {
+    "topics": [
+      "1-95",
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-法学-民法-18": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-法学-民法-19": {
+    "topics": [
+      "3-43",
+      "3-45"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-法学-民法-20": {
+    "topics": [
+      "5-63",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2019-法学-民法-26": {
+    "topics": [
+      "1-75",
+      "1-76"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2019-法学-民法-27": {
+    "topics": [
+      "3-34",
+      "3-35"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-法学-民法-28": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-法学-民法-29": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-法学-民法-30": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-21": {
+    "topics": [
+      "5-7"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-22": {
+    "topics": [
+      "7-4"
+    ],
+    "method": "semantic",
+    "confidence": 0.5267
+  },
+  "2019-非法学-民法-23": {
+    "topics": [
+      "5-33",
+      "5-34"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-24": {
+    "topics": [
+      "1-59"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-25": {
+    "topics": [
+      "1-67"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-非法学-民法-26": {
+    "topics": [
+      "2-35",
+      "2-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-非法学-民法-27": {
+    "topics": [
+      "1-95",
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-非法学-民法-28": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-29": {
+    "topics": [
+      "3-43",
+      "3-45"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-非法学-民法-30": {
+    "topics": [
+      "5-63",
+      "1-64",
+      "1-114",
+      "1-126"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2019-非法学-民法-31": {
+    "topics": [
+      "1-75",
+      "1-85",
+      "1-86"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2019-非法学-民法-32": {
+    "topics": [
+      "6-39",
+      "6-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-33": {
+    "topics": [
+      "2-8"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-非法学-民法-34": {
+    "topics": [
+      "5-45",
+      "5-46"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-非法学-民法-35": {
+    "topics": [
+      "6-7"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-非法学-民法-36": {
+    "topics": [
+      "4-3"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-非法学-民法-37": {
+    "topics": [
+      "7-28"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-非法学-民法-38": {
+    "topics": [
+      "4-9"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-39": {
+    "topics": [
+      "5-37",
+      "5-38",
+      "5-39",
+      "5-40"
+    ],
+    "method": "terminology",
+    "confidence": 0.5045
+  },
+  "2019-非法学-民法-40": {
+    "topics": [
+      "7-22"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2019-非法学-民法-46": {
+    "topics": [
+      "1-75",
+      "1-76"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2019-非法学-民法-47": {
+    "topics": [
+      "3-34",
+      "3-35"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-非法学-民法-48": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2019-非法学-民法-49": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2019-非法学-民法-50": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-法学-民法-11": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-法学-民法-12": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-法学-民法-13": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-法学-民法-14": {
+    "topics": [
+      "5-136",
+      "5-141"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-法学-民法-15": {
+    "topics": [
+      "2-19"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-法学-民法-16": {
+    "topics": [
+      "1-94"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2020-法学-民法-17": {
+    "topics": [
+      "6-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-法学-民法-18": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2020-法学-民法-19": {
+    "topics": [
+      "3-10"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-法学-民法-20": {
+    "topics": [
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-法学-民法-26": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-法学-民法-27": {
+    "topics": [
+      "1-75",
+      "1-76"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2020-法学-民法-28": {
+    "topics": [
+      "5-139"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-法学-民法-29": {
+    "topics": [
+      "6-15"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-法学-民法-30": {
+    "topics": [
+      "7-20"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-21": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-22": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-非法学-民法-23": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-非法学-民法-24": {
+    "topics": [
+      "5-136",
+      "5-141"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-非法学-民法-25": {
+    "topics": [
+      "2-19"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-26": {
+    "topics": [
+      "1-94"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2020-非法学-民法-27": {
+    "topics": [
+      "6-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-28": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2020-非法学-民法-29": {
+    "topics": [
+      "3-10"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-30": {
+    "topics": [
+      "3-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-非法学-民法-31": {
+    "topics": [
+      "3-16"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-32": {
+    "topics": [
+      "3-20"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-33": {
+    "topics": [
+      "5-118",
+      "5-122"
+    ],
+    "method": "terminology",
+    "confidence": 0.5
+  },
+  "2020-非法学-民法-34": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-35": {
+    "topics": [
+      "3-98"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-36": {
+    "topics": [
+      "7-36"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-37": {
+    "topics": [
+      "4-18"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-38": {
+    "topics": [
+      "1-84"
+    ],
+    "method": "semantic",
+    "confidence": 0.6929
+  },
+  "2020-非法学-民法-39": {
+    "topics": [
+      "1-45"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-40": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2020-非法学-民法-46": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-47": {
+    "topics": [
+      "1-75",
+      "1-76"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2020-非法学-民法-48": {
+    "topics": [
+      "5-139"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2020-非法学-民法-49": {
+    "topics": [
+      "6-15"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2020-非法学-民法-50": {
+    "topics": [
+      "7-20"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-法学-民法-11": {
+    "topics": [
+      "1-75"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2021-法学-民法-12": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-法学-民法-13": {
+    "topics": [
+      "5-95",
+      "5-100"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-法学-民法-14": {
+    "topics": [
+      "5-24"
+    ],
+    "method": "semantic",
+    "confidence": 0.7048
+  },
+  "2021-法学-民法-15": {
+    "topics": [
+      "5-60"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2021-法学-民法-16": {
+    "topics": [
+      "3-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-法学-民法-17": {
+    "topics": [
+      "6-4"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2021-法学-民法-18": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2021-法学-民法-19": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "6-62",
+      "6-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2021-法学-民法-20": {
+    "topics": [
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-法学-民法-26": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-法学-民法-27": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-法学-民法-28": {
+    "topics": [
+      "5-38",
+      "5-40",
+      "5-42",
+      "1-138"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2021-法学-民法-29": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-法学-民法-30": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-21": {
+    "topics": [
+      "1-75"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2021-非法学-民法-22": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-23": {
+    "topics": [
+      "5-95",
+      "5-100"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-24": {
+    "topics": [
+      "5-24"
+    ],
+    "method": "semantic",
+    "confidence": 0.688
+  },
+  "2021-非法学-民法-25": {
+    "topics": [
+      "5-60"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2021-非法学-民法-26": {
+    "topics": [
+      "3-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-非法学-民法-27": {
+    "topics": [
+      "6-4"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-非法学-民法-28": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2021-非法学-民法-29": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "6-62",
+      "6-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2021-非法学-民法-30": {
+    "topics": [
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-31": {
+    "topics": [
+      "2-19"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2021-非法学-民法-32": {
+    "topics": [
+      "4-20"
+    ],
+    "method": "semantic",
+    "confidence": 0.5837
+  },
+  "2021-非法学-民法-33": {
+    "topics": [
+      "4-9"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-非法学-民法-34": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-35": {
+    "topics": [
+      "5-7"
+    ],
+    "method": "terminology",
+    "confidence": 0.9364
+  },
+  "2021-非法学-民法-36": {
+    "topics": [
+      "6-52"
+    ],
+    "method": "semantic",
+    "confidence": 0.6657
+  },
+  "2021-非法学-民法-37": {
+    "topics": [
+      "5-131"
+    ],
+    "method": "terminology",
+    "confidence": 0.4909
+  },
+  "2021-非法学-民法-38": {
+    "topics": [
+      "5-97",
+      "5-102",
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2021-非法学-民法-39": {
+    "topics": [
+      "6-67",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2021-非法学-民法-40": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-非法学-民法-46": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2021-非法学-民法-47": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-48": {
+    "topics": [
+      "5-38",
+      "5-40",
+      "5-42",
+      "1-138"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2021-非法学-民法-49": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2021-非法学-民法-50": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-法学-民法-11": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-59",
+      "5-79"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-法学-民法-12": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-法学-民法-13": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-法学-民法-14": {
+    "topics": [
+      "7-29",
+      "7-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-法学-民法-15": {
+    "topics": [
+      "5-33",
+      "5-34"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-法学-民法-16": {
+    "topics": [
+      "5-143",
+      "5-147"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-法学-民法-17": {
+    "topics": [
+      "5-19"
+    ],
+    "method": "terminology",
+    "confidence": 0.9318
+  },
+  "2022-法学-民法-18": {
+    "topics": [
+      "7-17"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-法学-民法-19": {
+    "topics": [
+      "5-33",
+      "5-34"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-法学-民法-20": {
+    "topics": [
+      "5-19"
+    ],
+    "method": "terminology",
+    "confidence": 0.9318
+  },
+  "2022-法学-民法-26": {
+    "topics": [
+      "5-97",
+      "5-102",
+      "5-93",
+      "5-96"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-法学-民法-27": {
+    "topics": [
+      "1-25",
+      "4-6",
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-法学-民法-28": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-法学-民法-29": {
+    "topics": [
+      "3-12",
+      "3-15",
+      "3-14"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2022-法学-民法-30": {
+    "topics": [
+      "5-144",
+      "5-148",
+      "5-120",
+      "5-124"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-非法学-民法-21": {
+    "topics": [
+      "5-93",
+      "5-98"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-非法学-民法-22": {
+    "topics": [
+      "1-96"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-23": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-非法学-民法-24": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-非法学-民法-25": {
+    "topics": [
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.95
+  },
+  "2022-非法学-民法-26": {
+    "topics": [
+      "2-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-27": {
+    "topics": [
+      "5-33",
+      "5-34"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-28": {
+    "topics": [
+      "5-26",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-非法学-民法-29": {
+    "topics": [
+      "5-155",
+      "5-158"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-非法学-民法-30": {
+    "topics": [
+      "5-23"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-31": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-95",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-非法学-民法-32": {
+    "topics": [
+      "5-38"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2022-非法学-民法-33": {
+    "topics": [
+      "7-31",
+      "7-1",
+      "7-11"
+    ],
+    "method": "terminology",
+    "confidence": 0.6045
+  },
+  "2022-非法学-民法-34": {
+    "topics": [
+      "5-143",
+      "5-147"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-非法学-民法-35": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2022-非法学-民法-36": {
+    "topics": [
+      "3-87"
+    ],
+    "method": "semantic",
+    "confidence": 0.7272
+  },
+  "2022-非法学-民法-37": {
+    "topics": [
+      "6-55"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-38": {
+    "topics": [
+      "1-52"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-39": {
+    "topics": [
+      "1-39"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-非法学-民法-40": {
+    "topics": [
+      "4-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2022-非法学-民法-46": {
+    "topics": [
+      "1-95",
+      "5-118",
+      "5-122"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-非法学-民法-47": {
+    "topics": [
+      "1-25",
+      "4-6",
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2022-非法学-民法-48": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2022-非法学-民法-49": {
+    "topics": [
+      "3-12",
+      "3-15",
+      "3-14"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2022-非法学-民法-50": {
+    "topics": [
+      "3-41"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-法学-民法-11": {
+    "topics": [
+      "1-22",
+      "1-47"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2023-法学-民法-12": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-法学-民法-13": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-法学-民法-14": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-法学-民法-15": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-法学-民法-16": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-法学-民法-17": {
+    "topics": [
+      "6-65"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-法学-民法-18": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-129",
+      "5-63"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2023-法学-民法-19": {
+    "topics": [
+      "1-88"
+    ],
+    "method": "semantic",
+    "confidence": 0.6318
+  },
+  "2023-法学-民法-20": {
+    "topics": [
+      "5-90"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-法学-民法-26": {
+    "topics": [
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-法学-民法-27": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-法学-民法-28": {
+    "topics": [
+      "2-19",
+      "2-22",
+      "2-21"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2023-法学-民法-29": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-法学-民法-30": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-21": {
+    "topics": [
+      "1-22",
+      "1-47"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2023-非法学-民法-22": {
+    "topics": [
+      "7-51"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-23": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-24": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-25": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-26": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-27": {
+    "topics": [
+      "6-65"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-28": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "1-129",
+      "5-63"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2023-非法学-民法-29": {
+    "topics": [
+      "1-88"
+    ],
+    "method": "semantic",
+    "confidence": 0.628
+  },
+  "2023-非法学-民法-30": {
+    "topics": [
+      "5-90"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-31": {
+    "topics": [
+      "2-35"
+    ],
+    "method": "semantic",
+    "confidence": 0.6869
+  },
+  "2023-非法学-民法-32": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-33": {
+    "topics": [
+      "1-55"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2023-非法学-民法-34": {
+    "topics": [
+      "7-14"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-35": {
+    "topics": [
+      "1-69"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2023-非法学-民法-36": {
+    "topics": [
+      "5-7"
+    ],
+    "method": "terminology",
+    "confidence": 0.9364
+  },
+  "2023-非法学-民法-37": {
+    "topics": [
+      "5-39"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2023-非法学-民法-38": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-39": {
+    "topics": [
+      "5-127",
+      "5-129"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-40": {
+    "topics": [
+      "5-29"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-46": {
+    "topics": [
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-47": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-93"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2023-非法学-民法-48": {
+    "topics": [
+      "2-19",
+      "2-22",
+      "2-21"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2023-非法学-民法-49": {
+    "topics": [
+      "4-12"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2023-非法学-民法-50": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-法学-民法-11": {
+    "topics": [
+      "1-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.9409
+  },
+  "2024-法学-民法-12": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-法学-民法-13": {
+    "topics": [
+      "4-14"
+    ],
+    "method": "semantic",
+    "confidence": 0.5374
+  },
+  "2024-法学-民法-14": {
+    "topics": [
+      "5-29"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-法学-民法-15": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-法学-民法-16": {
+    "topics": [
+      "5-95",
+      "5-100"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-法学-民法-17": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-法学-民法-18": {
+    "topics": [
+      "2-32"
+    ],
+    "method": "semantic",
+    "confidence": 0.7233
+  },
+  "2024-法学-民法-19": {
+    "topics": [
+      "1-133"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-法学-民法-20": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-法学-民法-26": {
+    "topics": [
+      "3-50",
+      "3-64",
+      "3-69",
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2024-法学-民法-27": {
+    "topics": [
+      "3-53",
+      "3-63"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2024-法学-民法-28": {
+    "topics": [
+      "5-161",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-法学-民法-29": {
+    "topics": [
+      "3-92",
+      "5-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2024-法学-民法-30": {
+    "topics": [
+      "1-70",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2024-非法学-民法-21": {
+    "topics": [
+      "1-67"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-22": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-非法学-民法-23": {
+    "topics": [
+      "4-14"
+    ],
+    "method": "semantic",
+    "confidence": 0.4751
+  },
+  "2024-非法学-民法-24": {
+    "topics": [
+      "5-29"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-非法学-民法-25": {
+    "topics": [
+      "1-52",
+      "1-115"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-非法学-民法-26": {
+    "topics": [
+      "5-95",
+      "5-100"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-27": {
+    "topics": [
+      "5-21"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-非法学-民法-28": {
+    "topics": [
+      "2-32"
+    ],
+    "method": "semantic",
+    "confidence": 0.6291
+  },
+  "2024-非法学-民法-29": {
+    "topics": [
+      "1-133"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-30": {
+    "topics": [
+      "1-95"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-31": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-32": {
+    "topics": [
+      "7-32"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2024-非法学-民法-33": {
+    "topics": [
+      "5-31"
+    ],
+    "method": "semantic",
+    "confidence": 0.7447
+  },
+  "2024-非法学-民法-34": {
+    "topics": [
+      "5-72"
+    ],
+    "method": "semantic",
+    "confidence": 0.6434
+  },
+  "2024-非法学-民法-35": {
+    "topics": [
+      "5-26",
+      "1-95",
+      "5-84",
+      "5-86"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2024-非法学-民法-36": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-37": {
+    "topics": [
+      "1-91",
+      "1-93",
+      "5-93",
+      "5-98"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2024-非法学-民法-38": {
+    "topics": [
+      "1-60"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-非法学-民法-39": {
+    "topics": [
+      "5-84",
+      "5-86",
+      "5-92",
+      "5-96"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-40": {
+    "topics": [
+      "3-28",
+      "3-30"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2024-非法学-民法-46": {
+    "topics": [
+      "3-50",
+      "3-64",
+      "3-69",
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2024-非法学-民法-47": {
+    "topics": [
+      "3-53",
+      "3-63"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2024-非法学-民法-48": {
+    "topics": [
+      "5-161",
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2024-非法学-民法-49": {
+    "topics": [
+      "3-92",
+      "5-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2024-非法学-民法-50": {
+    "topics": [
+      "1-70",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2025-法学-民法-11": {
+    "topics": [
+      "3-27"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-12": {
+    "topics": [
+      "2-36"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-13": {
+    "topics": [
+      "5-90"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-14": {
+    "topics": [
+      "5-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-15": {
+    "topics": [
+      "7-31"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-16": {
+    "topics": [
+      "1-104"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-17": {
+    "topics": [
+      "5-115"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-18": {
+    "topics": [
+      "3-41",
+      "3-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-19": {
+    "topics": [
+      "5-71"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-20": {
+    "topics": [
+      "7-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-26": {
+    "topics": [
+      "5-18",
+      "5-56"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-27": {
+    "topics": [
+      "6-72",
+      "6-73"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-28": {
+    "topics": [
+      "1-10"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-29": {
+    "topics": [
+      "2-28"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-法学-民法-30": {
+    "topics": [
+      "3-65"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-21": {
+    "topics": [
+      "5-57",
+      "5-161"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2025-非法学-民法-22": {
+    "topics": [
+      "2-35",
+      "2-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-23": {
+    "topics": [
+      "5-90"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-24": {
+    "topics": [
+      "5-3"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-25": {
+    "topics": [
+      "7-31"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-26": {
+    "topics": [
+      "1-104"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-27": {
+    "topics": [
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2025-非法学-民法-28": {
+    "topics": [
+      "3-41",
+      "3-35"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-29": {
+    "topics": [
+      "5-71"
+    ],
+    "method": "terminology",
+    "confidence": 0.5864
+  },
+  "2025-非法学-民法-30": {
+    "topics": [
+      "7-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-31": {
+    "topics": [
+      "5-100",
+      "5-93",
+      "5-98"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2025-非法学-民法-32": {
+    "topics": [
+      "3-20"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-33": {
+    "topics": [
+      "1-69",
+      "1-85",
+      "1-86"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2025-非法学-民法-34": {
+    "topics": [
+      "5-100"
+    ],
+    "method": "terminology",
+    "confidence": 0.4773
+  },
+  "2025-非法学-民法-35": {
+    "topics": [
+      "3-50",
+      "3-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2025-非法学-民法-36": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2025-非法学-民法-37": {
+    "topics": [
+      "3-50",
+      "3-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2025-非法学-民法-38": {
+    "topics": [
+      "4-11"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-39": {
+    "topics": [
+      "1-100"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-40": {
+    "topics": [
+      "1-26",
+      "6-52"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-46": {
+    "topics": [
+      "5-26",
+      "5-84",
+      "5-86",
+      "5-92"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2025-非法学-民法-47": {
+    "topics": [
+      "6-62",
+      "6-64",
+      "6-71"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2025-非法学-民法-48": {
+    "topics": [
+      "1-10"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-49": {
+    "topics": [
+      "2-28"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2025-非法学-民法-50": {
+    "topics": [
+      "3-52",
+      "3-65"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2026-法学-民法-11": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-法学-民法-12": {
+    "topics": [
+      "7-46",
+      "7-47"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2026-法学-民法-13": {
+    "topics": [
+      "7-38"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-法学-民法-14": {
+    "topics": [
+      "5-100"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-法学-民法-15": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-法学-民法-16": {
+    "topics": [
+      "3-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-法学-民法-17": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2026-法学-民法-18": {
+    "topics": [
+      "7-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-法学-民法-19": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-法学-民法-20": {
+    "topics": [
+      "5-79",
+      "5-83"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-法学-民法-26": {
+    "topics": [
+      "4-10"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2026-法学-民法-27": {
+    "topics": [
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-法学-民法-28": {
+    "topics": [
+      "5-128"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2026-法学-民法-29": {
+    "topics": [
+      "5-10"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-法学-民法-30": {
+    "topics": [
+      "5-79",
+      "5-83",
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-21": {
+    "topics": [
+      "1-138",
+      "1-143"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-22": {
+    "topics": [
+      "7-46",
+      "7-47"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2026-非法学-民法-23": {
+    "topics": [
+      "7-38"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-24": {
+    "topics": [
+      "5-100"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-25": {
+    "topics": [
+      "7-1"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-26": {
+    "topics": [
+      "3-37"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-27": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2026-非法学-民法-28": {
+    "topics": [
+      "7-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-29": {
+    "topics": [
+      "4-22"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-30": {
+    "topics": [
+      "5-79",
+      "5-83"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-31": {
+    "topics": [
+      "3-50",
+      "3-64"
+    ],
+    "method": "terminology",
+    "confidence": 0.4864
+  },
+  "2026-非法学-民法-32": {
+    "topics": [
+      "3-26"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2026-非法学-民法-33": {
+    "topics": [
+      "1-28"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-34": {
+    "topics": [
+      "3-51",
+      "3-66"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2026-非法学-民法-35": {
+    "topics": [
+      "3-45"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-36": {
+    "topics": [
+      "5-91"
+    ],
+    "method": "semantic",
+    "confidence": 0.528
+  },
+  "2026-非法学-民法-37": {
+    "topics": [
+      "5-131",
+      "5-93",
+      "5-98"
+    ],
+    "method": "terminology",
+    "confidence": 0.4909
+  },
+  "2026-非法学-民法-38": {
+    "topics": [
+      "5-26"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2026-非法学-民法-39": {
+    "topics": [
+      "5-79",
+      "5-83"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-40": {
+    "topics": [
+      "6-13"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-46": {
+    "topics": [
+      "4-10"
+    ],
+    "method": "keyword-audit",
+    "confidence": 0.98
+  },
+  "2026-非法学-民法-47": {
+    "topics": [
+      "4-8"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  },
+  "2026-非法学-民法-48": {
+    "topics": [
+      "5-128"
+    ],
+    "method": "terminology",
+    "confidence": 0.4818
+  },
+  "2026-非法学-民法-49": {
+    "topics": [
+      "5-10"
+    ],
+    "method": "manual",
+    "confidence": 1.0
+  },
+  "2026-非法学-民法-50": {
+    "topics": [
+      "5-79",
+      "5-83",
+      "5-96",
+      "5-101"
+    ],
+    "method": "terminology",
+    "confidence": 0.4727
+  }
+}

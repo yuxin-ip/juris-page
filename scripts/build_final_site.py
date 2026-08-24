@@ -1,4 +1,5 @@
-"""Build the final dual-track criminal-law page index.
+# -*- coding: utf-8 -*-
+"""Build the final dual-track criminal- and civil-law page index.
 
 The build deliberately keeps the two extraction results as sources:
 
@@ -457,6 +458,7 @@ def build_questions(topic_by_norm):
             "id": question["id"],
             "year": question["year"],
             "track": question["track"],
+            "subject": "刑法",
             "type": question["question_type"],
             "number": question["question_number"],
             "primary_topic": primary["label"] if primary else None,
@@ -522,6 +524,27 @@ def build_offense_filters(rows: list[dict]) -> list[dict]:
     ]
 
 
+def build_topic_filters(rows: list[dict], offense_filters: list[dict]) -> list[dict]:
+    """Build one shared two-level selector for criminal and civil topics."""
+    result = [
+        {"subject": "刑法", "label": item["label"], "topics": item["offenses"]}
+        for item in offense_filters
+    ]
+    civil: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        if row.get("subject") != "民法":
+            continue
+        for topic in row.get("topics", []):
+            if topic.get("part"):
+                civil[topic["part"]].add(topic["label"])
+    part_order = ["民法总则", "人格权", "物权", "知识产权", "合同", "婚姻家庭与继承", "侵权责任"]
+    result.extend(
+        {"subject": "民法", "label": part, "topics": sorted(civil[part])}
+        for part in part_order if civil.get(part)
+    )
+    return result
+
+
 def audit_payload(rows, topics, merge_stats):
     by_track = Counter(row["track"] for row in rows)
     mapped = sum(bool(row["topics"]) for row in rows)
@@ -572,45 +595,47 @@ HTML = r'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="2010—2026 年法硕法学、非法学刑法客观题与众合 2027 刑法教材印刷页码速查">
-<title>法硕刑法真题 · 教材页码速查</title>
+<meta name="description" content="2010—2026 年法硕法学、非法学刑法与民法客观题及众合 2027 教材印刷页码速查">
+<title>法硕刑民法真题 · 教材页码速查</title>
 <style>
 :root{--bg:#f3f5f8;--card:#fff;--line:#e1e6ee;--text:#172033;--muted:#667085;--blue:#2357a6;--blue-soft:#eef4ff;--teal:#087f6d;--amber:#a85b00;--law:#7c3aed;--nonlaw:#0f6b63;--shadow:0 1px 3px rgba(16,24,40,.06)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}.wrap{width:min(980px,100%);margin:auto;padding:26px 18px 72px}.hero{margin-bottom:20px}.hero h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}.hero p{margin:0;color:var(--muted);font-size:14px}.controls{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);padding:12px 0 10px}.search-help{margin:0 0 7px;padding:8px 10px;border:1px solid #d9e5fa;border-radius:9px;background:#f8fbff;color:#4a5c78;font-size:12px}.search-help b{color:#274e8f}.search-help code{padding:1px 4px;border-radius:4px;background:#eaf1fd;color:#274e8f;font-family:inherit}.search{width:100%;height:46px;border:1px solid var(--line);border-radius:11px;background:#fff;padding:0 14px;font-size:15px;outline:none}.search:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #dbeafe}.filters{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:8px;margin-top:9px}.filters.active{padding:8px;border:1px solid #bfd3fb;border-radius:11px;background:var(--blue-soft)}.filter-group{display:grid;gap:3px;min-width:0}.filter-group span{padding-left:2px;color:var(--muted);font-size:11px;font-weight:650;line-height:1.2}select{width:100%;min-width:0;height:38px;border:1px solid var(--line);border-radius:9px;background:#fff;padding:0 10px;color:var(--text);font-size:13px}select.active{border-color:var(--blue);background:#e3edff;color:#17458a;font-weight:650}.filter-state{display:flex;align-items:center;gap:9px;margin-top:8px;padding:7px 9px;border:1px solid #bfd3fb;border-radius:9px;background:var(--blue-soft);color:#17458a;font-size:12px}.filter-state[hidden]{display:none}.reset-filters{margin-left:auto;border:1px solid #9dbbf2;border-radius:7px;background:#fff;color:#17458a;padding:4px 9px;font:inherit;font-weight:650;cursor:pointer;white-space:nowrap}.hot{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.hot button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:5px 10px;font-size:12px;cursor:pointer}.hot button.on{color:#fff;background:var(--blue);border-color:var(--blue)}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:13px 1px 10px;color:var(--muted);font-size:13px}.notice{background:#fff8e8;border:1px solid #f2d89a;border-radius:10px;padding:9px 12px;color:#7a4a00;font-size:12px;margin-bottom:12px}.list{display:grid;gap:11px}.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 16px;box-shadow:var(--shadow)}.head{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.qid{font-weight:750;color:var(--blue);font-size:15px}.badge{display:inline-flex;align-items:center;border-radius:6px;padding:2px 7px;font-size:11px;border:1px solid var(--line);color:var(--muted)}.badge.law{color:var(--law);border-color:#ddd0ff;background:#f6f1ff}.badge.nonlaw{color:var(--nonlaw);border-color:#bae3dd;background:#eefaf8}.primary{margin:8px 0 0;font-size:14px}.primary b{color:var(--blue)}.points{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.point{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;background:#fafbfc;padding:4px 8px;font-size:12px}.point.primary-point{background:var(--blue-soft);border-color:#cfe0ff}.point .name{font-weight:620}.page.bs{color:var(--teal);font-weight:650}.page.jj{color:var(--amber);font-weight:650}.page.missing{color:#98a2b3;font-weight:500}.verified{width:7px;height:7px;border-radius:50%;background:#22a06b;display:inline-block}.more,.load{border:1px solid var(--line);background:#fff;color:var(--blue);border-radius:8px;cursor:pointer}.more{font-size:12px;padding:4px 8px}.load{display:block;margin:18px auto 0;padding:9px 22px}.empty{text-align:center;padding:48px 10px;color:var(--muted)}footer{margin-top:28px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}footer p{margin:4px 0}.legend{display:flex;gap:14px;flex-wrap:wrap}.legend span{display:inline-flex;align-items:center;gap:5px}
 @media(max-width:680px){.wrap{padding:18px 14px 56px}.hero h1{font-size:22px}.filters{grid-template-columns:1fr 1fr}.filter-state{align-items:flex-start}.reset-filters{margin-left:0}.controls{padding-top:8px}.card{padding:14px}.point{width:100%;justify-content:flex-start}.hot{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px}.hot button{flex:none}.bar{align-items:flex-start;flex-direction:column;gap:2px}}
-/* Version 1.1: the two special-part selectors jointly occupy one filter slot. */
-.filters{grid-template-columns:1.15fr 1fr 1fr 1.25fr}.dual-select{display:grid;grid-template-columns:1fr 1fr;gap:5px}.dual-select span{padding:0}.end-hint{text-align:center;margin:18px auto 0;color:var(--muted);font-size:12px}
+/* Version 1.1: the two topic selectors stack vertically inside one filter slot. */
+.filters{grid-template-columns:1.15fr 1fr 1fr .85fr 1.3fr}.dual-select{display:grid;grid-template-columns:1fr;gap:5px}.dual-select span{padding:0}.end-hint{text-align:center;margin:18px auto 0;color:var(--muted);font-size:12px}
 @media(max-width:680px){.filters{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body><main class="wrap">
-<section class="hero"><h1>法硕刑法真题 · 教材页码速查</h1><p>2010—2026 法学 + 非法学客观题 · 众合 2027《背诵一本通》《精讲一本通》</p></section>
+<section class="hero"><h1>法硕刑民法真题 · 教材页码速查</h1><p>2010—2026 法学 + 非法学客观题 · 众合 2027《背诵一本通》《精讲一本通》</p></section>
 <section class="controls" aria-label="题目筛选">
-<div class="search-help"><b>搜索方法：</b>可单独输入年份、题号、考点或罪名，例如 <code>2025</code>、<code>诈骗罪</code>；也可用空格分隔组合筛选，例如 <code>2025 法学 抢劫罪</code>。输入 <code>202506</code> 可查看 2025 年第 6 题（法学、非法学同时显示）。</div>
-<input id="search" class="search" aria-label="搜索题目" placeholder="搜索年份、题号、考点或罪名">
-<div class="filters" id="filters"><label class="filter-group"><span>类别 · 法学 / 非法学</span><select id="track" aria-label="考生类别"><option value="">全部</option><option value="非法学">非法学</option><option value="法学">法学</option></select></label><label class="filter-group"><span>年份</span><select id="year" aria-label="年份"><option value="">全部年份</option></select></label><label class="filter-group"><span>题型 · 单选 / 多选</span><select id="type" aria-label="题型"><option value="">全部</option><option value="single">单选</option><option value="multiple">多选</option></select></label><label class="filter-group"><span>刑法分则罪名</span><span class="dual-select"><select id="offenseCategory" aria-label="犯罪类型"><option value="">犯罪类型</option></select><select id="offense" aria-label="具体罪名"><option value="">具体罪名</option></select></span></label></div><div class="filter-state" id="filterState" aria-live="polite" hidden><span>当前已启用筛选条件，搜索结果可能减少。</span><button id="resetFilters" class="reset-filters" type="button">重置筛选</button></div>
+<div class="search-help"><b>搜索方法：</b>可单独输入年份、题号、科目、考点或罪名，例如 <code>2025</code>、<code>民法</code>、<code>诈骗罪</code>；也可用空格分隔组合筛选，例如 <code>2025 法学 抢劫罪</code>。输入 <code>202506</code> 可查看 2025 年第 6 题（法学、非法学同时显示）。</div>
+<input id="search" class="search" aria-label="搜索题目" placeholder="搜索年份、题号、科目、考点或罪名">
+<div class="filters" id="filters"><label class="filter-group"><span>类别 · 法学 / 非法学</span><select id="track" aria-label="考生类别"><option value="">全部</option><option value="非法学">非法学</option><option value="法学">法学</option></select></label><label class="filter-group"><span>年份</span><select id="year" aria-label="年份"><option value="">全部年份</option></select></label><label class="filter-group"><span>题型 · 单选 / 多选</span><select id="type" aria-label="题型"><option value="">全部</option><option value="single">单选</option><option value="multiple">多选</option></select></label><label class="filter-group"><span>科目</span><select id="subject" aria-label="科目"><option value="">全部科目</option><option value="刑法">刑法</option><option value="民法">民法</option></select></label><label class="filter-group"><span id="topicFilterTitle">知识点筛选</span><span class="dual-select"><select id="topicCategory" aria-label="知识门类"><option value="">知识门类</option></select><select id="topic" aria-label="具体知识点"><option value="">具体知识点</option></select></span></label></div><div class="filter-state" id="filterState" aria-live="polite" hidden><span>当前已启用筛选条件，搜索结果可能减少。</span><button id="resetFilters" class="reset-filters" type="button">重置筛选</button></div>
 </section>
 <div class="bar"><span id="stats"></span><span>页码均为纸质书页脚的印刷页</span></div>
-<div class="notice">提示：同一道题可关联多个罪名或总则考点；页码定位仍建议结合题目解析判断。</div>
+<div class="notice">提示：同一道题可关联多个罪名或知识点；民法仅收录《背诵一本通》中有编号、有标题的知识点。页码定位仍建议结合题目解析判断。</div>
 <section class="list" id="list" aria-live="polite"></section><button id="load" class="load" hidden>显示更多</button><div id="endHint" class="end-hint" aria-live="polite" hidden></div>
-<footer><div class="legend"><span>背 P. = 背诵一本通</span><span>精 P. = 精讲一本通</span></div><p>范围：2010—2026 年刑法客观题，法学 250 道、非法学 425 道，共 675 道；2025、2026 两年均已收录。</p><p>本站不提供教材扫描件、真题题面或第三方解析全文。</p><p>版权所有 © 2026 郑宇昕。作者：南京理工大学知识产权学院 郑宇昕。</p></footer>
+<footer><div class="legend"><span>背 P. = 背诵一本通</span><span>精 P. = 精讲一本通</span></div><p>范围：2010—2026 年刑法、民法客观题，共 1355 道；2025、2026 两年均已收录。</p><p>本站不提供教材扫描件、真题题面或第三方解析全文。</p><p>版权所有 © 2026 郑宇昕。作者：南京理工大学知识产权学院 郑宇昕。</p></footer>
 </main><script>
-const DATA=__DATA__;const OFFENSE_FILTERS=__OFFENSE_FILTERS__;const PAGE_SIZE=80;let visible=PAGE_SIZE;const state={q:"",track:"",year:"",type:"",offenseCategory:"",offense:""};
+const DATA=__DATA__;const TOPIC_FILTERS=__TOPIC_FILTERS__;const PAGE_SIZE=80;let visible=PAGE_SIZE;const state={q:"",track:"",year:"",type:"",subject:"",topicCategory:"",topic:""};
 const $=s=>document.querySelector(s);const esc=s=>String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function formatRanges(ranges){return ranges.map(([a,b])=>a===b?String(a):a+"–"+b).join("、")}
 function refHtml(topic,key,label,cls){const ref=topic.references[key];if(!ref)return `<span class="page missing">${label} P.—</span>`;return `<span class="page ${cls}">${label} P.${formatRanges(ref.pages)}</span>`}
-function termMatches(x,hay,term){const yearQuestion=term.match(/^(20\d{2})(\d{1,2})$/);if(yearQuestion)return x.year===Number(yearQuestion[1])&&x.number===Number(yearQuestion[2]);if(/^20\d{2}$/.test(term))return x.year===Number(term);if(term==='法学'||term==='非法学')return x.track===term;if(term==='单选'||term==='单选题')return x.type==='single';if(term==='多选'||term==='多选题')return x.type==='multiple';return hay.includes(term)}
-function filtered(){const terms=state.q.trim().toLowerCase().split(/\s+/).filter(Boolean);const categoryOffenses=new Set((OFFENSE_FILTERS.find(x=>x.label===state.offenseCategory)||{offenses:[]}).offenses);return DATA.filter(x=>{if(state.track&&x.track!==state.track)return false;if(state.year&&String(x.year)!==state.year)return false;if(state.type&&x.type!==state.type)return false;if(state.offenseCategory&&!x.topics.some(t=>categoryOffenses.has(t.label)))return false;if(state.offense&&!x.topics.some(t=>t.label===state.offense))return false;if(terms.length){const hay=[x.id,x.year,x.track,x.number,x.primary_topic,...x.topics.map(t=>t.label)].join(" ").toLowerCase();if(!terms.every(term=>termMatches(x,hay,term)))return false}return true})}
+function termMatches(x,hay,term){const yearQuestion=term.match(/^(20\d{2})(\d{1,2})$/);if(yearQuestion)return x.year===Number(yearQuestion[1])&&x.number===Number(yearQuestion[2]);if(/^20\d{2}$/.test(term))return x.year===Number(term);if(term==='法学'||term==='非法学')return x.track===term;if(term==='刑法'||term==='民法')return x.subject===term;if(term==='单选'||term==='单选题')return x.type==='single';if(term==='多选'||term==='多选题')return x.type==='multiple';return hay.includes(term)}
+function filtered(){const terms=state.q.trim().toLowerCase().split(/\s+/).filter(Boolean);const categoryTopics=new Set((TOPIC_FILTERS.find(x=>x.label===state.topicCategory)||{topics:[]}).topics);return DATA.filter(x=>{if(state.track&&x.track!==state.track)return false;if(state.year&&String(x.year)!==state.year)return false;if(state.type&&x.type!==state.type)return false;if(state.subject&&x.subject!==state.subject)return false;if(state.topicCategory&&!x.topics.some(t=>categoryTopics.has(t.label)))return false;if(state.topic&&!x.topics.some(t=>t.label===state.topic))return false;if(terms.length){const hay=[x.id,x.year,x.track,x.subject,x.number,x.primary_topic,...x.topics.map(t=>t.label)].join(" ").toLowerCase();if(!terms.every(term=>termMatches(x,hay,term)))return false}return true})}
 function pointHtml(t,index){return `<span class="point ${index===0?'primary-point':''}"><span class="name">${esc(t.label)}</span>${refHtml(t,'beisong','背','bs')}${refHtml(t,'jingjiang','精','jj')}</span>`}
-function cardHtml(x){const primary=x.primary_topic?`主考点：<b>${esc(x.primary_topic)}</b>`:'暂未识别主考点';const shown=x.topics.slice(0,6),hidden=x.topics.slice(6);return `<article class="card" data-id="${esc(x.id)}"><div class="head"><span class="qid">${x.year} · ${x.track} · 第 ${x.number} 题</span><span class="badge">${x.type==='single'?'单选':'多选'}</span></div><p class="primary">${primary}</p><div class="points">${shown.map(pointHtml).join('')}${hidden.length?`<button class="more" data-more="${esc(x.id)}">另 ${hidden.length} 个考点</button>`:''}</div><template>${hidden.map((t,i)=>pointHtml(t,i+shown.length)).join('')}</template></article>`}
-function syncFilterState(){const ids=['track','year','type','offenseCategory','offense'];const active=ids.some(id=>Boolean(state[id]));$('#filters').classList.toggle('active',active);$('#filterState').hidden=!active;for(const id of ids){$('#'+id).classList.toggle('active',Boolean(state[id]))}}
+function cardHtml(x){const primary=x.primary_topic?`主考点：<b>${esc(x.primary_topic)}</b>`:'暂未识别主考点';const shown=x.topics.slice(0,6),hidden=x.topics.slice(6);return `<article class="card" data-id="${esc(x.id)}"><div class="head"><span class="qid">${x.year} · ${x.track} · ${x.subject} · 第 ${x.number} 题</span><span class="badge">${x.type==='single'?'单选':'多选'}</span></div><p class="primary">${primary}</p><div class="points">${shown.map(pointHtml).join('')}${hidden.length?`<button class="more" data-more="${esc(x.id)}">另 ${hidden.length} 个考点</button>`:''}</div><template>${hidden.map((t,i)=>pointHtml(t,i+shown.length)).join('')}</template></article>`}
+function syncFilterState(){const ids=['track','year','type','subject','topicCategory','topic'];const active=ids.some(id=>Boolean(state[id]));$('#filters').classList.toggle('active',active);$('#filterState').hidden=!active;for(const id of ids){$('#'+id).classList.toggle('active',Boolean(state[id]))}}
 function render(){const rows=filtered();const current=rows.slice(0,visible);const hasMore=rows.length>visible;syncFilterState();$('#stats').textContent=`找到 ${rows.length} 道题（法学 ${rows.filter(x=>x.track==='法学').length} · 非法学 ${rows.filter(x=>x.track==='非法学').length}）`;$('#list').innerHTML=current.length?current.map(cardHtml).join(''):'<div class="empty">没有匹配的题目</div>';$('#load').hidden=!hasMore;$('#endHint').hidden=rows.length===0||hasMore;$('#endHint').textContent=`没有更多内容了，已显示全部 ${rows.length} 道题。`}
 function resetRender(){visible=PAGE_SIZE;render()}
 for(let y=2026;y>=2010;y--){$('#year').insertAdjacentHTML('beforeend',`<option value="${y}">${y} 年</option>`)}
-function offenseOptions(category){const item=OFFENSE_FILTERS.find(x=>x.label===category);return item?item.offenses:OFFENSE_FILTERS.flatMap(x=>x.offenses)}
-function fillOffenses(){const selected=state.offense;const options=offenseOptions(state.offenseCategory);if(!options.includes(selected))state.offense='';$('#offense').innerHTML='<option value="">具体罪名</option>'+options.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');$('#offense').value=state.offense}
-$('#offenseCategory').insertAdjacentHTML('beforeend',OFFENSE_FILTERS.map(x=>`<option value="${esc(x.label)}">${esc(x.label)}</option>`).join(''));fillOffenses();
-$('#search').addEventListener('input',e=>{state.q=e.target.value;resetRender()});for(const id of ['track','year','type','offense']){$('#'+id).addEventListener('change',e=>{state[id]=e.target.value;resetRender()})}$('#offenseCategory').addEventListener('change',e=>{state.offenseCategory=e.target.value;fillOffenses();resetRender()});$('#resetFilters').addEventListener('click',()=>{for(const id of ['track','year','type','offenseCategory','offense']){state[id]='';if(id!=='offense')$('#'+id).value=''}fillOffenses();resetRender()});
+function availableGroups(){return state.subject?TOPIC_FILTERS.filter(x=>x.subject===state.subject):TOPIC_FILTERS}
+function topicOptions(category){const item=TOPIC_FILTERS.find(x=>x.label===category);return item?item.topics:availableGroups().flatMap(x=>x.topics)}
+function captions(){return state.subject==='刑法'?['刑法分则罪名','犯罪类型','具体罪名']:state.subject==='民法'?['民法编号知识点','民法部分','具体知识点']:['知识点筛选','知识门类','具体知识点']}
+function fillTopicSelectors(){const groups=availableGroups(),labels=groups.map(x=>x.label);if(!labels.includes(state.topicCategory))state.topicCategory='';const [title,categoryLabel,topicLabel]=captions();$('#topicFilterTitle').textContent=title;$('#topicCategory').innerHTML=`<option value="">${categoryLabel}</option>`+groups.map(x=>`<option value="${esc(x.label)}">${esc(x.label)}</option>`).join('');$('#topicCategory').value=state.topicCategory;const options=topicOptions(state.topicCategory);if(!options.includes(state.topic))state.topic='';$('#topic').innerHTML=`<option value="">${topicLabel}</option>`+options.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');$('#topic').value=state.topic}
+fillTopicSelectors();
+$('#search').addEventListener('input',e=>{state.q=e.target.value;resetRender()});for(const id of ['track','year','type','topic']){$('#'+id).addEventListener('change',e=>{state[id]=e.target.value;resetRender()})}$('#subject').addEventListener('change',e=>{state.subject=e.target.value;fillTopicSelectors();resetRender()});$('#topicCategory').addEventListener('change',e=>{state.topicCategory=e.target.value;fillTopicSelectors();resetRender()});$('#resetFilters').addEventListener('click',()=>{for(const id of ['track','year','type','subject','topicCategory','topic'])state[id]='';for(const id of ['track','year','type','subject'])$('#'+id).value='';fillTopicSelectors();resetRender()});
 $('#list').addEventListener('click',e=>{const b=e.target.closest('[data-more]');if(!b)return;const card=b.closest('.card'),tpl=card.querySelector('template');b.insertAdjacentHTML('beforebegin',tpl.innerHTML);b.remove()});$('#load').addEventListener('click',()=>{visible+=PAGE_SIZE;render()});render();
 </script></body></html>'''
 
@@ -621,6 +646,11 @@ def main():
     audit = audit_payload(rows, topics, merge_stats)
 
     offense_filters = build_offense_filters(rows)
+    civil_path = ROOT / ".work" / "civil" / "site_rows.json"
+    if civil_path.exists():
+        rows.extend(json.loads(civil_path.read_text(encoding="utf-8")))
+    rows.sort(key=lambda item: (-item["year"], item["track"] != "非法学", item["subject"], item["number"]))
+    topic_filters = build_topic_filters(rows, offense_filters)
 
     payload = {
         "meta": {
@@ -638,9 +668,12 @@ def main():
     (DATA_DIR / "offense_filters.json").write_text(
         json.dumps(offense_filters, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    (DATA_DIR / "topic_filters.json").write_text(
+        json.dumps(topic_filters, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     (DATA_DIR / "page_audit.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
     html = HTML.replace("__DATA__", json.dumps(rows, ensure_ascii=False, separators=(",", ":")))
-    html = html.replace("__OFFENSE_FILTERS__", json.dumps(offense_filters, ensure_ascii=False, separators=(",", ":")))
+    html = html.replace("__TOPIC_FILTERS__", json.dumps(topic_filters, ensure_ascii=False, separators=(",", ":")))
     (WEB_DIR / "index.html").write_text(html, encoding="utf-8")
     # GitHub Pages can publish this repository directly from the main branch root.
     (ROOT / "index.html").write_text(html, encoding="utf-8")

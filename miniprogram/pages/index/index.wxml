@@ -1,19 +1,20 @@
 <view class="page">
   <view class="hero">
-    <view class="title-row"><text class="title">法硕刑法真题 · 页码速查</text><text class="about" bindtap="goAbout">说明</text></view>
-    <text class="subtitle">2010—2026 · 法学 + 非法学 · 众合 2027 刑法教材</text>
+    <view class="title-row"><text class="title">法硕刑民法真题 · 页码速查</text><text class="about" bindtap="goAbout">说明</text></view>
+    <text class="subtitle">2010—2026 · 法学 + 非法学 · 众合 2027 教材</text>
   </view>
 
   <view class="search-help">
-    <text class="help-title">搜索方法：</text>可单独输入年份、题号、考点或罪名，例如 2025、诈骗罪；也可用空格分隔组合筛选，例如 2025 法学 抢劫罪。输入 202506 可同时查看两类试卷的第 6 题。
+    <text class="help-title">搜索方法：</text>可单独输入年份、题号、科目、考点或罪名，例如 2025、民法、诈骗罪；也可用空格分隔组合筛选，例如 2025 法学 抢劫罪。输入 202506 可同时查看两类试卷的第 6 题。
   </view>
-  <input class="search" value="{{query}}" placeholder="搜索年份、题号、考点或罪名" bindinput="onSearch" confirm-type="search" />
+  <input class="search" value="{{query}}" placeholder="搜索年份、题号、科目、考点或罪名" bindinput="onSearch" confirm-type="search" />
 
   <view class="filters {{hasActiveFilter ? 'filters-active' : ''}}">
     <picker mode="selector" range="{{trackOptions}}" value="{{trackIndex}}" bindchange="onTrackChange"><view class="filter"><text>类别 · 法学 / 非法学</text><text>{{trackOptions[trackIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{yearOptions}}" value="{{yearIndex}}" bindchange="onYearChange"><view class="filter"><text>年份</text><text>{{yearOptions[yearIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{typeOptions}}" value="{{typeIndex}}" bindchange="onTypeChange"><view class="filter"><text>题型 · 单选 / 多选</text><text>{{typeOptions[typeIndex]}} ›</text></view></picker>
-    <view class="filter offense-filter"><text>刑法分则罪名</text><view class="offense-selects"><picker mode="selector" range="{{categoryOptions}}" value="{{categoryIndex}}" bindchange="onCategoryChange"><view class="offense-select"><text>犯罪类型</text><text>{{categoryOptions[categoryIndex]}} ›</text></view></picker><picker mode="selector" range="{{offenseOptions}}" value="{{offenseIndex}}" bindchange="onOffenseChange"><view class="offense-select"><text>具体罪名</text><text>{{offenseOptions[offenseIndex]}} ›</text></view></picker></view></view>
+    <picker mode="selector" range="{{subjectOptions}}" value="{{subjectIndex}}" bindchange="onSubjectChange"><view class="filter"><text>科目 · 刑法 / 民法</text><text>{{subjectOptions[subjectIndex]}} ›</text></view></picker>
+    <view class="filter offense-filter"><text>{{topicFilterTitle}}</text><view class="offense-selects"><picker mode="selector" range="{{categoryOptions}}" value="{{categoryIndex}}" bindchange="onCategoryChange"><view class="offense-select"><text>{{categoryCaption}}</text><text>{{categoryOptions[categoryIndex]}} ›</text></view></picker><picker mode="selector" range="{{topicOptions}}" value="{{topicIndex}}" bindchange="onTopicChange"><view class="offense-select"><text>{{topicCaption}}</text><text>{{topicOptions[topicIndex]}} ›</text></view></picker></view></view>
   </view>
   <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view>
 
@@ -23,6 +24,6 @@
   <button wx:if="{{hasMore}}" class="load-more" bindtap="showMore">显示更多</button>
   <view wx:if="{{showEndHint}}" class="end-hint">{{endText}}</view>
 
-  <view class="notice">同一道题可关联多个罪名或总则考点；页码定位仍建议结合题目解析判断。</view>
+  <view class="notice">同一道题可关联多个罪名或知识点；民法仅收录《背诵一本通》中有编号、有标题的知识点。页码定位仍建议结合题目解析判断。</view>
   <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>
 </view>

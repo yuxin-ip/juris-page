@@ -1,6 +1,6 @@
 <view class="card">
   <view class="head">
-    <text class="qid">{{question.year}} · {{question.track}} · 第 {{question.number}} 题</text>
+    <text class="qid">{{question.year}} · {{question.track}} · {{question.subject}} · 第 {{question.number}} 题</text>
     <text class="badge">{{question.type === 'single' ? '单选' : '多选'}}</text>
   </view>
   <view class="primary">主考点：<text>{{question.primary_topic || '暂未识别主考点'}}</text></view>

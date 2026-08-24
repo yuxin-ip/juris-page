@@ -15,6 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data" / "site_dataset.json"
 OFFENSE_FILTERS = ROOT / "data" / "offense_filters.json"
+TOPIC_FILTERS = ROOT / "data" / "topic_filters.json"
 OUTPUT = ROOT / "miniprogram" / "data" / "questions"
 
 
@@ -25,6 +26,7 @@ def js_module(value: object) -> str:
 def main():
     payload = json.loads(SOURCE.read_text(encoding="utf-8"))
     offense_filters = json.loads(OFFENSE_FILTERS.read_text(encoding="utf-8"))
+    topic_filters = json.loads(TOPIC_FILTERS.read_text(encoding="utf-8"))
     by_year: dict[int, list[dict]] = defaultdict(list)
     for question in payload["questions"]:
         by_year[question["year"]].append(question)
@@ -52,6 +54,9 @@ def main():
     (ROOT / "miniprogram" / "data" / "meta.js").write_text(js_module(meta), encoding="utf-8")
     (ROOT / "miniprogram" / "data" / "offense-filters.js").write_text(
         js_module({"categories": offense_filters}), encoding="utf-8"
+    )
+    (ROOT / "miniprogram" / "data" / "topic-filters.js").write_text(
+        js_module({"groups": topic_filters}), encoding="utf-8"
     )
     print(f"Built Mini Program data: {len(payload['questions'])} questions across {len(years)} years")
 
