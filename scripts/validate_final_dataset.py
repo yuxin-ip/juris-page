@@ -50,15 +50,20 @@ assert '<select id="track" aria-label="考生类别"><option value="">全部</op
 assert '<select id="type" aria-label="题型"><option value="">全部</option>' in html
 assert 'class="subject-switch" role="radiogroup"' in html
 assert 'data-subject="刑法"' in html and 'data-subject="民法"' in html
+assert 'data-subject=""' not in html
 assert '<select id="subject"' not in html
 assert 'id="topicCategory"' in html
 assert 'id="topic"' in html
 assert "setAttribute('aria-label',categoryLabel)" in html
 assert "setAttribute('aria-label',topicLabel)" in html
-assert 'id="topicFilterGroup" hidden' in html
+assert 'id="topicFilterGroup"' in html and 'id="topicFilterTitle"' in html
 assert "Boolean(state.subject)||" in html
 assert "['刑法分则罪名','犯罪类型','具体罪名']" in html
-assert "['民法编号知识点','民法部分','具体知识点']" in html
+assert "['民法编号知识点','民法典全部七编','具体知识点']" in html
+assert "民法部分" not in html
+for book in ("第一编·总则", "第二编·物权", "第三编·合同", "第四编·人格权", "第五编·婚姻家庭", "第六编·继承", "第七编·侵权责任"):
+    assert book in html
+assert "民法典外·知识产权" in html
 assert "知识门类" not in html
 assert "科目、考点或罪名" in html
 assert 'placeholder="搜索年份、题号、科目、考点或罪名"' in html
@@ -89,7 +94,7 @@ expected_categories = [
     "贪污贿赂罪", "渎职罪",
 ]
 assert [item["label"] for item in offense_filters] == expected_categories
-assert Counter(item["subject"] for item in topic_filters) == {"刑法": 8, "民法": 7}
+assert Counter(item["subject"] for item in topic_filters) == {"刑法": 8, "民法": 8}
 appearing_topics = {topic["label"] for row in rows for topic in row["topics"]}
 for category in topic_filters:
     assert category["subject"] in {"刑法", "民法"}

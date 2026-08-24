@@ -3,11 +3,11 @@ const { groups } = require('../../data/topic-filters.js');
 
 const TRACKS = ['', '非法学', '法学'];
 const TYPES = ['', 'single', 'multiple'];
-const SUBJECTS = ['', '刑法', '民法'];
+const SUBJECTS = ['刑法', '民法'];
 
 function availableGroups(subject) { return subject ? groups.filter((item) => item.subject === subject) : groups; }
 function categoryOptions(subject) {
-  const first = subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法部分' : '';
+  const first = subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法典全部七编' : '';
   return [first].concat(availableGroups(subject).map((item) => item.label));
 }
 function allTopics(category, subject) {
@@ -33,9 +33,9 @@ Page({
     trackOptions: ['全部', '非法学', '法学'],
     yearOptions: ['全部年份'].concat(years.map(String)),
     typeOptions: ['全部', '单选', '多选'],
-    subjectOptions: ['全部', '刑法', '民法'],
-    categoryOptions: [],
-    topicOptions: [], topicFilterTitle: '', categoryCaption: '', topicCaption: '',
+    subjectOptions: ['刑法', '民法'],
+    categoryOptions: categoryOptions('刑法'),
+    topicOptions: allTopics('', '刑法'), topicFilterTitle: '刑法分则罪名',
     items: [], visibleItems: [], resultText: '', endText: '', limit: 80,
     hasActiveFilter: false, hasMore: false, showEndHint: false,
   },
@@ -52,9 +52,7 @@ Page({
     this.setData({
       subjectIndex, categoryIndex: 0, topicIndex: 0,
       categoryOptions: categoryOptions(subject), topicOptions: allTopics('', subject),
-      topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : subject === '民法' ? '民法编号知识点' : '',
-      categoryCaption: subject === '刑法' ? '犯罪类型' : subject === '民法' ? '民法部分' : '',
-      topicCaption: subject === '刑法' ? '具体罪名' : subject === '民法' ? '具体知识点' : '',
+      topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : '民法编号知识点',
     }, () => this.applyFilters());
   },
 
@@ -73,8 +71,8 @@ Page({
   resetFilters() {
     this.setData({
       trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectIndex: 0, categoryIndex: 0, topicIndex: 0,
-      categoryOptions: [], topicOptions: [],
-      topicFilterTitle: '', categoryCaption: '', topicCaption: '',
+      categoryOptions: categoryOptions('刑法'), topicOptions: allTopics('', '刑法'),
+      topicFilterTitle: '刑法分则罪名',
     }, () => this.applyFilters());
   },
 

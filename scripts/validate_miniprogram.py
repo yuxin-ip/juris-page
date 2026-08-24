@@ -35,18 +35,25 @@ def main():
     assert "onSubjectTap" in index_js and "onSubjectChange" not in index_js
     assert "showEndHint" in index_js and "hasMore" in index_js
     topic_filters = read_js_data(PROGRAM / "data" / "topic-filters.js")["groups"]
-    assert Counter(item["subject"] for item in topic_filters) == {"刑法": 8, "民法": 7}
+    assert Counter(item["subject"] for item in topic_filters) == {"刑法": 8, "民法": 8}
     appearing_topics = {topic["label"] for question in questions for topic in question["topics"]}
     assert all(set(item["topics"]) <= appearing_topics for item in topic_filters)
     wxml = (PROGRAM / "pages" / "index" / "index.wxml").read_text(encoding="utf-8")
     wxss = (PROGRAM / "pages" / "index" / "index.wxss").read_text(encoding="utf-8")
     card = (PROGRAM / "components" / "question-card" / "question-card.wxml").read_text(encoding="utf-8")
     assert 'class="subject-switch"' in wxml and 'bindtap="onSubjectTap"' in wxml
-    assert 'wx:if="{{subjectIndex > 0}}"' in wxml
+    assert "subjectOptions: ['刑法', '民法']" in index_js
+    assert "subjectOptions: ['全部', '刑法', '民法']" not in index_js
+    assert 'wx:if="{{subjectIndex > 0}}"' not in wxml
+    assert "topicFilterTitle" in wxml and "topicFilterTitle" in index_js
+    assert "categoryCaption" not in wxml and "categoryCaption" not in index_js
+    assert "topicCaption" not in wxml and "topicCaption" not in index_js
     assert "'犯罪类型'" in index_js and "'具体罪名'" in index_js
-    assert "'民法部分'" in index_js and "'具体知识点'" in index_js
+    assert "'民法典全部七编'" in index_js and "'具体知识点'" in index_js
+    assert "'民法部分'" not in index_js
     assert "知识门类" not in index_js and "全部门类" not in index_js
     assert ".offense-selects{display:grid;grid-template-columns:1fr;" in wxss
+    assert "grid-template-columns:repeat(2,minmax(0,1fr))" in wxss
     assert "{{question.track}} · {{question.subject}} · 第" in card
     config = json.loads((PROGRAM / "project.config.json").read_text(encoding="utf-8"))
     assert config["miniprogramRoot"] == "./"
