@@ -40,6 +40,11 @@ assert "法学 + 非法学" in html
 assert "2025、2026 两年均已收录" in html
 assert '<select id="track" aria-label="考生类别"><option value="">全部</option>' in html
 assert '<select id="type" aria-label="题型"><option value="">全部</option>' in html
+assert "类别 · 法学 / 非法学" in html
+assert "题型 · 单选 / 多选" in html
+assert "空格可组合筛选" in html
+assert "function termMatches" in html
+assert "x.track===term" in html
 assert 'id="resetFilters"' in html
 assert "当前已启用筛选条件，搜索结果可能减少。" in html
 assert "南京理工大学知识产权学院 郑宇昕" in html
