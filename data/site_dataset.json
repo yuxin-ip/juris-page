@@ -28,6 +28,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  12,
+                  12
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -453,6 +462,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  30,
+                  30
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -858,6 +876,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  110,
+                  110
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -1136,6 +1163,15 @@
                 [
                   503,
                   503
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  126,
+                  126
                 ]
               ],
               "status": "candidate"
@@ -1685,7 +1721,26 @@
           "kind": "offense",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  150,
+                  150
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  472,
+                  472
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -2086,6 +2141,15 @@
                 [
                   330,
                   330
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  110,
+                  110
                 ]
               ],
               "status": "candidate"
@@ -3104,6 +3168,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -3438,6 +3511,32 @@
       "primary_topic": "失职致使在押人员脱逃罪",
       "topics": [
         {
+          "label": "徇私枉法罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  574,
+                  574
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  180,
+                  180
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "滥用职权罪",
           "kind": "offense",
           "role": "related",
@@ -3516,28 +3615,30 @@
           }
         },
         {
-          "label": "徇私枉法罪",
+          "label": "失职致使在押人员脱逃罪",
           "kind": "offense",
-          "role": "related",
+          "role": "primary",
           "mapping_status": "candidate",
           "references": {
+            "beisong": {
+              "pages": [
+                [
+                  182,
+                  182
+                ]
+              ],
+              "status": "candidate"
+            },
             "jingjiang": {
               "pages": [
                 [
-                  574,
-                  574
+                  578,
+                  578
                 ]
               ],
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "失职致使在押人员脱逃罪",
-          "kind": "offense",
-          "role": "primary",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -3990,6 +4091,15 @@
                 [
                   494,
                   494
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  155,
+                  155
                 ]
               ],
               "status": "candidate"
@@ -4832,10 +4942,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -5298,6 +5427,32 @@
           }
         },
         {
+          "label": "催收非法债务罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  494,
+                  494
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  155,
+                  155
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "强迫交易罪",
           "kind": "offense",
           "role": "related",
@@ -5343,23 +5498,6 @@
                 [
                   136,
                   136
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "催收非法债务罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  494,
-                  494
                 ]
               ],
               "status": "candidate"
@@ -6277,6 +6415,58 @@
           }
         },
         {
+          "label": "实行行为",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  125,
+                  125
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "着手",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "故意犯罪的停止形态",
           "kind": "general_rule",
           "role": "related",
@@ -6301,30 +6491,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "实行行为",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  125,
-                  125
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "着手",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -6402,6 +6568,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  12,
+                  12
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -6449,13 +6624,13 @@
       "track": "非法学",
       "type": "single",
       "number": 5,
-      "primary_topic": "无限额罚金",
+      "primary_topic": "罚金",
       "topics": [
         {
           "label": "罚金",
           "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
+          "role": "primary",
+          "mapping_status": "verified",
           "references": {
             "jingjiang": {
               "pages": [
@@ -6476,34 +6651,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "无限额罚金",
-          "kind": "other",
-          "role": "primary",
-          "mapping_status": "candidate",
-          "references": {}
-        },
-        {
-          "label": "倍数罚金",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
-        },
-        {
-          "label": "比例罚金",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
-        },
-        {
-          "label": "限额罚金",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -6676,6 +6823,15 @@
                 [
                   172,
                   172
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  42,
+                  42
                 ]
               ],
               "status": "candidate"
@@ -7146,6 +7302,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  38,
+                  38
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -7444,6 +7609,15 @@
                 [
                   172,
                   172
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  42,
+                  42
                 ]
               ],
               "status": "candidate"
@@ -7859,6 +8033,15 @@
                 [
                   172,
                   172
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  42,
+                  42
                 ]
               ],
               "status": "candidate"
@@ -8729,10 +8912,29 @@
       "topics": [
         {
           "label": "刑法体系",
-          "kind": "other",
+          "kind": "general_rule",
           "role": "primary",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  3,
+                  3
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  5,
+                  5
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         },
         {
           "label": "刑法的体系",
@@ -9325,6 +9527,15 @@
                 [
                   27,
                   27
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  12,
+                  12
                 ]
               ],
               "status": "candidate"
@@ -10087,10 +10298,29 @@
         },
         {
           "label": "精神病人",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  67,
+                  67
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -12464,10 +12694,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -12507,10 +12756,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -12729,7 +12997,26 @@
           "kind": "offense",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  167,
+                  167
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  531,
+                  531
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -12908,6 +13195,32 @@
           }
         },
         {
+          "label": "精神病人",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  67,
+                  67
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "醉酒",
           "kind": "general_rule",
           "role": "related",
@@ -12921,15 +13234,17 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
             }
           }
-        },
-        {
-          "label": "精神病人",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -12941,6 +13256,32 @@
       "number": 16,
       "primary_topic": "属地管辖",
       "topics": [
+        {
+          "label": "属地管辖",
+          "kind": "general_rule",
+          "role": "primary",
+          "mapping_status": "verified",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
         {
           "label": "拐卖妇女、儿童罪",
           "kind": "offense",
@@ -12961,23 +13302,6 @@
                 [
                   132,
                   132
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "属地管辖",
-          "kind": "general_rule",
-          "role": "primary",
-          "mapping_status": "verified",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  9,
-                  9
                 ]
               ],
               "status": "candidate"
@@ -13425,6 +13749,32 @@
           }
         },
         {
+          "label": "犯罪集团",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  152,
+                  152
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  38,
+                  38
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "胁从犯",
           "kind": "general_rule",
           "role": "related",
@@ -13444,23 +13794,6 @@
                 [
                   189,
                   189
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "犯罪集团",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  152,
-                  152
                 ]
               ],
               "status": "candidate"
@@ -15580,6 +15913,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  94,
+                  94
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -15594,6 +15936,15 @@
                 [
                   495,
                   495
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  156,
+                  156
                 ]
               ],
               "status": "candidate"
@@ -16618,6 +16969,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  140,
+                  140
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -16910,7 +17270,26 @@
           "kind": "offense",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  111,
+                  111
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  334,
+                  334
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -17239,6 +17618,15 @@
                 [
                   495,
                   495
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  156,
+                  156
                 ]
               ],
               "status": "candidate"
@@ -18085,6 +18473,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  156,
+                  156
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -18177,6 +18574,15 @@
           "mapping_status": "verified",
           "references": {
             "jingjiang": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
               "pages": [
                 [
                   9,
@@ -18514,6 +18920,32 @@
           }
         },
         {
+          "label": "徇私枉法罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  574,
+                  574
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  180,
+                  180
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "滥用职权罪",
           "kind": "offense",
           "role": "related",
@@ -18559,23 +18991,6 @@
                 [
                   67,
                   67
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "徇私枉法罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  574,
-                  574
                 ]
               ],
               "status": "candidate"
@@ -18749,6 +19164,32 @@
           }
         },
         {
+          "label": "着手",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "继续犯",
           "kind": "general_rule",
           "role": "related",
@@ -18825,13 +19266,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "着手",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -19108,6 +19542,15 @@
                 [
                   88,
                   88
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  267,
+                  267
                 ]
               ],
               "status": "candidate"
@@ -19519,6 +19962,15 @@
                 [
                   199,
                   199
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  50,
+                  50
                 ]
               ],
               "status": "candidate"
@@ -22841,6 +23293,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  23,
+                  23
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -23057,6 +23518,32 @@
           }
         },
         {
+          "label": "着手",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "继续犯",
           "kind": "general_rule",
           "role": "related",
@@ -23081,13 +23568,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "着手",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -23364,6 +23844,15 @@
                 [
                   406,
                   406
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  135,
+                  135
                 ]
               ],
               "status": "candidate"
@@ -23714,10 +24203,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -24313,6 +24821,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  23,
+                  23
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -24689,6 +25206,32 @@
           }
         },
         {
+          "label": "虐待被监护、看护人罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  406,
+                  406
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  135,
+                  135
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "负有照护职责人员性侵罪",
           "kind": "offense",
           "role": "related",
@@ -24760,23 +25303,6 @@
                 [
                   25,
                   25
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "虐待被监护、看护人罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  406,
-                  406
                 ]
               ],
               "status": "candidate"
@@ -25638,6 +26164,15 @@
                 [
                   185,
                   185
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  23,
+                  23
                 ]
               ],
               "status": "candidate"
@@ -26848,6 +27383,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  29,
+                  29
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -27266,6 +27810,32 @@
           }
         },
         {
+          "label": "从旧兼从轻",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  185,
+                  185
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  23,
+                  23
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "罪刑法定原则",
           "kind": "general_rule",
           "role": "related",
@@ -27285,23 +27855,6 @@
                 [
                   7,
                   7
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "从旧兼从轻",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "beisong": {
-              "pages": [
-                [
-                  185,
-                  185
                 ]
               ],
               "status": "candidate"
@@ -28650,6 +29203,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -28664,6 +29226,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"
@@ -29065,6 +29636,58 @@
           }
         },
         {
+          "label": "事实认识错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  91,
+                  91
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  28,
+                  28
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "因果关系错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  96,
+                  96
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  29,
+                  29
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "客体错误",
           "kind": "general_rule",
           "role": "related",
@@ -29136,58 +29759,6 @@
                 [
                   27,
                   27
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "手段错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  96,
-                  96
-                ]
-              ],
-              "status": "candidate"
-            },
-            "beisong": {
-              "pages": [
-                [
-                  29,
-                  29
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "打击错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  94,
-                  94
-                ]
-              ],
-              "status": "candidate"
-            },
-            "beisong": {
-              "pages": [
-                [
-                  29,
-                  29
                 ]
               ],
               "status": "candidate"
@@ -30215,6 +30786,15 @@
                 [
                   402,
                   402
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  133,
+                  133
                 ]
               ],
               "status": "candidate"
@@ -32539,8 +33119,34 @@
       "track": "法学",
       "type": "multiple",
       "number": 24,
-      "primary_topic": "拐骗儿童罪",
+      "primary_topic": "催收非法债务罪",
       "topics": [
+        {
+          "label": "催收非法债务罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  494,
+                  494
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  155,
+                  155
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
         {
           "label": "拐骗儿童罪",
           "kind": "offense",
@@ -32717,23 +33323,6 @@
                 [
                   54,
                   54
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "催收非法债务罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  494,
-                  494
                 ]
               ],
               "status": "candidate"
@@ -33400,10 +33989,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -34155,6 +34763,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  50,
+                  50
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -34488,6 +35105,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  180,
+                  180
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -34590,6 +35216,15 @@
                 [
                   495,
                   495
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  156,
+                  156
                 ]
               ],
               "status": "candidate"
@@ -34933,6 +35568,15 @@
                 [
                   477,
                   477
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  151,
+                  151
                 ]
               ],
               "status": "candidate"
@@ -35367,6 +36011,41 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  29,
+                  29
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "事实认识错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  91,
+                  91
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  28,
+                  28
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -35442,23 +36121,6 @@
                 [
                   29,
                   29
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "事实认识错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  91,
-                  91
                 ]
               ],
               "status": "candidate"
@@ -37119,10 +37781,29 @@
         },
         {
           "label": "刑法基本原则",
-          "kind": "other",
+          "kind": "general_rule",
           "role": "primary",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  7,
+                  7
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  16,
+                  16
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         },
         {
           "label": "危害结果",
@@ -37327,6 +38008,32 @@
           }
         },
         {
+          "label": "因果关系错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  96,
+                  96
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  29,
+                  29
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "实害犯",
           "kind": "general_rule",
           "role": "related",
@@ -37346,23 +38053,6 @@
                 [
                   33,
                   33
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "因果关系错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  96,
-                  96
                 ]
               ],
               "status": "candidate"
@@ -37433,10 +38123,29 @@
         },
         {
           "label": "时效延长",
-          "kind": "other",
+          "kind": "general_rule",
           "role": "primary",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  80,
+                  80
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  257,
+                  257
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         },
         {
           "label": "时效",
@@ -37537,6 +38246,15 @@
                 [
                   296,
                   296
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
                 ]
               ],
               "status": "candidate"
@@ -38472,6 +39190,32 @@
           }
         },
         {
+          "label": "着手",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "故意犯罪的停止形态",
           "kind": "general_rule",
           "role": "related",
@@ -38496,13 +39240,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "着手",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -38837,6 +39574,58 @@
           }
         },
         {
+          "label": "实行行为",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  125,
+                  125
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "着手",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "结果犯",
           "kind": "general_rule",
           "role": "related",
@@ -38856,49 +39645,6 @@
                 [
                   147,
                   147
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "行为犯",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  127,
-                  127
-                ]
-              ],
-              "status": "candidate"
-            },
-            "beisong": {
-              "pages": [
-                [
-                  186,
-                  186
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "实行行为",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  125,
-                  125
                 ]
               ],
               "status": "candidate"
@@ -39655,6 +40401,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  42,
+                  42
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -39887,6 +40642,58 @@
           }
         },
         {
+          "label": "事实认识错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  91,
+                  91
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  28,
+                  28
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "因果关系错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  96,
+                  96
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  29,
+                  29
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "客体错误",
           "kind": "general_rule",
           "role": "related",
@@ -39958,40 +40765,6 @@
                 [
                   29,
                   29
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "事实认识错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  91,
-                  91
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "因果关系错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  96,
-                  96
                 ]
               ],
               "status": "candidate"
@@ -41058,6 +41831,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  69,
+                  69
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -41896,6 +42678,58 @@
           }
         },
         {
+          "label": "失火罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  278,
+                  278
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  94,
+                  94
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "刑法基本原则",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  7,
+                  7
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  16,
+                  16
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "危害结果",
           "kind": "general_rule",
           "role": "related",
@@ -41946,30 +42780,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "失火罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  278,
-                  278
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "刑法基本原则",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -42119,6 +42929,41 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  20,
+                  20
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "精神病人",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  67,
+                  67
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -42136,15 +42981,17 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
             }
           }
-        },
-        {
-          "label": "精神病人",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -42395,6 +43242,32 @@
           }
         },
         {
+          "label": "事实认识错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  91,
+                  91
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  28,
+                  28
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "对象错误",
           "kind": "general_rule",
           "role": "related",
@@ -42440,23 +43313,6 @@
                 [
                   14,
                   14
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "事实认识错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  91,
-                  91
                 ]
               ],
               "status": "candidate"
@@ -42661,10 +43517,29 @@
       "topics": [
         {
           "label": "罪状、罪名、法定刑",
-          "kind": "other",
+          "kind": "general_rule",
           "role": "primary",
           "mapping_status": "verified",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  85,
+                  85
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  262,
+                  262
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -42756,10 +43631,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -43330,7 +44224,26 @@
           "kind": "offense",
           "role": "primary",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  102,
+                  102
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  310,
+                  310
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         },
         {
           "label": "执行判决、裁定滥用职权罪",
@@ -43379,6 +44292,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"
@@ -43716,6 +44638,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"
@@ -44666,6 +45597,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  19,
+                  19
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -44680,6 +45620,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"
@@ -45101,6 +46050,32 @@
           }
         },
         {
+          "label": "着手",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "继续犯",
           "kind": "general_rule",
           "role": "related",
@@ -45125,13 +46100,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "着手",
-          "kind": "zonglun",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -45359,6 +46327,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  122,
+                  122
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -45523,6 +46500,58 @@
           }
         },
         {
+          "label": "事实认识错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  91,
+                  91
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  28,
+                  28
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
+          "label": "因果关系错误",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  96,
+                  96
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  29,
+                  29
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "客体错误",
           "kind": "general_rule",
           "role": "related",
@@ -45568,40 +46597,6 @@
                 [
                   29,
                   29
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "事实认识错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  91,
-                  91
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "因果关系错误",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  96,
-                  96
                 ]
               ],
               "status": "candidate"
@@ -45723,6 +46718,32 @@
           }
         },
         {
+          "label": "徇私枉法罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  574,
+                  574
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  180,
+                  180
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "拐卖妇女、儿童罪",
           "kind": "offense",
           "role": "related",
@@ -45794,32 +46815,6 @@
                 [
                   181,
                   181
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "盗窃罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  436,
-                  436
-                ]
-              ],
-              "status": "candidate"
-            },
-            "beisong": {
-              "pages": [
-                [
-                  141,
-                  141
                 ]
               ],
               "status": "candidate"
@@ -45900,10 +46895,29 @@
       "topics": [
         {
           "label": "罪状、罪名、法定刑",
-          "kind": "other",
+          "kind": "general_rule",
           "role": "primary",
           "mapping_status": "verified",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  85,
+                  85
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  262,
+                  262
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -46242,7 +47256,26 @@
           "kind": "offense",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  112,
+                  112
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  336,
+                  336
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -47506,6 +48539,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  142,
+                  142
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -47572,6 +48614,32 @@
           }
         },
         {
+          "label": "数罪并罚的原则",
+          "kind": "general_rule",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  68,
+                  68
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  232,
+                  232
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "缓刑",
           "kind": "general_rule",
           "role": "related",
@@ -47598,23 +48666,6 @@
           }
         },
         {
-          "label": "数罪并罚的原则",
-          "kind": "general_rule",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "beisong": {
-              "pages": [
-                [
-                  68,
-                  68
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
           "label": "缓刑的法律后果",
           "kind": "general_rule",
           "role": "related",
@@ -47625,6 +48676,15 @@
                 [
                   71,
                   71
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  236,
+                  236
                 ]
               ],
               "status": "candidate"
@@ -47776,6 +48836,15 @@
                 [
                   402,
                   402
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  133,
+                  133
                 ]
               ],
               "status": "candidate"
@@ -48350,6 +49419,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -48377,6 +49455,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -48391,6 +49478,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"
@@ -49137,6 +50233,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  21,
+                  21
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -49301,6 +50406,15 @@
                 [
                   402,
                   402
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  133,
+                  133
                 ]
               ],
               "status": "candidate"
@@ -49739,10 +50853,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -50791,6 +51924,15 @@
                 [
                   363,
                   363
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  122,
+                  122
                 ]
               ],
               "status": "candidate"
@@ -52447,6 +53589,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  19,
+                  19
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -52457,6 +53608,15 @@
           "mapping_status": "candidate",
           "references": {
             "jingjiang": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
               "pages": [
                 [
                   9,
@@ -52612,6 +53772,15 @@
                 [
                   185,
                   185
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  23,
+                  23
                 ]
               ],
               "status": "candidate"
@@ -53319,7 +54488,7 @@
           }
         },
         {
-          "label": "吸收原则",
+          "label": "主刑",
           "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
@@ -53327,8 +54496,8 @@
             "jingjiang": {
               "pages": [
                 [
-                  234,
-                  234
+                  199,
+                  199
                 ]
               ],
               "status": "candidate"
@@ -53336,8 +54505,8 @@
             "beisong": {
               "pages": [
                 [
-                  69,
-                  69
+                  50,
+                  50
                 ]
               ],
               "status": "candidate"
@@ -53811,6 +54980,32 @@
           }
         },
         {
+          "label": "徇私枉法罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "jingjiang": {
+              "pages": [
+                [
+                  574,
+                  574
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  180,
+                  180
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "滥用职权罪",
           "kind": "offense",
           "role": "related",
@@ -53830,23 +55025,6 @@
                 [
                   180,
                   180
-                ]
-              ],
-              "status": "candidate"
-            }
-          }
-        },
-        {
-          "label": "徇私枉法罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {
-            "jingjiang": {
-              "pages": [
-                [
-                  574,
-                  574
                 ]
               ],
               "status": "candidate"
@@ -54030,6 +55208,15 @@
                 [
                   172,
                   172
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  42,
+                  42
                 ]
               ],
               "status": "candidate"
@@ -54415,6 +55602,32 @@
           }
         },
         {
+          "label": "骗取出口退税罪",
+          "kind": "offense",
+          "role": "related",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  118,
+                  118
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  353,
+                  353
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "走私普通货物、物品罪",
           "kind": "offense",
           "role": "related",
@@ -54439,13 +55652,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "骗取出口退税罪",
-          "kind": "offense",
-          "role": "related",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -54950,6 +56156,15 @@
                 [
                   574,
                   574
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  180,
+                  180
                 ]
               ],
               "status": "candidate"
@@ -55707,6 +56922,15 @@
                 [
                   402,
                   402
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  133,
+                  133
                 ]
               ],
               "status": "candidate"
@@ -56509,6 +57733,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -56523,6 +57756,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"
@@ -56742,6 +57984,32 @@
       "primary_topic": "工程重大安全事故罪",
       "topics": [
         {
+          "label": "工程重大安全事故罪",
+          "kind": "offense",
+          "role": "primary",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  101,
+                  101
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  312,
+                  312
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "单位犯罪",
           "kind": "general_rule",
           "role": "related",
@@ -56792,13 +58060,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "工程重大安全事故罪",
-          "kind": "offense",
-          "role": "primary",
-          "mapping_status": "candidate",
-          "references": {}
         }
       ]
     },
@@ -56916,10 +58177,29 @@
         },
         {
           "label": "着手",
-          "kind": "zonglun",
+          "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
-          "references": {}
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  34,
+                  34
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  126,
+                  126
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
         }
       ]
     },
@@ -57264,7 +58544,7 @@
           }
         },
         {
-          "label": "吸收原则",
+          "label": "主刑",
           "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
@@ -57272,8 +58552,8 @@
             "jingjiang": {
               "pages": [
                 [
-                  234,
-                  234
+                  199,
+                  199
                 ]
               ],
               "status": "candidate"
@@ -57281,8 +58561,8 @@
             "beisong": {
               "pages": [
                 [
-                  69,
-                  69
+                  50,
+                  50
                 ]
               ],
               "status": "candidate"
@@ -57290,7 +58570,7 @@
           }
         },
         {
-          "label": "并科原则",
+          "label": "吸收原则",
           "kind": "general_rule",
           "role": "related",
           "mapping_status": "candidate",
@@ -57590,6 +58870,15 @@
                 [
                   402,
                   402
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  133,
+                  133
                 ]
               ],
               "status": "candidate"
@@ -57949,6 +59238,32 @@
           }
         },
         {
+          "label": "强令违章冒险作业罪",
+          "kind": "offense",
+          "role": "primary",
+          "mapping_status": "candidate",
+          "references": {
+            "beisong": {
+              "pages": [
+                [
+                  102,
+                  102
+                ]
+              ],
+              "status": "candidate"
+            },
+            "jingjiang": {
+              "pages": [
+                [
+                  310,
+                  310
+                ]
+              ],
+              "status": "candidate"
+            }
+          }
+        },
+        {
           "label": "拘役",
           "kind": "general_rule",
           "role": "related",
@@ -57999,13 +59314,6 @@
               "status": "candidate"
             }
           }
-        },
-        {
-          "label": "强令违章冒险作业罪",
-          "kind": "offense",
-          "role": "primary",
-          "mapping_status": "candidate",
-          "references": {}
         },
         {
           "label": "强令、组织他人违章冒险作业罪",
@@ -58389,6 +59697,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  38,
+                  38
+                ]
+              ],
+              "status": "candidate"
             }
           }
         }
@@ -58641,6 +59958,15 @@
                 [
                   554,
                   554
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  174,
+                  174
                 ]
               ],
               "status": "candidate"
@@ -59023,6 +60349,15 @@
                 ]
               ],
               "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
+                ]
+              ],
+              "status": "candidate"
             }
           }
         },
@@ -59037,6 +60372,15 @@
                 [
                   21,
                   21
+                ]
+              ],
+              "status": "candidate"
+            },
+            "beisong": {
+              "pages": [
+                [
+                  9,
+                  9
                 ]
               ],
               "status": "candidate"

@@ -88,6 +88,59 @@ PAGE_RESOLUTIONS = [
 ]
 
 
+# 页级 OCR 复核后补入的索引。这里优先使用考点正文的起始页；少数在
+# 《背诵一本通》中仅以章节/罪名表呈现的考点，使用能直接定位到该知识组的页码。
+# 这些页码尚未逐张渲染校对，因此保留为 candidate，而不标示为绿色“已核”圆点。
+SUPPLEMENTAL_PAGE_REFS = {
+    "犯罪概念": {"背诵": 12},
+    "刑法基本原则": {"背诵": 7, "精讲": 16},
+    "属地管辖": {"背诵": 9},
+    "普遍管辖": {"背诵": 9},
+    "刑法的空间效力": {"精讲": 19},
+    "从旧兼从轻": {"精讲": 23},
+    "刑法体系": {"背诵": 3, "精讲": 5},
+    "刑事责任能力": {"背诵": 20},
+    "精神病人": {"背诵": 21, "精讲": 67},
+    "醉酒": {"背诵": 21},
+    "事实认识错误": {"背诵": 28},
+    "因果关系错误": {"背诵": 29},
+    "特殊防卫": {"背诵": 30},
+    "实行行为": {"背诵": 34},
+    "着手": {"背诵": 34, "精讲": 126},
+    "犯罪集团": {"背诵": 38},
+    "结果加重犯": {"背诵": 42},
+    "主刑": {"背诵": 50},
+    "时效延长": {"背诵": 80, "精讲": 257},
+    "罪状、罪名、法定刑": {"背诵": 85, "精讲": 262},
+    "失火罪": {"背诵": 94},
+    "工程重大安全事故罪": {"背诵": 101, "精讲": 312},
+    "强令违章冒险作业罪": {"背诵": 102, "精讲": 310},
+    "非法经营同类营业罪": {"背诵": 110},
+    "变造货币罪": {"背诵": 111, "精讲": 334},
+    "骗取贷款罪": {"背诵": 112, "精讲": 336},
+    "骗取出口退税罪": {"背诵": 118, "精讲": 353},
+    "组织、领导传销活动罪": {"背诵": 122, "精讲": 363},
+    "过失致人重伤罪": {"背诵": 126},
+    "诬告陷害罪": {"背诵": 133},
+    "虐待被监护、看护人罪": {"背诵": 135},
+    "转化型抢劫罪": {"背诵": 140},
+    "侵占罪与职务侵占罪": {"背诵": 142},
+    "投放虚假危险物质罪": {"背诵": 151},
+    "催收非法债务罪": {"背诵": 155},
+    "组织、领导、参加黑社会性质组织罪": {"背诵": 156},
+    "挪用特定款物罪": {"背诵": 174},
+    "徇私枉法罪": {"背诵": 180},
+    "失职致使在押人员脱逃罪": {"背诵": 182, "精讲": 578},
+    "国家工作人员的范围": {"精讲": 69},
+    "数罪并罚的原则": {"精讲": 232},
+    "缓刑的法律后果": {"精讲": 236},
+    "危害国家安全罪": {"精讲": 267},
+    # 该罪在两本书中未列为独立正文，使用“毒品犯罪”知识组的起始页。
+    "包庇毒品犯罪分子罪": {"背诵": 167, "精讲": 531},
+    "伪造国家机关印章罪": {"背诵": 150, "精讲": 472},
+}
+
+
 def build_topic_catalog():
     topics = load_json("topics.source.json")
     index_jj = load_json("index_jingjiang.json")
@@ -133,6 +186,32 @@ def build_topic_catalog():
                 next(iter(matches.values())), book_ids[book], chosen, "verified", "rendered-page-audit"
             )
 
+    # Fill precise labels surfaced by the question parser but omitted from one of
+    # the two early indexes.  Add a concise catalog entry where neither index had
+    # created one, then attach only the missing-side reference(s).
+    book_ids = {"精讲": BOOK_JJ, "背诵": BOOK_BS}
+    for label, page_map in SUPPLEMENTAL_PAGE_REFS.items():
+        matches = {item["id"]: item for item in by_norm.get(norm(label), [])}
+        if not matches:
+            topic = {
+                "id": f"xingfa.supplemented.{label}",
+                "label": label,
+                "kind": "offense" if label.endswith("罪") else "general_rule",
+                "aliases": [],
+                "parent_id": None,
+                "references": [],
+            }
+            topics.append(topic)
+            by_norm[norm(label)].append(topic)
+            matches = {topic["id"]: topic}
+        if len(matches) != 1:
+            continue
+        topic = next(iter(matches.values()))
+        for book, page in page_map.items():
+            book_id = book_ids[book]
+            if first_printed_page(topic, book_id) is None:
+                set_printed_page(topic, book_id, page, "candidate", "ocr-page-supplement")
+
     # Rebuild lookup after additions and aliases.
     by_norm = defaultdict(list)
     for topic in topics:
@@ -174,6 +253,12 @@ MANUAL_QUESTION_TOPICS = {
     "2020-非法学-刑法-01": ["属地管辖"],
     "2022-非法学-刑法-16": ["属地管辖", "拐卖妇女、儿童罪"],
     "2023-非法学-刑法-18": ["为境外窃取、刺探、收买、非法提供国家秘密、情报罪"],
+}
+
+# 2024 非法学第 5 题考查的是罚金制度本身。题目选项的四类罚金不应被
+# 拆成四个没有独立索引价值的子考点，统一回到“罚金”。
+QUESTION_TOPIC_OVERRIDES = {
+    "2024-非法学-刑法-05": ["罚金"],
 }
 
 
@@ -277,6 +362,11 @@ def build_questions(topic_by_norm):
 
         for index, label in enumerate(MANUAL_QUESTION_TOPICS.get(question["id"], [])):
             add_candidate(label, "manual", "primary" if index == 0 else "related", "verified")
+
+        if question["id"] in QUESTION_TOPIC_OVERRIDES:
+            candidates.clear()
+            for index, label in enumerate(QUESTION_TOPIC_OVERRIDES[question["id"]]):
+                add_candidate(label, "manual", "primary" if index == 0 else "related", "verified")
 
         has_specific_offense = any(
             item["topic"].get("kind") == "offense" and item["topic"]["label"] not in CATEGORY_LABELS
@@ -397,14 +487,15 @@ HTML = r'''<!DOCTYPE html>
 <title>法硕刑法真题 · 教材页码速查</title>
 <style>
 :root{--bg:#f3f5f8;--card:#fff;--line:#e1e6ee;--text:#172033;--muted:#667085;--blue:#2357a6;--blue-soft:#eef4ff;--teal:#087f6d;--amber:#a85b00;--law:#7c3aed;--nonlaw:#0f6b63;--shadow:0 1px 3px rgba(16,24,40,.06)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}.wrap{width:min(980px,100%);margin:auto;padding:26px 18px 72px}.hero{margin-bottom:20px}.hero h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}.hero p{margin:0;color:var(--muted);font-size:14px}.controls{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);padding:12px 0 10px}.search{width:100%;height:46px;border:1px solid var(--line);border-radius:11px;background:#fff;padding:0 14px;font-size:15px;outline:none}.search:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #dbeafe}.filters{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:8px;margin-top:9px}.filters.active{padding:8px;border:1px solid #bfd3fb;border-radius:11px;background:var(--blue-soft)}.filter-group{display:grid;gap:3px;min-width:0}.filter-group span{padding-left:2px;color:var(--muted);font-size:11px;font-weight:650;line-height:1.2}select{width:100%;min-width:0;height:38px;border:1px solid var(--line);border-radius:9px;background:#fff;padding:0 10px;color:var(--text);font-size:13px}select.active{border-color:var(--blue);background:#e3edff;color:#17458a;font-weight:650}.filter-state{display:flex;align-items:center;gap:9px;margin-top:8px;padding:7px 9px;border:1px solid #bfd3fb;border-radius:9px;background:var(--blue-soft);color:#17458a;font-size:12px}.filter-state[hidden]{display:none}.reset-filters{margin-left:auto;border:1px solid #9dbbf2;border-radius:7px;background:#fff;color:#17458a;padding:4px 9px;font:inherit;font-weight:650;cursor:pointer;white-space:nowrap}.hot{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.hot button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:5px 10px;font-size:12px;cursor:pointer}.hot button.on{color:#fff;background:var(--blue);border-color:var(--blue)}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:13px 1px 10px;color:var(--muted);font-size:13px}.notice{background:#fff8e8;border:1px solid #f2d89a;border-radius:10px;padding:9px 12px;color:#7a4a00;font-size:12px;margin-bottom:12px}.list{display:grid;gap:11px}.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 16px;box-shadow:var(--shadow)}.head{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.qid{font-weight:750;color:var(--blue);font-size:15px}.badge{display:inline-flex;align-items:center;border-radius:6px;padding:2px 7px;font-size:11px;border:1px solid var(--line);color:var(--muted)}.badge.law{color:var(--law);border-color:#ddd0ff;background:#f6f1ff}.badge.nonlaw{color:var(--nonlaw);border-color:#bae3dd;background:#eefaf8}.primary{margin:8px 0 0;font-size:14px}.primary b{color:var(--blue)}.points{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.point{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;background:#fafbfc;padding:4px 8px;font-size:12px}.point.primary-point{background:var(--blue-soft);border-color:#cfe0ff}.point .name{font-weight:620}.page.bs{color:var(--teal);font-weight:650}.page.jj{color:var(--amber);font-weight:650}.page.missing{color:#98a2b3;font-weight:500}.verified{width:7px;height:7px;border-radius:50%;background:#22a06b;display:inline-block}.more,.load{border:1px solid var(--line);background:#fff;color:var(--blue);border-radius:8px;cursor:pointer}.more{font-size:12px;padding:4px 8px}.load{display:block;margin:18px auto 0;padding:9px 22px}.empty{text-align:center;padding:48px 10px;color:var(--muted)}footer{margin-top:28px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}footer p{margin:4px 0}.legend{display:flex;gap:14px;flex-wrap:wrap}.legend span{display:inline-flex;align-items:center;gap:5px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55}.wrap{width:min(980px,100%);margin:auto;padding:26px 18px 72px}.hero{margin-bottom:20px}.hero h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}.hero p{margin:0;color:var(--muted);font-size:14px}.controls{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);padding:12px 0 10px}.search-help{margin:0 0 7px;padding:8px 10px;border:1px solid #d9e5fa;border-radius:9px;background:#f8fbff;color:#4a5c78;font-size:12px}.search-help b{color:#274e8f}.search-help code{padding:1px 4px;border-radius:4px;background:#eaf1fd;color:#274e8f;font-family:inherit}.search{width:100%;height:46px;border:1px solid var(--line);border-radius:11px;background:#fff;padding:0 14px;font-size:15px;outline:none}.search:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #dbeafe}.filters{display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:8px;margin-top:9px}.filters.active{padding:8px;border:1px solid #bfd3fb;border-radius:11px;background:var(--blue-soft)}.filter-group{display:grid;gap:3px;min-width:0}.filter-group span{padding-left:2px;color:var(--muted);font-size:11px;font-weight:650;line-height:1.2}select{width:100%;min-width:0;height:38px;border:1px solid var(--line);border-radius:9px;background:#fff;padding:0 10px;color:var(--text);font-size:13px}select.active{border-color:var(--blue);background:#e3edff;color:#17458a;font-weight:650}.filter-state{display:flex;align-items:center;gap:9px;margin-top:8px;padding:7px 9px;border:1px solid #bfd3fb;border-radius:9px;background:var(--blue-soft);color:#17458a;font-size:12px}.filter-state[hidden]{display:none}.reset-filters{margin-left:auto;border:1px solid #9dbbf2;border-radius:7px;background:#fff;color:#17458a;padding:4px 9px;font:inherit;font-weight:650;cursor:pointer;white-space:nowrap}.hot{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.hot button{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:5px 10px;font-size:12px;cursor:pointer}.hot button.on{color:#fff;background:var(--blue);border-color:var(--blue)}.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:13px 1px 10px;color:var(--muted);font-size:13px}.notice{background:#fff8e8;border:1px solid #f2d89a;border-radius:10px;padding:9px 12px;color:#7a4a00;font-size:12px;margin-bottom:12px}.list{display:grid;gap:11px}.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 16px;box-shadow:var(--shadow)}.head{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.qid{font-weight:750;color:var(--blue);font-size:15px}.badge{display:inline-flex;align-items:center;border-radius:6px;padding:2px 7px;font-size:11px;border:1px solid var(--line);color:var(--muted)}.badge.law{color:var(--law);border-color:#ddd0ff;background:#f6f1ff}.badge.nonlaw{color:var(--nonlaw);border-color:#bae3dd;background:#eefaf8}.primary{margin:8px 0 0;font-size:14px}.primary b{color:var(--blue)}.points{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.point{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;border:1px solid var(--line);border-radius:8px;background:#fafbfc;padding:4px 8px;font-size:12px}.point.primary-point{background:var(--blue-soft);border-color:#cfe0ff}.point .name{font-weight:620}.page.bs{color:var(--teal);font-weight:650}.page.jj{color:var(--amber);font-weight:650}.page.missing{color:#98a2b3;font-weight:500}.verified{width:7px;height:7px;border-radius:50%;background:#22a06b;display:inline-block}.more,.load{border:1px solid var(--line);background:#fff;color:var(--blue);border-radius:8px;cursor:pointer}.more{font-size:12px;padding:4px 8px}.load{display:block;margin:18px auto 0;padding:9px 22px}.empty{text-align:center;padding:48px 10px;color:var(--muted)}footer{margin-top:28px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}footer p{margin:4px 0}.legend{display:flex;gap:14px;flex-wrap:wrap}.legend span{display:inline-flex;align-items:center;gap:5px}
 @media(max-width:680px){.wrap{padding:18px 14px 56px}.hero h1{font-size:22px}.filters{grid-template-columns:1fr 1fr}.filter-state{align-items:flex-start}.reset-filters{margin-left:0}.controls{padding-top:8px}.card{padding:14px}.point{width:100%;justify-content:flex-start}.hot{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px}.hot button{flex:none}.bar{align-items:flex-start;flex-direction:column;gap:2px}}
 </style>
 </head>
 <body><main class="wrap">
 <section class="hero"><h1>法硕刑法真题 · 教材页码速查</h1><p>2010—2026 法学 + 非法学客观题 · 众合 2027《背诵一本通》《精讲一本通》</p></section>
 <section class="controls" aria-label="题目筛选">
-<input id="search" class="search" aria-label="搜索题目" placeholder="搜索年份、题号、考点或罪名；空格可组合筛选：如：2025　如：法学　如：抢劫罪">
+<div class="search-help"><b>搜索方法：</b>空格分隔可组合筛选，例如 <code>2025 法学 抢劫罪</code>；输入 <code>202506</code> 可查看 2025 年第 6 题（法学、非法学同时显示）。</div>
+<input id="search" class="search" aria-label="搜索题目" placeholder="搜索年份、题号、考点或罪名">
 <div class="filters" id="filters"><label class="filter-group"><span>类别 · 法学 / 非法学</span><select id="track" aria-label="考生类别"><option value="">全部</option><option value="非法学">非法学</option><option value="法学">法学</option></select></label><label class="filter-group"><span>年份</span><select id="year" aria-label="年份"><option value="">全部年份</option></select></label><label class="filter-group"><span>题型 · 单选 / 多选</span><select id="type" aria-label="题型"><option value="">全部</option><option value="single">单选</option><option value="multiple">多选</option></select></label><label class="filter-group"><span>页码状态</span><select id="pageState" aria-label="页码状态"><option value="">全部页码状态</option><option value="both">两本都有页码</option><option value="verified">含已核页码</option><option value="missing">含缺失页码</option></select></label></div><div class="filter-state" id="filterState" aria-live="polite" hidden><span>当前已启用筛选条件，搜索结果可能减少。</span><button id="resetFilters" class="reset-filters" type="button">重置筛选</button></div>
 <div class="hot" id="hot" aria-label="热门考点"></div></section>
 <div class="bar"><span id="stats"></span><span>页码均为纸质书页脚的印刷页</span></div>

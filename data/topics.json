@@ -21,6 +21,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 142,
+            "end": 142
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 148,
+            "end": 148
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -146,6 +163,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 140,
+            "end": 140
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 146,
+            "end": 146
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -1904,6 +1938,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 69,
+            "end": 69
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 91,
+            "end": 91
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -2306,6 +2357,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 232,
+            "end": 232
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 254,
+            "end": 254
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -3721,6 +3789,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 236,
+            "end": 236
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 258,
+            "end": 258
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -5452,6 +5537,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 155,
+            "end": 155
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 161,
+            "end": 161
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -6019,6 +6121,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 267,
+            "end": 267
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 289,
+            "end": 289
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -7029,6 +7148,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 180,
+            "end": 180
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 186,
+            "end": 186
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -7245,6 +7381,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 151,
+            "end": 151
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 157,
+            "end": 157
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -9453,6 +9606,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 156,
+            "end": 156
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 162,
+            "end": 162
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -9478,6 +9648,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 122,
+            "end": 122
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 128,
+            "end": 128
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -9999,6 +10186,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 135,
+            "end": 135
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 141,
+            "end": 141
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -10308,6 +10512,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 133,
+            "end": 133
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 139,
+            "end": 139
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -11572,6 +11793,23 @@
           }
         ],
         "review_status": "candidate"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 110,
+            "end": 110
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 116,
+            "end": 116
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -11992,6 +12230,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 9,
+            "end": 9
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 15,
+            "end": 15
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -12018,6 +12273,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 9,
+            "end": 9
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 15,
+            "end": 15
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -12345,6 +12617,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 12,
+            "end": 12
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 18,
+            "end": 18
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -12586,6 +12875,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 20,
+            "end": 20
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 26,
+            "end": 26
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -12698,6 +13004,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 28,
+            "end": 28
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 34,
+            "end": 34
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -12896,6 +13219,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 29,
+            "end": 29
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 35,
+            "end": 35
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -12922,6 +13262,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 30,
+            "end": 30
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 36,
+            "end": 36
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -13163,6 +13520,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 34,
+            "end": 34
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 40,
+            "end": 40
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -13189,6 +13563,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 38,
+            "end": 38
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 44,
+            "end": 44
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -13387,6 +13778,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 42,
+            "end": 42
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 48,
+            "end": 48
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -13654,6 +14062,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 50,
+            "end": 50
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 56,
+            "end": 56
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14050,6 +14475,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 94,
+            "end": 94
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 100,
+            "end": 100
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14076,6 +14518,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 21,
+            "end": 21
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 27,
+            "end": 27
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14154,6 +14613,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 126,
+            "end": 126
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 132,
+            "end": 132
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14232,6 +14708,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 174,
+            "end": 174
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 180,
+            "end": 180
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14301,6 +14794,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 19,
+            "end": 19
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 41,
+            "end": 41
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14327,6 +14837,23 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 23,
+            "end": 23
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 45,
+            "end": 45
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   },
@@ -14353,6 +14880,608 @@
         ],
         "review_status": "candidate",
         "page_source": "other-index-fill"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.刑法基本原则",
+    "label": "刑法基本原则",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 7,
+            "end": 7
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 13,
+            "end": 13
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 16,
+            "end": 16
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 38,
+            "end": 38
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.刑法体系",
+    "label": "刑法体系",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 3,
+            "end": 3
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 9,
+            "end": 9
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 5,
+            "end": 5
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 27,
+            "end": 27
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.精神病人",
+    "label": "精神病人",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 21,
+            "end": 21
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 27,
+            "end": 27
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 67,
+            "end": 67
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 89,
+            "end": 89
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.着手",
+    "label": "着手",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 34,
+            "end": 34
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 40,
+            "end": 40
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 126,
+            "end": 126
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 148,
+            "end": 148
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.时效延长",
+    "label": "时效延长",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 80,
+            "end": 80
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 86,
+            "end": 86
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 257,
+            "end": 257
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 279,
+            "end": 279
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.罪状、罪名、法定刑",
+    "label": "罪状、罪名、法定刑",
+    "kind": "general_rule",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 85,
+            "end": 85
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 91,
+            "end": 91
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 262,
+            "end": 262
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 284,
+            "end": 284
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.工程重大安全事故罪",
+    "label": "工程重大安全事故罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 101,
+            "end": 101
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 107,
+            "end": 107
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 312,
+            "end": 312
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 334,
+            "end": 334
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.强令违章冒险作业罪",
+    "label": "强令违章冒险作业罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 102,
+            "end": 102
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 108,
+            "end": 108
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 310,
+            "end": 310
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 332,
+            "end": 332
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.变造货币罪",
+    "label": "变造货币罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 111,
+            "end": 111
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 117,
+            "end": 117
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 334,
+            "end": 334
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 356,
+            "end": 356
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.骗取贷款罪",
+    "label": "骗取贷款罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 112,
+            "end": 112
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 118,
+            "end": 118
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 336,
+            "end": 336
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 358,
+            "end": 358
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.骗取出口退税罪",
+    "label": "骗取出口退税罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 118,
+            "end": 118
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 124,
+            "end": 124
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 353,
+            "end": 353
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 375,
+            "end": 375
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.失职致使在押人员脱逃罪",
+    "label": "失职致使在押人员脱逃罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 182,
+            "end": 182
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 188,
+            "end": 188
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 578,
+            "end": 578
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 600,
+            "end": 600
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.包庇毒品犯罪分子罪",
+    "label": "包庇毒品犯罪分子罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 167,
+            "end": 167
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 173,
+            "end": 173
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 531,
+            "end": 531
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 553,
+            "end": 553
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      }
+    ]
+  },
+  {
+    "id": "xingfa.supplemented.伪造国家机关印章罪",
+    "label": "伪造国家机关印章罪",
+    "kind": "offense",
+    "aliases": [],
+    "parent_id": null,
+    "references": [
+      {
+        "book_id": "zhonghe-beisong-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 150,
+            "end": 150
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 156,
+            "end": 156
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
+      },
+      {
+        "book_id": "zhonghe-jingjiang-xingfa-2027",
+        "printed_pages": [
+          {
+            "start": 472,
+            "end": 472
+          }
+        ],
+        "pdf_pages": [
+          {
+            "start": 494,
+            "end": 494
+          }
+        ],
+        "review_status": "candidate",
+        "page_source": "ocr-page-supplement"
       }
     ]
   }

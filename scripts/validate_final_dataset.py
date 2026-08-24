@@ -42,7 +42,9 @@ assert '<select id="track" aria-label="考生类别"><option value="">全部</op
 assert '<select id="type" aria-label="题型"><option value="">全部</option>' in html
 assert "类别 · 法学 / 非法学" in html
 assert "题型 · 单选 / 多选" in html
-assert "空格可组合筛选" in html
+assert "搜索方法：" in html
+assert "空格分隔可组合筛选" in html
+assert 'placeholder="搜索年份、题号、考点或罪名"' in html
 assert "function termMatches" in html
 assert "x.track===term" in html
 assert 'id="resetFilters"' in html
