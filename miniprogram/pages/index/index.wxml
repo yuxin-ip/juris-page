@@ -23,6 +23,6 @@
   <button wx:if="{{hasMore}}" class="load-more" bindtap="showMore">显示更多</button>
   <view wx:if="{{showEndHint}}" class="end-hint">{{endText}}</view>
 
-  <view class="notice">同一道题可关联多个罪名或总则考点。绿色圆点表示该页已经过教材页面核验；其余页码为待进一步逐页核验的候选定位。</view>
+  <view class="notice">同一道题可关联多个罪名或总则考点；页码定位仍建议结合题目解析判断。</view>
   <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>
 </view>
