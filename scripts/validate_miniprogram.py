@@ -63,7 +63,8 @@ def main():
     assert ".subject-panel" in wxss and "overflow:hidden" in wxss
     assert ".subject-panel-active{border-color:#bfd3fb;background:#eef4ff}" in wxss
     app_wxss = (PROGRAM / "app.wxss").read_text(encoding="utf-8")
-    assert ".back-to-filters{position:fixed;" in app_wxss
+    assert ".back-to-filters{display:flex;" in app_wxss and "border-radius:50%" in app_wxss
+    assert "返回" in wxml and "顶部" in wxml and "筛选 ↑" not in wxml
     about = (PROGRAM / "pages" / "about" / "about.wxml").read_text(encoding="utf-8")
     assert "微信：zlszyxdwx" in about
     assert "{{question.track}} · {{question.subject}} · 第" in card

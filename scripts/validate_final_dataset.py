@@ -75,7 +75,9 @@ assert 'id="resetFilters"' in html
 assert "当前已启用筛选条件，搜索结果可能减少。" in html
 assert 'class="sticky-filters"' in html
 assert ".controls{position:static" in html
+assert '<section class="controls" aria-label="题目筛选">' in html and '</section><div class="sticky-filters">' in html
 assert "function scrollToResults" in html and "resetRender(true)" in html
+assert 'id="aboutToggle"' in html and 'id="aboutPanel"' in html
 assert "问题反馈：微信 zlszyxdwx" in html
 assert "南京理工大学知识产权学院 郑宇昕" in html
 assert 'id="hot"' not in html

@@ -27,5 +27,5 @@
 
   <view class="notice">同一道题可关联多个罪名或知识点；民法仅收录《背诵一本通》中有编号、有标题的知识点。页码定位仍建议结合题目解析判断。</view>
   <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>问题反馈：微信 zlszyxdwx</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>
-  <button wx:if="{{showBackToFilters}}" class="back-to-filters {{backToFiltersArmed ? 'back-to-filters-armed' : ''}}" bindtap="onBackToFilters">{{backToFiltersArmed ? '再点返回筛选' : '筛选 ↑'}}</button>
+  <button wx:if="{{showBackToFilters}}" class="back-to-filters {{backToFiltersArmed ? 'back-to-filters-armed' : ''}}" bindtap="onBackToFilters"><text>{{backToFiltersArmed ? '再点' : '返回'}}</text><text>{{backToFiltersArmed ? '确认' : '顶部'}}</text></button>
 </view>
