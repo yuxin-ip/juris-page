@@ -44,6 +44,8 @@ for row in rows:
 
 html = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
 root_html = (ROOT / "index.html").read_text(encoding="utf-8")
+about_html = (ROOT / "about.html").read_text(encoding="utf-8")
+web_about_html = (ROOT / "web" / "about.html").read_text(encoding="utf-8")
 assert "法硕刑民法真题" in html
 assert "2010—2026" in html and "法学 + 非法学" in html
 assert '<select id="track" aria-label="考生类别"><option value="">全部</option>' in html
@@ -77,7 +79,8 @@ assert 'class="sticky-filters"' in html
 assert ".controls{position:static" in html
 assert '<section class="controls" aria-label="题目筛选">' in html and '</section><div class="sticky-filters">' in html
 assert "function scrollToResults" in html and "resetRender(true)" in html
-assert 'id="aboutToggle"' in html and 'id="aboutPanel"' in html
+assert 'class="about-toggle" href="about.html"' in html
+assert 'id="aboutToggle"' not in html and 'id="aboutPanel"' not in html
 assert 'id="backToTop"' in html and "function syncBackToTop" in html
 assert "问题反馈：微信 zlszyxdwx" in html
 assert "南京理工大学知识产权学院 郑宇昕" in html
@@ -87,6 +90,9 @@ assert "没有更多内容了，已显示全部" in html
 assert 'class="summary"' not in html
 assert "const DATA=" in html and "const TOPIC_FILTERS=" in html
 assert root_html == html, "root GitHub Pages entry must match web/index.html"
+assert about_html == web_about_html, "root and web explanation pages must match"
+assert "使用说明" in about_html and 'href="index.html"' in about_html
+assert "微信：zlszyxdwx" in about_html
 
 missing_2010 = [f"2010-法学-刑法-{number:02d}" for number in range(11, 16)]
 by_id = {row["id"]: row for row in rows}

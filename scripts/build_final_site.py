@@ -653,7 +653,7 @@ HTML = r'''<!DOCTYPE html>
 </style>
 </head>
 <body><main class="wrap">
-<section class="hero"><div class="hero-top"><h1>法硕刑民法真题 · 教材页码速查</h1><button id="aboutToggle" class="about-toggle" type="button" aria-expanded="false">说明</button></div><p>2010—2026 法学 + 非法学客观题 · 众合 2027《背诵一本通》《精讲一本通》</p><div id="aboutPanel" class="about-panel" hidden><p>可按关键词、年份、考生类别、题型与科目筛选；同一道题可能关联多个罪名或知识点。</p><p>问题反馈：微信 zlszyxdwx</p></div></section>
+<section class="hero"><div class="hero-top"><h1>法硕刑民法真题 · 教材页码速查</h1><a class="about-toggle" href="about.html">说明</a></div><p>2010—2026 法学 + 非法学客观题 · 众合 2027《背诵一本通》《精讲一本通》</p></section>
 <section class="controls" aria-label="题目筛选">
 <div class="search-help"><b>搜索方法：</b>可单独输入年份、题号、科目、考点或罪名，例如 <code>2025</code>、<code>民法</code>、<code>诈骗罪</code>；也可用空格分隔组合筛选，例如 <code>2025 法学 抢劫罪</code>。输入 <code>202506</code> 可查看 2025 年第 6 题（法学、非法学同时显示）。</div>
 <input id="search" class="search" aria-label="搜索题目" placeholder="搜索年份、题号、科目、考点或罪名">
@@ -685,10 +685,15 @@ function captions(){return singleSubject()==='刑法'?['刑法分则罪名','犯
 function fillTopicSelectors(){const group=$('#topicFilterGroup');if(!singleSubject()){state.topicCategory='';state.topic='';group.hidden=true;return}group.hidden=false;const groups=availableGroups(),labels=groups.map(x=>x.label);if(!labels.includes(state.topicCategory))state.topicCategory='';const [title,categoryLabel,topicLabel]=captions();$('#topicFilterTitle').textContent=title;$('#topicCategory').setAttribute('aria-label',categoryLabel);$('#topic').setAttribute('aria-label',topicLabel);$('#topicCategory').innerHTML=`<option value="">${categoryLabel}</option>`+groups.map(x=>`<option value="${esc(x.label)}">${esc(x.label)}</option>`).join('');$('#topicCategory').value=state.topicCategory;const options=topicOptions(state.topicCategory);if(!options.includes(state.topic))state.topic='';$('#topic').innerHTML=`<option value="">${topicLabel}</option>`+options.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');$('#topic').value=state.topic}
 fillTopicSelectors();
 $('#search').addEventListener('input',e=>{state.q=e.target.value;resetRender()});for(const id of ['track','year','type','topic']){$('#'+id).addEventListener('change',e=>{state[id]=e.target.value;resetRender(true)})}document.querySelectorAll('[data-subject]').forEach(button=>button.addEventListener('click',()=>{const subject=button.dataset.subject;state.subjects=state.subjects.includes(subject)?state.subjects.filter(x=>x!==subject):[...state.subjects,subject];state.topicCategory='';state.topic='';fillTopicSelectors();resetRender(true)}));$('#topicCategory').addEventListener('change',e=>{state.topicCategory=e.target.value;fillTopicSelectors();resetRender(true)});$('#resetFilters').addEventListener('click',()=>{for(const id of ['track','year','type','topicCategory','topic'])state[id]='';state.subjects=[];for(const id of ['track','year','type'])$('#'+id).value='';fillTopicSelectors();resetRender(true)});
-$('#aboutToggle').addEventListener('click',()=>{const panel=$('#aboutPanel'),opened=panel.hidden;panel.hidden=!opened;$('#aboutToggle').setAttribute('aria-expanded',String(opened))});
 let backToTopTimer;function syncBackToTop(){const button=$('#backToTop');button.hidden=window.scrollY<560;if(button.hidden){button.classList.remove('armed');$('#backToTopText').innerHTML='返回<br>顶部'}}window.addEventListener('scroll',syncBackToTop,{passive:true});$('#backToTop').addEventListener('click',()=>{const button=$('#backToTop'),text=$('#backToTopText');if(!button.classList.contains('armed')){button.classList.add('armed');text.innerHTML='再点<br>确认';clearTimeout(backToTopTimer);backToTopTimer=setTimeout(()=>{button.classList.remove('armed');text.innerHTML='返回<br>顶部'},2200);return}clearTimeout(backToTopTimer);button.classList.remove('armed');text.innerHTML='返回<br>顶部';window.scrollTo({top:0,behavior:'smooth'})});syncBackToTop();
 $('#list').addEventListener('click',e=>{const b=e.target.closest('[data-more]');if(!b)return;const card=b.closest('.card'),tpl=card.querySelector('template');b.insertAdjacentHTML('beforebegin',tpl.innerHTML);b.remove()});$('#load').addEventListener('click',()=>{visible+=PAGE_SIZE;render()});render();
 </script></body></html>'''
+
+
+ABOUT_HTML = '''<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="法硕刑民法真题教材页码速查使用说明"><title>使用说明 · 法硕刑民法真题页码速查</title><style>
+:root{--bg:#f3f5f8;--card:#fff;--line:#e1e6ee;--text:#172033;--muted:#667085;--blue:#2357a6}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}.wrap{width:min(760px,100%);margin:auto;padding:28px 18px 72px}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px}.top h1{margin:0;font-size:25px;letter-spacing:-.02em}.back{flex:none;border:1px solid #c7d8f6;border-radius:8px;background:#fff;color:var(--blue);padding:6px 10px;text-decoration:none;font-size:13px;font-weight:650}.card{margin-top:12px;padding:16px;border:1px solid var(--line);border-radius:13px;background:var(--card)}h2{margin:0 0 8px;color:var(--blue);font-size:16px}p{margin:6px 0;color:#475467}ul{margin:7px 0;padding-left:21px;color:#475467}.note{border-color:#d9e5fa;background:#f8fbff}.footer{margin-top:26px;color:var(--muted);font-size:12px}.footer p{margin:4px 0}@media(max-width:680px){.wrap{padding:20px 14px 56px}.top h1{font-size:22px}}
+</style></head><body><main class="wrap"><div class="top"><h1>使用说明</h1><a class="back" href="index.html">返回速查</a></div><section class="card note"><h2>资料范围</h2><p>收录 2010—2026 年法律硕士法学、非法学刑法与民法客观题，共 1360 道；其中刑法、民法各 680 道。</p><p>页码对应众合 2027《背诵一本通》《精讲一本通》的纸质书印刷页。</p></section><section class="card"><h2>如何筛选</h2><ul><li>可直接输入年份、题号、科目、考点或罪名，例如“2025”“民法”“诈骗罪”。</li><li>空格可组合筛选，例如“2025 法学 抢劫罪”。</li><li>输入“202506”可同时查看两类试卷的 2025 年第 6 题。</li><li>民法、刑法可分别勾选；只选一个时会启用对应题目与二级知识点筛选。</li></ul></section><section class="card"><h2>使用提示</h2><p>同一道题可能关联多个罪名或知识点；民法仅归入《背诵一本通》中有编号、有标题的知识点。</p><p>本网站不提供教材扫描件、真题题面或第三方解析全文；页码定位建议结合题目解析使用。</p></section><section class="card"><h2>问题反馈</h2><p>微信：zlszyxdwx</p></section><footer class="footer"><p>版权所有 © 2026 郑宇昕</p><p>作者：南京理工大学知识产权学院 郑宇昕</p></footer></main></body></html>'''
 
 
 def main():
@@ -728,6 +733,8 @@ def main():
     (WEB_DIR / "index.html").write_text(html, encoding="utf-8")
     # GitHub Pages can publish this repository directly from the main branch root.
     (ROOT / "index.html").write_text(html, encoding="utf-8")
+    (WEB_DIR / "about.html").write_text(ABOUT_HTML, encoding="utf-8")
+    (ROOT / "about.html").write_text(ABOUT_HTML, encoding="utf-8")
     print(f"Built {len(rows)} questions: {dict(Counter(row['track'] for row in rows))}")
     print(f"Mapped: {sum(bool(row['topics']) for row in rows)}")
     print(f"Page disagreements resolved: {len(PAGE_RESOLUTIONS)}")
