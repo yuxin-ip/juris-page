@@ -19,12 +19,13 @@
   </view>
   <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view>
 
-  <view class="bar"><text>{{resultText}}</text><text>页码为纸质书印刷页</text></view>
+  <view id="resultStart" class="bar"><text>{{resultText}}</text><text>页码为纸质书印刷页</text></view>
   <view wx:if="{{visibleItems.length}}"><question-card wx:for="{{visibleItems}}" wx:key="id" question="{{item}}" /></view>
   <view wx:else class="empty">没有匹配的题目</view>
   <button wx:if="{{hasMore}}" class="load-more" bindtap="showMore">显示更多</button>
   <view wx:if="{{showEndHint}}" class="end-hint">{{endText}}</view>
 
   <view class="notice">同一道题可关联多个罪名或知识点；民法仅收录《背诵一本通》中有编号、有标题的知识点。页码定位仍建议结合题目解析判断。</view>
-  <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>
+  <view class="footer"><text>背 P. = 背诵一本通　精 P. = 精讲一本通</text><text>问题反馈：微信 zlszyxdwx</text><text>版权所有 © 2026 郑宇昕</text><text>作者：南京理工大学知识产权学院 郑宇昕</text></view>
+  <button wx:if="{{showBackToFilters}}" class="back-to-filters {{backToFiltersArmed ? 'back-to-filters-armed' : ''}}" bindtap="onBackToFilters">{{backToFiltersArmed ? '再点返回筛选' : '筛选 ↑'}}</button>
 </view>

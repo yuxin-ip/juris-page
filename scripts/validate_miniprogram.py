@@ -33,6 +33,7 @@ def main():
     assert "termMatches" in index_js and "loadAllQuestions" in index_js
     assert "onCategoryChange" in index_js and "onTopicChange" in index_js
     assert "onSubjectTap" in index_js and "onSubjectChange" not in index_js
+    assert "scrollToResults" in index_js and "onPageScroll" in index_js and "onBackToFilters" in index_js
     assert "showEndHint" in index_js and "hasMore" in index_js
     topic_filters = read_js_data(PROGRAM / "data" / "topic-filters.js")["groups"]
     assert Counter(item["subject"] for item in topic_filters) == {"刑法": 8, "民法": 8}
@@ -48,6 +49,7 @@ def main():
     assert "subjectIndex" not in index_js and "subjectIndex" not in wxml
     assert 'wx:if="{{showTopicFilters}}"' in wxml
     assert "subjectPanelActive" in wxml and "subjectPanelActive" in index_js
+    assert 'id="resultStart"' in wxml and "showBackToFilters" in wxml
     assert "topicFilterTitle" in wxml and "topicFilterTitle" in index_js
     assert "categoryCaption" not in wxml and "categoryCaption" not in index_js
     assert "topicCaption" not in wxml and "topicCaption" not in index_js
@@ -60,6 +62,10 @@ def main():
     assert ".subject-button{flex:1 1 0;width:0;min-width:0;" in wxss
     assert ".subject-panel" in wxss and "overflow:hidden" in wxss
     assert ".subject-panel-active{border-color:#bfd3fb;background:#eef4ff}" in wxss
+    app_wxss = (PROGRAM / "app.wxss").read_text(encoding="utf-8")
+    assert ".back-to-filters{position:fixed;" in app_wxss
+    about = (PROGRAM / "pages" / "about" / "about.wxml").read_text(encoding="utf-8")
+    assert "微信：zlszyxdwx" in about
     assert "{{question.track}} · {{question.subject}} · 第" in card
     config = json.loads((PROGRAM / "project.config.json").read_text(encoding="utf-8"))
     assert config["miniprogramRoot"] == "./"

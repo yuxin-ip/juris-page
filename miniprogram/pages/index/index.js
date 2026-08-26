@@ -46,13 +46,14 @@ Page({
     categoryOptions: [], topicOptions: [], topicFilterTitle: '',
     items: [], visibleItems: [], resultText: '', endText: '', limit: 80,
     hasActiveFilter: false, subjectPanelActive: false, showTopicFilters: false, hasMore: false, showEndHint: false,
+    showBackToFilters: false, backToFiltersArmed: false,
   },
 
   onLoad() { this.allQuestions = loadAllQuestions(); this.applyFilters(); },
   onSearch(event) { this.setData({ query: event.detail.value }, () => this.applyFilters()); },
-  onTrackChange(event) { this.setData({ trackIndex: Number(event.detail.value) }, () => this.applyFilters()); },
-  onYearChange(event) { this.setData({ yearIndex: Number(event.detail.value) }, () => this.applyFilters()); },
-  onTypeChange(event) { this.setData({ typeIndex: Number(event.detail.value) }, () => this.applyFilters()); },
+  onTrackChange(event) { this.setData({ trackIndex: Number(event.detail.value) }, () => this.applyFilters(true, true)); },
+  onYearChange(event) { this.setData({ yearIndex: Number(event.detail.value) }, () => this.applyFilters(true, true)); },
+  onTypeChange(event) { this.setData({ typeIndex: Number(event.detail.value) }, () => this.applyFilters(true, true)); },
 
   onSubjectTap(event) {
     const index = Number(event.currentTarget.dataset.index);
@@ -64,7 +65,7 @@ Page({
       categoryOptions: subject ? categoryOptions(subject) : [], topicOptions: subject ? allTopics('', subject) : [],
       topicFilterTitle: subject === '刑法' ? '刑法分则罪名' : subject === '民法' ? '民法编号知识点' : '',
       subjectPanelActive: Boolean(subject), showTopicFilters: Boolean(subject),
-    }, () => this.applyFilters());
+    }, () => this.applyFilters(true, true));
   },
 
   onCategoryChange(event) {
@@ -74,23 +75,52 @@ Page({
     this.setData({
       categoryIndex, topicIndex: 0,
       topicOptions: allTopics(categoryIndex ? category : '', subject),
-    }, () => this.applyFilters());
+    }, () => this.applyFilters(true, true));
   },
 
-  onTopicChange(event) { this.setData({ topicIndex: Number(event.detail.value) }, () => this.applyFilters()); },
+  onTopicChange(event) { this.setData({ topicIndex: Number(event.detail.value) }, () => this.applyFilters(true, true)); },
 
   resetFilters() {
     this.setData({
       trackIndex: 0, yearIndex: 0, typeIndex: 0, subjectSelected: [false, false], categoryIndex: 0, topicIndex: 0,
       categoryOptions: [], topicOptions: [], topicFilterTitle: '',
       subjectPanelActive: false, showTopicFilters: false,
-    }, () => this.applyFilters());
+    }, () => this.applyFilters(true, true));
   },
 
   showMore() { this.setData({ limit: this.data.limit + 80 }, () => this.applyFilters(false)); },
   goAbout() { wx.navigateTo({ url: '/pages/about/about' }); },
 
-  applyFilters(resetLimit = true) {
+  scrollToResults() {
+    const query = wx.createSelectorQuery().in(this);
+    query.select('#resultStart').boundingClientRect();
+    query.selectViewport().scrollOffset();
+    query.exec((result) => {
+      if (!result[0] || !result[1]) return;
+      wx.pageScrollTo({ scrollTop: Math.max(0, result[0].top + result[1].scrollTop - 16), duration: 260 });
+    });
+  },
+
+  onPageScroll(event) {
+    const showBackToFilters = event.scrollTop > 560;
+    if (showBackToFilters !== this.data.showBackToFilters) this.setData({ showBackToFilters });
+  },
+
+  onBackToFilters() {
+    if (!this.data.backToFiltersArmed) {
+      this.setData({ backToFiltersArmed: true });
+      clearTimeout(this.backToFiltersTimer);
+      this.backToFiltersTimer = setTimeout(() => this.setData({ backToFiltersArmed: false }), 2200);
+      return;
+    }
+    clearTimeout(this.backToFiltersTimer);
+    this.setData({ backToFiltersArmed: false });
+    wx.pageScrollTo({ scrollTop: 0, duration: 260 });
+  },
+
+  onUnload() { clearTimeout(this.backToFiltersTimer); },
+
+  applyFilters(resetLimit = true, jumpToResults = false) {
     const { query, trackIndex, yearIndex, typeIndex, subjectSelected, categoryIndex, topicIndex, categoryOptions, topicOptions } = this.data;
     const track = TRACKS[trackIndex];
     const year = yearIndex ? Number(years[yearIndex - 1]) : 0;
@@ -121,6 +151,6 @@ Page({
       endText: `没有更多内容了，已显示全部 ${items.length} 道题。`,
       hasActiveFilter: Boolean(track || year || type || subject || category || topic),
       resultText: `找到 ${items.length} 道题（法学 ${lawCount} · 非法学 ${nonlawCount}）`,
-    });
+    }, () => { if (jumpToResults) this.scrollToResults(); });
   }
 });
