@@ -11,13 +11,13 @@
 
   <view class="subject-panel {{subjectPanelActive ? 'subject-panel-active' : ''}}"><view class="subject-switch"><button wx:for="{{subjectOptions}}" wx:key="*this" data-index="{{index}}" bindtap="onSubjectTap" class="subject-button {{subjectSelected[index] ? 'subject-active' : ''}}">{{item}}</button></view></view>
 
-  <view class="filters {{hasActiveFilter ? 'filters-active' : ''}}">
+  <view class="sticky-filters"><view class="filters {{hasActiveFilter ? 'filters-active' : ''}}">
     <picker mode="selector" range="{{trackOptions}}" value="{{trackIndex}}" bindchange="onTrackChange"><view class="filter"><text>类别 · 法学 / 非法学</text><text>{{trackOptions[trackIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{yearOptions}}" value="{{yearIndex}}" bindchange="onYearChange"><view class="filter"><text>年份</text><text>{{yearOptions[yearIndex]}} ›</text></view></picker>
     <picker mode="selector" range="{{typeOptions}}" value="{{typeIndex}}" bindchange="onTypeChange"><view class="filter"><text>题型 · 单选 / 多选</text><text>{{typeOptions[typeIndex]}} ›</text></view></picker>
     <view wx:if="{{showTopicFilters}}" class="filter offense-filter"><text>{{topicFilterTitle}}</text><view class="offense-selects"><picker mode="selector" range="{{categoryOptions}}" value="{{categoryIndex}}" bindchange="onCategoryChange"><view class="offense-select"><text>{{categoryOptions[categoryIndex]}} ›</text></view></picker><picker mode="selector" range="{{topicOptions}}" value="{{topicIndex}}" bindchange="onTopicChange"><view class="offense-select"><text>{{topicOptions[topicIndex]}} ›</text></view></picker></view></view>
   </view>
-  <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view>
+  <view wx:if="{{hasActiveFilter}}" class="filter-tip"><text>当前已启用筛选条件，搜索结果可能减少。</text><button bindtap="resetFilters">重置筛选</button></view></view>
 
   <view id="resultStart" class="bar"><text>{{resultText}}</text><text>页码为纸质书印刷页</text></view>
   <view wx:if="{{visibleItems.length}}"><question-card wx:for="{{visibleItems}}" wx:key="id" question="{{item}}" /></view>
