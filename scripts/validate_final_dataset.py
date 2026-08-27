@@ -68,7 +68,7 @@ assert "civilCategory" in html and "civilTopic" in html
 assert "subjectTopicState" in html and "state.subjects.includes(x.subject)" in html
 assert "topic-filter-groups dual" not in html and ".topic-filter-groups.dual" in html
 assert ".filters{grid-template-columns:repeat(3,minmax(0,1fr))}" in html
-assert ".topic-filter-groups.single{grid-template-columns:minmax(0,1fr);width:calc(33.333%" in html
+assert ".topic-filter-groups.single{width:100%}" in html
 assert ".topic-filter-groups.dual{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}" in html
 assert "select.long-value" in html and "select.xlong-value" in html
 assert "民法部分" not in html

@@ -65,7 +65,7 @@ def main():
     assert ".topic-filter-groups-single{grid-template-columns:minmax(0,1fr);" in wxss
     assert ".topic-filter-groups-dual{grid-template-columns:repeat(2,minmax(0,1fr));" in wxss
     assert ".filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));" in wxss
-    assert ".topic-filter-groups-single{grid-template-columns:minmax(0,1fr);width:calc(33.333%" in wxss
+    assert "style=\"{{showBothTopicFilters ? '' : 'width:100%'}}\"" in wxml
     assert ".topic-filter-groups-dual{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}" in wxss
     assert ".offense-select-long text:last-child" in wxss and ".offense-select-xlong text:last-child" in wxss
     assert ".subject-switch{display:flex;" in wxss

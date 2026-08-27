@@ -12,6 +12,7 @@
 /* Each selected subject keeps its own two-level topic filter. */
 .subject-panel{margin-top:9px;padding:9px 10px;border:1px solid var(--line);border-radius:11px;background:#fff}.subject-panel.active{border-color:#bfd3fb;background:var(--blue-soft)}.subject-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%}.subject-button{width:100%;min-width:0;min-height:42px;border:1px solid var(--line);border-radius:8px;background:#f8fafc;color:var(--text);font:inherit;font-size:14px;font-weight:650;cursor:pointer}.subject-button.active{border-color:var(--blue);background:var(--blue);color:#fff;box-shadow:0 2px 6px rgba(35,87,166,.2)}.filters{grid-template-columns:repeat(3,minmax(0,1fr))}.topic-filter-groups{grid-column:1/-1;display:grid;gap:8px;margin-left:auto}.topic-filter-groups.single{grid-template-columns:minmax(0,1fr);width:calc(33.333% - 6px)}.topic-filter-groups.dual{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.dual-select{display:grid;grid-template-columns:1fr;gap:5px}.dual-select span{padding:0}select.long-value{font-size:11px}select.xlong-value{font-size:10px}.end-hint{text-align:center;margin:18px auto 0;color:var(--muted);font-size:12px}
 @media(max-width:680px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))}.filter-group span{font-size:10px}.topic-filter-groups.single{width:calc(33.333% - 5px)}.topic-filter-groups.dual{width:100%}}
+.topic-filter-groups.single{width:100%}
 </style>
 <style>
 #topicFilterGroups[hidden],#criminalTopicFilter[hidden],#civilTopicFilter[hidden]{display:none!important}
