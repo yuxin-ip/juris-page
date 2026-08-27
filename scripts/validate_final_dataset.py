@@ -54,16 +54,20 @@ assert 'class="subject-switch" aria-label="科目筛选"' in html
 assert 'data-subject="刑法"' in html and 'data-subject="民法"' in html
 assert 'data-subject=""' not in html
 assert '<select id="subject"' not in html
-assert 'id="topicCategory"' in html
-assert 'id="topic"' in html
-assert "setAttribute('aria-label',categoryLabel)" in html
-assert "setAttribute('aria-label',topicLabel)" in html
-assert 'id="topicFilterGroup" hidden' in html and 'id="topicFilterTitle"' in html
+assert 'id="criminalTopicCategory"' in html and 'id="criminalTopic"' in html
+assert 'id="civilTopicCategory"' in html and 'id="civilTopic"' in html
+assert 'id="topicFilterGroups" hidden' in html
+assert 'id="criminalTopicFilter" hidden' in html and 'id="civilTopicFilter" hidden' in html
 assert "subjects:[]" in html and "state.subjects.length===1" in html
 assert "state.subjects=[]" in html
 assert "subjectPanel').classList.toggle('active',Boolean(singleSubject()))" in html
-assert "['刑法分则罪名','犯罪类型','具体罪名']" in html
-assert "['民法编号知识点','民法典全部七编','具体知识点']" in html
+assert "刑法分则罪名" in html and 'aria-label="犯罪类型"' in html and 'aria-label="具体罪名"' in html
+assert "民法编号知识点" in html and 'aria-label="民法典全部七编"' in html and 'aria-label="具体知识点"' in html
+assert "criminalCategory" in html and "criminalTopic" in html
+assert "civilCategory" in html and "civilTopic" in html
+assert "subjectTopicState" in html and "state.subjects.includes(x.subject)" in html
+assert "topic-filter-groups dual" not in html and ".topic-filter-groups.dual" in html
+assert "select.long-value" in html and "select.xlong-value" in html
 assert "民法部分" not in html
 for book in ("第一编·总则", "第二编·物权", "第三编·合同", "第四编·人格权", "第五编·婚姻家庭", "第六编·继承", "第七编·侵权责任"):
     assert book in html
@@ -79,6 +83,7 @@ assert 'class="sticky-filters"' in html
 assert ".controls{position:static" in html
 assert '<section class="controls" aria-label="题目筛选">' in html and '</section><div class="sticky-filters">' in html
 assert "function scrollToResults" in html and "resetRender(true)" in html
+assert "requestAnimationFrame(()=>requestAnimationFrame" in html
 assert 'class="about-toggle" href="about.html"' in html
 assert 'id="aboutToggle"' not in html and 'id="aboutPanel"' not in html
 assert 'id="backToTop"' in html and "function syncBackToTop" in html

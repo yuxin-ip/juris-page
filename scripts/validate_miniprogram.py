@@ -47,12 +47,14 @@ def main():
     assert "subjectOptions: ['刑法', '民法']" in index_js
     assert "subjectOptions: ['全部', '刑法', '民法']" not in index_js
     assert "subjectSelected: [false, false]" in index_js
-    assert "subjectIndex" not in index_js and "subjectIndex" not in wxml
-    assert 'wx:if="{{showTopicFilters}}"' in wxml
+    assert "subjectIndex:" not in index_js and "subjectIndex" not in wxml
+    assert 'wx:if="{{showCriminalFilters || showCivilFilters}}"' in wxml
     assert '<view class="sticky-filters">' in wxml
     assert "subjectPanelActive" in wxml and "subjectPanelActive" in index_js
     assert 'id="resultStart"' in wxml and "showBackToFilters" in wxml
-    assert "topicFilterTitle" in wxml and "topicFilterTitle" in index_js
+    assert "showCriminalFilters" in wxml and "showCivilFilters" in wxml and "showBothTopicFilters" in wxml
+    assert "criminalCategoryIndex" in index_js and "criminalTopicIndex" in index_js
+    assert "civilCategoryIndex" in index_js and "civilTopicIndex" in index_js
     assert "categoryCaption" not in wxml and "categoryCaption" not in index_js
     assert "topicCaption" not in wxml and "topicCaption" not in index_js
     assert "'犯罪类型'" in index_js and "'具体罪名'" in index_js
@@ -60,6 +62,9 @@ def main():
     assert "'民法部分'" not in index_js
     assert "知识门类" not in index_js and "全部门类" not in index_js
     assert ".offense-selects{display:grid;grid-template-columns:1fr;" in wxss
+    assert ".topic-filter-groups-single{grid-template-columns:minmax(0,1fr);" in wxss
+    assert ".topic-filter-groups-dual{grid-template-columns:repeat(2,minmax(0,1fr));" in wxss
+    assert ".offense-select-long text:last-child" in wxss and ".offense-select-xlong text:last-child" in wxss
     assert ".subject-switch{display:flex;" in wxss
     assert ".subject-button{flex:1 1 0;width:0;min-width:0;" in wxss
     assert ".subject-panel" in wxss and "overflow:hidden" in wxss
@@ -69,6 +74,8 @@ def main():
     assert ".back-to-filters{display:flex;" in app_wxss and "border-radius:50%" in app_wxss
     assert "width:88rpx!important" in app_wxss and "height:88rpx!important" in app_wxss
     assert "返回" in wxml and "顶部" in wxml and "筛选 ↑" not in wxml
+    assert "query.select('.sticky-filters').boundingClientRect()" in index_js
+    assert "result[1].top + result[2].scrollTop - stickyHeight - 12" in index_js
     about = (PROGRAM / "pages" / "about" / "about.wxml").read_text(encoding="utf-8")
     assert "微信：zlszyxdwx" in about
     about_js = (PROGRAM / "pages" / "about" / "about.js").read_text(encoding="utf-8")
