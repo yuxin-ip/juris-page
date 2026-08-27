@@ -34,6 +34,7 @@ def main():
     assert "onCategoryChange" in index_js and "onTopicChange" in index_js
     assert "onSubjectTap" in index_js and "onSubjectChange" not in index_js
     assert "scrollToResults" in index_js and "onPageScroll" in index_js and "onBackToFilters" in index_js
+    assert "onShareAppMessage" in index_js and "onShareTimeline" in index_js
     assert "showEndHint" in index_js and "hasMore" in index_js
     topic_filters = read_js_data(PROGRAM / "data" / "topic-filters.js")["groups"]
     assert Counter(item["subject"] for item in topic_filters) == {"刑法": 8, "民法": 8}
@@ -70,6 +71,8 @@ def main():
     assert "返回" in wxml and "顶部" in wxml and "筛选 ↑" not in wxml
     about = (PROGRAM / "pages" / "about" / "about.wxml").read_text(encoding="utf-8")
     assert "微信：zlszyxdwx" in about
+    about_js = (PROGRAM / "pages" / "about" / "about.js").read_text(encoding="utf-8")
+    assert "onShareAppMessage" in about_js and "onShareTimeline" in about_js
     assert "{{question.track}} · {{question.subject}} · 第" in card
     config = json.loads((PROGRAM / "project.config.json").read_text(encoding="utf-8"))
     assert config["miniprogramRoot"] == "./"

@@ -91,6 +91,20 @@ Page({
   showMore() { this.setData({ limit: this.data.limit + 80 }, () => this.applyFilters(false)); },
   goAbout() { wx.navigateTo({ url: '/pages/about/about' }); },
 
+  onShareAppMessage() {
+    return {
+      title: '法硕刑民法真题 · 页码速查',
+      path: '/pages/index/index',
+    };
+  },
+
+  onShareTimeline() {
+    return {
+      title: '法硕刑民法真题 · 页码速查',
+      query: '',
+    };
+  },
+
   scrollToResults() {
     const query = wx.createSelectorQuery().in(this);
     query.select('#resultStart').boundingClientRect();
